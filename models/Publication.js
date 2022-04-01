@@ -65,3 +65,5 @@ Publication.init(
         modelName: 'publication',
     }
 );
+
+module.exports = Publication;
