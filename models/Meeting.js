@@ -11,7 +11,7 @@ Meeting.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        mtg__name: {
+        mtg_name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
