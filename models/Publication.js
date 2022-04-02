@@ -27,7 +27,7 @@ Publication.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        main_auth: {
+        emp_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             referances: {
@@ -47,7 +47,7 @@ Publication.init(
             type: DataTypes.STRING,
             allowNull: true,
         },
-        office_id: {
+        off_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             referances: {
