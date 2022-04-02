@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Acheivement extends Model {}
+class Achievement extends Model {}
 
-Acheivement.init(
+Achievement.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,7 +11,7 @@ Acheivement.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        acheivement_name: {
+        achievement_name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -45,4 +45,4 @@ Acheivement.init(
     }
 );
 
-module.exports = Acheivement;
+module.exports = Achievement;
