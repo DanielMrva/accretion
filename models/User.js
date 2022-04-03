@@ -42,7 +42,7 @@ User.init(
     off_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      referances: {
+      references: {
         model: "office",
         key: "id"
       }

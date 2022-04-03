@@ -20,7 +20,7 @@ Media.init(
             allowNull: false,
         },
         date: {
-            type: DataTypes.DATE,
+            type: DataTypes.DATEONLY,
             allowNull: false,
         },
         emp_id: {

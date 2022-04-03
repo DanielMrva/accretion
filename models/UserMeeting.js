@@ -1,23 +1,16 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Achievement extends Model {}
 
-Achievement.init(
+class UserMeeting extends Model {}
+
+UserMeeting.init(
     {
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            primaryKey: true,
             autoIncrement: true,
-        },
-        achievement_name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        date_received: {
-            type: DataTypes.DATEONLY,
-            allowNull: false,
+            primaryKey: true,
         },
         emp_id: {
             type: DataTypes.INTEGER,
@@ -27,22 +20,22 @@ Achievement.init(
                 key: "id"
             }
         },
-        off_id: {
+        meeting_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: "office",
+                model: "meeting",
                 key: "id"
             }
-        }   
+        }
     },
     {
         sequelize,
-        timestamps: true,
+        timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'achievement',
+        modelName: "userMeeting",
     }
 );
 
-module.exports = Achievement;
+module.exports = UserMeeting;
