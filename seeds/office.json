@@ -1,0 +1,27 @@
+[
+    {
+        "name":"Wyoming-Montana Water Science Center",
+        "state":"WY",
+        "city":"Cheyenne"
+    },
+    {
+        "name":"National Earthquake Information Center",
+        "state":"CO",
+        "city":"Golden"
+    },
+    {
+        "name":"Colorado Water Science Center - Southeast Colorado Office",
+        "state":"CO",
+        "city":"Pueblo"
+    },
+    {
+        "name":"Moab Field Office",
+        "state":"UT",
+        "city":"Moab"
+    },
+    {
+        "name":"Roswell Field Office",
+        "state":"NM",
+        "city":"Roswell"
+    }
+]

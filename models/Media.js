@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Achievement extends Model {}
+class Media extends Model {}
 
-Achievement.init(
+Media.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,11 +11,15 @@ Achievement.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        achievement_name: {
+        outlet: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        date_received: {
+        topic: {
+            type: DataTypes.TEXT,
+            allowNull: false,
+        },
+        date: {
             type: DataTypes.DATEONLY,
             allowNull: false,
         },
@@ -34,15 +38,15 @@ Achievement.init(
                 model: "office",
                 key: "id"
             }
-        }   
+        }
     },
     {
         sequelize,
         timestamps: true,
         freezeTableName: true,
         underscored: true,
-        modelName: 'achievement',
+        modelName: 'media'
     }
 );
 
-module.exports = Achievement;
+module.exports = Media;
