@@ -23,7 +23,7 @@ Office.init(
       }
     },
     city: {
-      type: DataTypes.string,
+      type: DataTypes.STRING,
       allowNull: false,
     }
   },
@@ -32,7 +32,7 @@ Office.init(
     timestamps: true,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project',
+    modelName: 'office',
   }
 );
 

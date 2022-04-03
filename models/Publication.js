@@ -1,5 +1,5 @@
 const { Model, DataTypes} = require('sequelize');
-const sequelize = require('..config/connection');
+const sequelize = require('../config/connection');
 
 class Publication extends Model {}
 
@@ -27,35 +27,14 @@ Publication.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        emp_id: {
-            type: DataTypes.INTEGER,
+        author_name: {
+            type: DataTypes.STRING,
             allowNull: false,
-            referances: {
-                model: "user",
-                key: "id"
-            }
-        },
-        usgs_contrib: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
-            referances: {
-                model: "user",
-                key: "id"
-            }
         },
         other_contrib: {
             type: DataTypes.STRING,
             allowNull: true,
         },
-        off_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            referances: {
-                model: "office",
-                key: "id"
-            }
-        },
-
     },
     {
         sequelize,
