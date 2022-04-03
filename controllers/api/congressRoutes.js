@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Congress } = require('../../models');
 
-//endpoint: /api/congressroutes
+//endpoint: /api/congress
 
 router.get('/', async (req, res) => {
     try {
@@ -40,7 +40,7 @@ router.post('/', async (req, res) => {
 router.put('/:id', async (req, res) => {
     try {
         const congressData = await Congress.update(
-        //fix this to match the congress model: {achievement_name: req.body.achievement_name},
+        {reps_comm: req.body.reps_comm},
         {where: {id: req.params.id}}
         );
         res.status(200).json(congressData);

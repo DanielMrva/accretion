@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Achievement } = require('../../models');
 
-//endpoint: /api/achievementroutes
+//endpoint: /api/achievements
 
 router.get('/', async (req, res) => {
     try {
