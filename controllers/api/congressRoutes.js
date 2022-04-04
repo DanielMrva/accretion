@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Congress } = require('../../models');
 
 //endpoint: /api/congress
-
+//gets a list of all congressional hearings in database
 router.get('/', async (req, res) => {
     try {
       const congressData = await Congress.findAll({
@@ -13,6 +13,8 @@ router.get('/', async (req, res) => {
     }
 });
 
+//endpoint: /api/congress/:id
+//gets one congressional hearing, needs id 
 router.get('/:id', async (req, res) => {
 try {
     const congressData = await Congress.findByPk(req.params.id, {
@@ -27,7 +29,8 @@ try {
     }
 }); 
 
-//check this when data is seeded
+//endpoint: /api/congress
+//creates one new congressional hearing
 router.post('/', async (req, res) => {
     try {
       const congressData = await Congress.create(req.body);
@@ -37,6 +40,8 @@ router.post('/', async (req, res) => {
     }
   });
 
+//endpoint: /api/congress/:id
+//updates one congressional hearing, needs id
 router.put('/:id', async (req, res) => {
     try {
         const congressData = await Congress.update(
@@ -49,6 +54,8 @@ router.put('/:id', async (req, res) => {
     }
 });
 
+//endpoint: /api/congress/:id
+//deletes one congressional hearing, needs id
 router.delete('/:id', async (req, res) => {
     try {
       const congressData = await Congress.destroy({
