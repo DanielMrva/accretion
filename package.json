@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "author": "Alfred Garraffa, Amber Zimmerman, Daniel Mrva, Lindsey Choi",
-  "license": "MIT", 
+  "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "connect-session-sequelize": "^7.0.4",
@@ -19,7 +19,8 @@
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
     "mysql2": "^2.2.5",
-    "sequelize": "^6.3.5"
+    "sequelize": "^6.3.5",
+    "yarn": "^1.22.18"
   },
   "devDependencies": {
     "eslint": "^7.12.1",
