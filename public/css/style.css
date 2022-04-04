@@ -87,3 +87,8 @@ input {
   height: 28px;
   width: 260px;
 }
+
+h2 {
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  color: grey;
+}
