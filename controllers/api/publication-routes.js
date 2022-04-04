@@ -21,6 +21,7 @@ router.get('/', async (req, res) => {
 
 });
 
+// get one publication record
 router.get('/:id', async (req, res) => {
 
     try {
@@ -43,6 +44,8 @@ router.get('/:id', async (req, res) => {
 
 });
 
+
+// post a new publication record
 router.post('/', async (req, res) => {
 
     try {
@@ -59,7 +62,7 @@ router.post('/', async (req, res) => {
 
 });
 
-
+// update an existing publication record
 router.put('/:id', async (req, res) => {
 
     try {
@@ -92,6 +95,7 @@ router.put('/:id', async (req, res) => {
 
 });
 
+// delete a publication record
 router.delete('/:id', async (req, res) => {
 
     try {
@@ -114,4 +118,4 @@ router.delete('/:id', async (req, res) => {
 
 });
 
-module.exports = router
+module.exports = router;
