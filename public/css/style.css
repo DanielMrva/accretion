@@ -92,3 +92,44 @@ h2 {
   font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
   color: grey;
 }
+
+.side-nav {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgb(85, 141, 41);
+  margin-left: -250px;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.side-nav ul{
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.side-nav a{
+  text-decoration: none;
+  margin-bottom: 20px;
+  font-size: 30px;
+  display: block;
+  color: white;
+  font-family: 'Cantarell', sans-serif;
+
+}
+
+.right-main {
+  transition: 0.5s;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.expand-arrow {
+  transition: 0.5s;
+  position: fixed;
+  bottom: 50%;
+}

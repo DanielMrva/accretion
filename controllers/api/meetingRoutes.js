@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const { Meeting } = require('../../models');
 
-//endpoint: /api/meetings
-
+//endpoint location: /api/meetings
+//gets a list of all meetings in the database
 router.get('/', async (req, res) => {
     try {
       const meetingData = await Meeting.findAll({
@@ -13,6 +13,8 @@ router.get('/', async (req, res) => {
     }
 });
 
+//endpoint location: /api/meetings/:id
+//gets one meeting from the database, needs an id
 router.get('/:id', async (req, res) => {
 try {
     const meetingData = await Meeting.findByPk(req.params.id, {
@@ -27,7 +29,8 @@ try {
     }
 }); 
 
-//check this when data is seeded
+//endpoint location: /api/meetings
+//creates a meeting in the database
 router.post('/', async (req, res) => {
     try {
       const meetingData = await Meeting.create(req.body);
@@ -37,6 +40,9 @@ router.post('/', async (req, res) => {
     }
   });
 
+
+//endpoint location: /api/meetings/:id
+//updates a meeting in the database, needs an id
 router.put('/:id', async (req, res) => {
     try {
         const meetingData = await Meeting.update(
@@ -49,6 +55,8 @@ router.put('/:id', async (req, res) => {
     }
 });
 
+//endpoint location: /api/meetings/:id
+//deletes a meeting in the database, needs an id
 router.delete('/:id', async (req, res) => {
     try {
       const meetingData = await Meeting.destroy({
