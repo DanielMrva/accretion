@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const { Achievement } = require('../../models');
 
-//endpoint: /api/achievements
-
+//endpoint location: /api/achievements
+//get a list of all achievements in database
 router.get('/', async (req, res) => {
     try {
       const achievementData = await Achievement.findAll({
@@ -13,6 +13,8 @@ router.get('/', async (req, res) => {
     }
 });
 
+//endpoint location: /api/achievements/:id
+//get one achievement by giving the id of the achievement
 router.get('/:id', async (req, res) => {
 try {
     const achievementData = await Achievement.findByPk(req.params.id, {
@@ -27,7 +29,8 @@ try {
     }
 }); 
 
-//check this when data is seeded
+//endpoint location: /api/achievements
+//create a new achievement
 router.post('/', async (req, res) => {
     try {
       const achievementData = await Achievement.create(req.body);
@@ -37,6 +40,8 @@ router.post('/', async (req, res) => {
     }
   });
 
+//endpoint location: /api/achievements/:id
+//update an achievement by id
 router.put('/:id', async (req, res) => {
     try {
         const achievementData = await Achievement.update(
@@ -49,6 +54,8 @@ router.put('/:id', async (req, res) => {
     }
 });
 
+//endpoint location: /api/achievements/:id
+//delete an achievement by id
 router.delete('/:id', async (req, res) => {
     try {
       const achievementData = await Achievement.destroy({
