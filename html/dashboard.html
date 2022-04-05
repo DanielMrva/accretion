@@ -20,25 +20,36 @@
 
 <body>
 
-  <video playsinline autoplay muted loop poster="" id="bgvid">
-    <source src="../assets/images/homepage-video.mp4" type="video/mp4">
-  </video>
-
-<div class="view">
-
-  <header class="homepage-logo">
-
+<div id="sideNav" class="side-nav" onclick="closeNav()">
     <img class="logo" src="../assets/images/usgs_logo.png" alt="USGS logo white">
+        <ul>
+            <li>WEEKLY REPORT</li>
+            <li>ACHIEVEMENTS</li>
+            <li>CONGRESS</li>
+            <li>MEDIA</li>
+            <li>MEETINGS</li>
+            <li>PUBLICATIONS</li>
+            <li>SEARCH</li>
+        </ul>
 
-    <button class="button-1" role="button">LOGIN</button>
-    <button class="button-1" role="button">SIGN UP</button>
-
-  </header>
-
-
+        <!-- <button class="button-1" id="logOut" role="button">SUBMIT</button> -->
 </div>
 
+<img src="../assets/images/favpng_arrow-button-icon.png" 
+    alt="Menu expand"
+    class="side-arrow"
+    id="expandArrow"
+    onclick="openNav()"
+/>
+
+<div id="rightMain" class="right-main">
+    <div>
+        <h2>Welcome Back</h2>
+        
+    </div>
+</div>
 
 </body>
-
 </html>
+
+
