@@ -22,7 +22,7 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-    if (resizeBy.session.logged_in) {
+    if (res.session.logged_in) {
         res.redirect('/');
         return;
     }
