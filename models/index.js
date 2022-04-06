@@ -16,6 +16,9 @@ User.belongsTo(Office);
 User.belongsToMany(Publication, {through: {model: UserPub, foreignKey:'pub_id'}} );
 Publication.belongsToMany(User, {through: {model: UserPub, foreignKey:'emp_id'}} );
 
+// User.belongsToMany(Publication, {through: {model: UserPub}} );
+// Publication.belongsToMany(User, {through: {model: UserPub}} );
+
 User.hasMany(Achievement, {foreignKey: 'emp_id', onDelete: 'CASCADE'});
 Achievement.belongsTo(User, {foreignKey: 'emp_id'});
 
