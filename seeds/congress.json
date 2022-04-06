@@ -1,14 +1,10 @@
 [
     {
         "reps_comm":"Burro of Land Management",
-        "topic":"Why do we have a jackass here anyway?",
-        "emp_id":6,
-        "off_id":1
+        "topic":"Why do we have a jackass here anyway?"
     },
     {
         "reps_comm":"Committee on Space, Science, and Technology",
-        "topic":"The Earth is round, NASA can prove it!",
-        "emp_id":2,
-        "off_id":2
+        "topic":"The Earth is round, NASA can prove it!"
     }
 ]
