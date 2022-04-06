@@ -1,0 +1,14 @@
+{{#if loggedIn}}
+<section>
+    <div class="card">
+        <div class="card-block">
+            <h4 class="card-title">Achievement Name: {{achievement.achievement_name}}</h4>
+            <h6 class="card-subtitle text-muted">Date Received: {{achievement.date_received}}</h6>
+            <h6 class="card-subtitle text-muted">Employee: {{achievement.emp_id}}</h6>
+            <h6 class="card-subtitle text-muted">Office: {{achievement.off_id}}</h6>
+        </div>
+    </div>
+</section>
+{{else}}
+<a href="/login">You must login in order to be able to search this criteria!</a>
+{{/if}}

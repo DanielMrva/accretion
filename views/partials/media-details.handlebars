@@ -1,0 +1,14 @@
+{{#if loggedIn}}
+<section>
+    <div class="card">
+        <div class="card-block">
+            <h4 class="card-title">Topic: {{media.topic}}</h4>
+            <h6 class="card-subtitle text-muted">Media Outlet: {{media.outlet}}</h6>
+            <h6 class="card-subtitle text-muted">Date: {{media.date}}</h6>
+            <h6 class="card-subtitle text-muted">Office: {{media.off_id}}</h6>
+        </div>
+    </div>
+</section>
+{{else}}
+<a href="/login">You must login in order to be able to search this criteria!</a>
+{{/if}}
