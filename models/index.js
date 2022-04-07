@@ -13,9 +13,6 @@ const UserCongress = require('./UserCongress')
 Office.hasMany(User);
 User.belongsTo(Office);
 
-// User.belongsToMany(Publication, {through: {model: UserPub, foreignKey:'pub_id'}} );
-// Publication.belongsToMany(User, {through: {model: UserPub, foreignKey:'emp_id'}} );
-
 User.belongsToMany(Publication, {through: UserPub} );
 Publication.belongsToMany(User, {through: UserPub} );
 
