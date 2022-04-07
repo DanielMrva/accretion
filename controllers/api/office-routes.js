@@ -65,13 +65,21 @@ router.post('/', async (req, res) => {
 // update an existing office
 router.put('/:id', async (req, res) => {
 
+    let data = {};
+
     try {
 
-        let data = {
-            name: req.body.name,
-            state: req.body.state,
-            city: req.body.city
-        };
+        if (req.body.name) {
+            data.name = req.body.name;
+        }
+
+        if (req.body.state) {
+            data.state = req.body.state;
+        }
+
+        if (req.body.city) {
+            data.city = req.body.city;
+        }
 
         const offData = await Office.update(
             data,

@@ -65,24 +65,32 @@ router.post('/', async (req, res) => {
 // update an existing user
 router.put('/:id', async (req, res) => {
 
+    let data = {};
+
     try {
 
         // for some reason it wasn't letting me update properly without passing in this data variable
 
-        let data = {
-            first_name: req.body.first_name,
-            last_name: req.body.last_name,
-            email: req.body.email,
-            password: req.body.password,
-            off_id: req.body.off_id
-        };
+        if (req.body.first_name) {
+            data.first_name = req.body.first_name;
+        }
 
-        // in the final product we will want to verify that each of those things is present. maybe a series of if statements
-        // if (req.body.first_name) {
-        //     data.first_name = req.body.first_name
-        // } 
-        // (do this for all properties)
-        // this way it will only pass through the things you update
+        if (req.body.last_name) {
+            data.last_name = req.body.last_name;
+        }
+
+        if (req.body.email) {
+            data.email = req.body.email;
+        }
+
+        // we will need to pass this through bcrypt before updating
+        if (req.body.password) {
+            data.password = req.body.password;
+        }
+        
+        if (req.body.off_id) {
+            data.off_id = req.body.off_id;
+        }
 
         const userData = await User.update(
             data,

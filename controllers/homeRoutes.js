@@ -5,12 +5,12 @@ const res = require('express/lib/response');
 const { User } = require ('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', withAuth, async (req, res) => {
-    try {
-       const userData = await User.findAll({
-           attributes: { exclude: ['password'] },
-           order: [['last_name', 'ASC']],
-       });
+// router.get('/', withAuth, async (req, res) => {
+//     try {
+//        const userData = await User.findAll({
+//            attributes: { exclude: ['password'] },
+//            order: [['last_name', 'ASC']],
+//        });
 
 //        const users = userData.map((project) => project.get({ plain: true }));
 
@@ -33,10 +33,10 @@ router.get('/', withAuth, async (req, res) => {
 //     res.render('login');
 // })
 
-router.get('/', async (req, res) => {
+// router.get('/', async (req, res) => {
 
-    res.render('homepage');
+//     res.render('homepage');
     
-})
+// })
 
 module.exports = router;
