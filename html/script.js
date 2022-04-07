@@ -9,4 +9,6 @@ function openNav () {
     document.getElementById('sideNav').style.marginLeft = '-300px';
     document.getElementById('rightMain').style.marginLeft = '0';
     document.getElementById('expandArrow').style.marginLeft = "0";
-  }s
+  };
+
+  
