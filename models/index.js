@@ -7,8 +7,8 @@ const Media = require('./Media');
 const Meeting = require('./Meeting');
 const UserPub = require('./UserPub');
 const UserMeeting = require('./UserMeeting')
-const UserMedia = require('./UserMedia')
-const UserCongress = require('./UserCongress')
+const UserMedia = require('./UserMedia');
+const UserCongress = require('./UserCongress');
 
 Office.hasMany(User);
 User.belongsTo(Office);

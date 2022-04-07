@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Media, User } = require('../../models');
+const { Media, User, UserMedia } = require('../../models');
 
 
 // api/media endpoint
@@ -9,7 +9,9 @@ router.get('/', async (req, res) => {
 
     try {
 
-        const mediaData = await Media.findAll({include: [{model:User}]});
+        // const mediaData = await Media.findAll({include: [{model:User, through: UserMedia, as: 'users'}]});
+
+        const mediaData = await Media.findAll({include: User});
 
         res.status(200).json(mediaData);
 

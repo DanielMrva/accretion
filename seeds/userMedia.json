@@ -10,5 +10,9 @@
     {
         "user_id":4,
         "media_id":3
+    },
+    {
+        "user_id":3,
+        "media_id":1
     }
 ]
