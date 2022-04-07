@@ -27,7 +27,7 @@ Publication.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        author_name: {
+        name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -35,6 +35,14 @@ Publication.init(
             type: DataTypes.STRING,
             allowNull: true,
         },
+        user_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: "user",
+                key: "id"
+            }
+        }
     },
     {
         sequelize,

@@ -5,29 +5,26 @@ const Achievement = require('./Achievement');
 const Congress = require('./Congress');
 const Media = require('./Media');
 const Meeting = require('./Meeting');
-const UserPub = require('./UserPub');
-const UserMeeting = require('./UserMeeting')
-const UserMedia = require('./UserMedia');
-const UserCongress = require('./UserCongress');
+
+// const { User, Office, Publication, Achievement, Congress, Media, Meeting } = require('../models2')
 
 Office.hasMany(User);
 User.belongsTo(Office);
 
-User.belongsToMany(Publication, {through: UserPub} );
-Publication.belongsToMany(User, {through: UserPub} );
+User.hasMany(Publication);
+Publication.belongsTo(User);
 
-User.hasMany(Achievement, {foreignKey: 'user_id', onDelete: 'CASCADE'});
-Achievement.belongsTo(User, {foreignKey: 'user_id'});
+User.hasMany(Congress);
+Congress.belongsTo(User);
 
-User.belongsToMany(Media, { through: UserMedia, foreignKey: 'user_id' });
-Media.belongsToMany(User, { through: UserMedia, foreignKey: 'media_id' });
+User.hasMany(Media);
+Media.belongsTo(User);
 
-User.belongsToMany(Congress, {through: UserCongress} );
-Congress.belongsToMany(User, {through: UserCongress} );
+User.hasMany(Meeting);
+Meeting.belongsTo(User);
+
+User.hasMany(Achievement);
+Achievement.belongsTo(User);
 
 
-User.belongsToMany(Meeting, {through: UserMeeting} );
-Meeting.belongsToMany(User, {through: UserMeeting} );
-
-
-module.exports = { User, Office, Publication, Achievement, Congress, Media, Meeting, UserPub, UserMeeting, UserCongress, UserMedia };
+module.exports = { User, Office, Publication, Achievement, Congress, Media, Meeting };

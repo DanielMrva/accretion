@@ -15,6 +15,10 @@ Congress.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        names: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         topic: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -22,6 +26,14 @@ Congress.init(
         date: {
             type: DataTypes.DATEONLY,
             allowNull: false,
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: "user",
+                key: "id"
+            }
         }
     },
     {
