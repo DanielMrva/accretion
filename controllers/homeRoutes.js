@@ -21,19 +21,11 @@ const withAuth = require('../utils/auth');
 //     }
 // });
 
-<<<<<<< HEAD
-router.get('/login', (req, res) => {
-    if (res.session.logged_in) {
-        res.redirect('/');
-        return;
-    }
-=======
 // router.get('/login', (req, res) => {
 //     if (res.session.logged_in) {
 //         res.redirect('/');
 //         return;
 //     }
->>>>>>> 7ff3d30fdec6a02063d59b57daa6eff2b175663d
 
 //     res.render('login');
 // })
