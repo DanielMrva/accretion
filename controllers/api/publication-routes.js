@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Publication } = require('../../models');
+const { Publication, User, UserPub } = require('../../models');
 
 // api/publications endpoint
 
@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
 
     try { 
 
-        const pubData = await Publication.findAll();
+        const pubData = await Publication.findAll({include: [{model:User}]});
 
         res.status(200).json(pubData);
 
@@ -26,7 +26,11 @@ router.get('/:id', async (req, res) => {
 
     try {
         
-        const pubData = await Publication.findByPK(req.params.id)
+        const pubData = await Publication.findByPk(req.params.id, {
+            include: [
+                {model: User}
+            ]
+        });
 
         if (!pubData) {
 

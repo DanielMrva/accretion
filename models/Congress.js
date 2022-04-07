@@ -19,20 +19,10 @@ Congress.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        emp_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'user',
-                key: 'id'
-            }
-        },
-        off_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'office',
-                key: 'id'
-            }
-        },
+        date: {
+            type: DataTypes.DATEONLY,
+            allowNull: false,
+        }
     },
     {
         sequelize,

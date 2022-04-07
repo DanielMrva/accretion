@@ -1,10 +1,10 @@
 [
     {
-        "emp_id":4,
+        "user_id":4,
         "meeting_id":1
     },
     {
-        "emp_id":6,
+        "user_id":6,
         "meeting_id":2
     }
 ]

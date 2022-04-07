@@ -19,22 +19,6 @@ Meeting.init(
             type: DataTypes.TEXT,
             allowNull: true,
         },
-        // emp_id: {
-        //     type: DataTypes.INTEGER,
-        //     allowNull: false,
-        //     references: {
-        //         model: "user",
-        //         key: "id"
-        //     }
-        // },
-        off_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: "office",
-                key: "id"
-            }
-        }
     },
     {
         sequelize,

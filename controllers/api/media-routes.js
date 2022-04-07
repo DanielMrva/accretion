@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Media } = require('../../models');
+const { Media, User, UserMedia } = require('../../models');
 
 
 // api/media endpoint
@@ -9,7 +9,9 @@ router.get('/', async (req, res) => {
 
     try {
 
-        const mediaData = await Media.findAll();
+        // const mediaData = await Media.findAll({include: [{model:User, through: UserMedia, as: 'users'}]});
+
+        const mediaData = await Media.findAll({include: User});
 
         res.status(200).json(mediaData);
 
@@ -26,7 +28,7 @@ router.get('/:id', async (req, res) => {
 
     try {
 
-        const mediaData = await Media.findByPk(req.params.id)
+        const mediaData = await Media.findByPk(req.params.id, {include: [{model: User}]});
 
         if (!mediaData) {
 

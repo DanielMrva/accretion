@@ -2,22 +2,16 @@
     {
         "outlet":"KNYX",
         "topic":"Younger Dryas Impact",
-        "date":"2022-05-02",
-        "emp_id":5,
-        "off_id":5
+        "date":"2022-05-02"
     },
     {
         "outlet":"BBC",
         "topic":"Trees what are they good for?",
-        "date":"2022-04-02",
-        "emp_id":3,
-        "off_id":3
+        "date":"2022-04-02"
     },
     {
         "outlet":"WNYC",
         "topic":"Truffle hunting in city parks",
-        "date":"2022-07-11",
-        "emp_id":4,
-        "off_id":4
+        "date":"2022-07-11"
     }
 ]

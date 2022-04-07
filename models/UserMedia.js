@@ -1,16 +1,15 @@
-const { Model, DataTypes} = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
+class UserMedia extends Model {}
 
-class UserPub extends Model {}
-
-UserPub.init(
+UserMedia.init(
     {
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             autoIncrement: true,
-            primaryKey: true,
+            primaryKey: true
         },
         user_id: {
             type: DataTypes.INTEGER,
@@ -20,23 +19,23 @@ UserPub.init(
                 key: "id"
             }
         },
-        publication_id: {
+        media_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: "publication",
+                model: "media",
                 key: "id"
             }
         }
-
+        
     },
     {
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: "userPub",
+        modelName: "usermedia"
     }
 );
 
-module.exports = UserPub;
+module.exports = UserMedia;
