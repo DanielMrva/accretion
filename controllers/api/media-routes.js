@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
 
     try {
 
-        const mediaData = await Media.findAll({inlcude: [{model: User}]});
+        const mediaData = await Media.findAll({include: [{model:User}]});
 
         res.status(200).json(mediaData);
 
@@ -26,7 +26,7 @@ router.get('/:id', async (req, res) => {
 
     try {
 
-        const mediaData = await Media.findByPk(req.params.id)
+        const mediaData = await Media.findByPk(req.params.id, {include: [{model: User}]});
 
         if (!mediaData) {
 
