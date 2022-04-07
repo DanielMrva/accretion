@@ -146,7 +146,7 @@ video {
   opacity: .5;
 }
 
-.login {
+#login {
   height: 300px;
   width: 700px;
   border-color: red;
