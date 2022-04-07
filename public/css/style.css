@@ -151,7 +151,7 @@ video {
   width: 700px;
   border-color: red;
   position: fixed;
-  display: flex;
+  display: none;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
