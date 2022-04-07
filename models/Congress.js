@@ -34,7 +34,15 @@ Congress.init(
                 model: "user",
                 key: "id"
             }
-        }
+        },
+        office_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: "office",
+                key: "id"
+            }
+        } 
     },
     {
         sequelize,
