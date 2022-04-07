@@ -1,3 +1,8 @@
+/* Mobile- 360x640
+Tablet- 768x1024 (51.43%)
+Desktop/laptop- 1366x768 (22.98%)
+ */
+
 :root {
   --green: rgb(85, 141, 41);
 }
@@ -146,12 +151,12 @@ video {
   opacity: .5;
 }
 
-.login {
+#login {
   height: 300px;
   width: 700px;
   border-color: red;
   position: fixed;
-  display: flex;
+  display: none;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -233,9 +238,11 @@ h2 {
 }
 
 .form-body {
-  width: 515px;
-  position: static;
-  margin: 60px;
+  width: 700px;
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .accordian-button {
@@ -279,4 +286,9 @@ h2 {
 
 h2.welcome {
   padding: 10px;
+}
+
+.square-home {
+  width: 200px;
+  height: auto;
 }

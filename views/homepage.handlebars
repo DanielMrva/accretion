@@ -1,14 +1,56 @@
- 
- 
- <video playsinline autoplay muted loop poster="" id="bgvid">
-    <source src="/assets/images/homepage-video.mp4" type="video/mp4">
-  </video>
+{{! First thing a user who is not logged in will see. Homepage }}
+
+<video playsinline autoplay muted loop poster="" id="bgvid">
+  <source src="../assets/images/homepage-video.mp4" type="video/mp4" />
+</video>
 
 <div class="view">
 
   <header class="homepage-logo">
-    <img class="logo" src="/assets/images/usgs_logo.png" alt="USGS logo white">
-    <button class="button-24" role="button">LOGIN</button>
+
+    <img class="square-home" src="../assets/images/usgs-image-small.jpg" />
+    <img
+      class="logo"
+      src="../assets/images/usgs_logo.png"
+      alt="USGS logo white"
+    />
+
+    <img class="square-home1" src="../assets/images/usgs-image1-small.jpg" />
+    <button id="loginBtn" class="button-1" role="button">LOGIN</button>
+
+    <img class="square-home2" src="../assets/images/usgs-image2-small.jpg" />
+    <button class="button-1" role="button">SIGN UP</button>
+
+    <div id="login">
+
+      <div class="home-login-container">
+        <form>
+          <h2 class="text">LOGIN</h2>
+          <input type="text" class="email" placeholder="EMAIL" />
+          <input type="password" class="password" placeholder="PASSWORD" />
+
+              <button class="button-1" role="button">LOGIN</button>
+
+          
+        </form>
+      </div>
+
+      <div class="home-login-container">
+        <form>
+          <h2 class="text">SIGN UP</h2>
+          <input type="text" class="first-name" placeholder="FIRST NAME" />
+          <input type="text" class="last-name" placeholder="LAST NAME" />
+          <input type="text" class="office" placeholder="OFFICE" />
+          <input type="text" class="email" placeholder="EMAIL" />
+          <input type="password" class="password" placeholder="PASSWORD" />
+
+              <button class="button-1" role="button">SIGN UP</button>
+
+        </form>
+      </div>
+
+    </div>
+
   </header>
 
 </div>
