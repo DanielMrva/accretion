@@ -1,14 +1,32 @@
 {{#if loggedIn}}
 <section>
-    <div class="card">
-        <div class="card-block">
-            <h4 class="card-title">Congressional Hearing: {{congress.topic}}</h4>
-            <h6 class="card-subtitle text-muted">Employee Attending: {{congress.emp_id}}</h6>
-            <h6 class="card-subtitle text-muted">Representative: {{congress.reps_comm}}</h6>
-            <h6 class="card-subtitle text-muted">Office: {{congress.off_id}}</h6>
-        </div>
+    <div class="page-header">
+        <h1>Congressional Hearings</h1>
     </div>
+    {{#each MAGICAL_UNICORN_CONGRESSIONAL_HEARINGS}}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Topic</th>
+                <th scope="col">Committees</th>
+                <th scope="col">Employee</th>
+                <th scope="col">Office</th>
+                <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"></th>
+                <td>{{congress.topic}}</td>
+                <td>{{congress.reps_comm}}</td>
+                <td>{{congress.user_id}}</td>
+                <td>{{congress.off_id}}</td>
+                <td>{{congress.date}}</td>
+            </tr>
+        </tbody>
+    </table>{{/each}}
 </section>
+
 {{else}}
-<a href="/login">You must login in order to be able to search this criteria!</a>
+<a href="/login">You must login first to view this information.</a>
 {{/if}}

@@ -1,14 +1,30 @@
 {{#if loggedIn}}
 <section>
-    <div class="card">
-        <div class="card-block">
-            <h4 class="card-title">Achievement Name: {{achievement.achievement_name}}</h4>
-            <h6 class="card-subtitle text-muted">Date Received: {{achievement.date_received}}</h6>
-            <h6 class="card-subtitle text-muted">Employee: {{achievement.emp_id}}</h6>
-            <h6 class="card-subtitle text-muted">Office: {{achievement.off_id}}</h6>
-        </div>
+    <div class="page-header">
+        <h1>Achievements</h1>
     </div>
+    {{#each MAGICAL_UNICORN_ACHIEVEMENTS}}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Date Recieved</th>
+                <th scope="col">Recipient</th>
+                <th scope="col">Office</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"></th>
+                <td>{{achievement.achievement_name}}</td>
+                <td>{{achievement.date_received}}</td>
+                <td>{{achievement.user_id}}</td>
+                <td>{{achievement.off_id}}</td>
+            </tr>
+        </tbody>
+    </table>{{/each}}
 </section>
+
 {{else}}
-<a href="/login">You must login in order to be able to search this criteria!</a>
+<a href="/login">You must login first to view this information.</a>
 {{/if}}
