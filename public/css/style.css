@@ -113,18 +113,27 @@ video {
   opacity: .5;
 }
 
-.home-login-container {
+.login {
+  height: 300px;
+  width: 700px;
+  border-color: red;
   position: fixed;
+  display: flex;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: space-evenly;
+}
+
+.home-login-container {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 260px;
   width: 300px;
-  top: 50%;
-  left: 50%;
   border-radius: 40px;
-  transform: translate(-50%, -50%);
   background-color:rgba(255, 255, 255, .4);
+  padding: 40px;
   }
 
 
@@ -209,6 +218,10 @@ h2 {
   background-color: rgba(85, 141, 41, 0.1);
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(85, 141, 41, 0.2);
+}
+
+h2 {
+  text-align: center;
 }
 
 
