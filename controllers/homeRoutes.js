@@ -24,7 +24,7 @@ const withAuth = require('../utils/auth');
 //     }
 // });
 
-<<<<<<< HEAD
+
 =======
 <<<<<<< HEAD
 router.get('/login', (req, res) => {

@@ -285,3 +285,8 @@ h2 {
 h2.welcome {
   padding: 10px;
 }
+
+.square-home {
+  width: 200px;
+  height: auto;
+}
