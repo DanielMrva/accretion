@@ -19,8 +19,8 @@ User.belongsTo(Office);
 User.belongsToMany(Publication, {through: UserPub} );
 Publication.belongsToMany(User, {through: UserPub} );
 
-User.hasMany(Achievement, {foreignKey: 'emp_id', onDelete: 'CASCADE'});
-Achievement.belongsTo(User, {foreignKey: 'emp_id'});
+User.hasMany(Achievement, {foreignKey: 'user_id', onDelete: 'CASCADE'});
+Achievement.belongsTo(User, {foreignKey: 'user_id'});
 
 User.belongsToMany(Media, {through: UserMedia} );
 Media.belongsToMany(User, {through: UserMedia} );
