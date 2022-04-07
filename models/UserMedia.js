@@ -34,7 +34,7 @@ UserMedia.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: "userMedia"
+        modelName: "usermedia"
     }
 );
 
