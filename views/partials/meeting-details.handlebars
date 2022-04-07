@@ -1,0 +1,32 @@
+{{#if loggedIn}}
+<section>
+    <div class="page-header">
+        <h1>Meetings</h1>
+    </div>
+    {{#each MAGICAL_UNICORN_MEETINGS}}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Topic</th>
+                <th scope="col">Employee</th>
+                <th scope="col">Office</th>
+                <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"></th>
+                <td>{{meeting.title}}</td>
+                <td>{{meeting.mtg_name}}</td>
+                <td>{{meeting.user_id}}</td>
+                <td>{{meeting.off_id}}</td>
+                <td>{{meeting.date}}</td>
+            </tr>
+        </tbody>
+    </table>{{/each}}
+</section>
+
+{{else}}
+<a href="/login">You must login first to view this information.</a>
+{{/if}}

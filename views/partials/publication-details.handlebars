@@ -1,0 +1,32 @@
+{{#if loggedIn}}
+<section>
+    <div class="page-header">
+        <h1>Publications</h1>
+    </div>
+    {{#each MAGICAL_UNICORN_PUBLICATIONS}}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Article Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">Contributors</th>
+                <th scope="col">Publication</th>
+                <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"></th>
+                <td>{{publication.article_title}}</td>
+                <td>{{publication.author_name}}</td>
+                <td>{{publication.other_contrib}}</td>
+                <td>{{publication.pub_name}}</td>
+                <td>{{publication.pub_date}}</td>
+            </tr>
+        </tbody>
+    </table>{{/each}}
+</section>
+
+{{else}}
+<a href="/login">You must login first to view this information.</a>
+{{/if}}
