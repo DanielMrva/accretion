@@ -1,14 +1,14 @@
 [
     {
-        "emp_id":5,
+        "user_id":5,
         "media_id":1
     },
     {
-        "emp_id":3,
+        "user_id":3,
         "media_id":2
     },
     {
-        "emp_id":4,
+        "user_id":4,
         "media_id":3
     }
 ]

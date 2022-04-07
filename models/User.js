@@ -39,7 +39,7 @@ User.init(
         len: [8],
       },
     },
-    off_id: {
+    office_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {

@@ -1,22 +1,22 @@
 [
     {
-        "emp_id":1,
-        "pub_id":1
+        "user_id":1,
+        "publication_id":1
     },
     {
-        "emp_id":6,
-        "pub_id":2
+        "user_id":6,
+        "publication_id":2
     },
     {
-        "emp_id":2,
-        "pub_id":3
+        "user_id":2,
+        "publication_id":3
     },
     {
-        "emp_id":3,
-        "pub_id":4
+        "user_id":3,
+        "publication_id":4
     },
     {
-        "emp_id":5,
-        "pub_id":5
+        "user_id":5,
+        "publication_id":5
     }
 ]

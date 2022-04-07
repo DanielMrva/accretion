@@ -11,7 +11,7 @@ UserCongress.init(
             autoIncrement: true,
             primaryKey: true
         },
-        emp_id: {
+        user_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
