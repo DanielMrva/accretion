@@ -15,11 +15,11 @@ Congress.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        names: {
+        topic: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        topic: {
+        names: {
             type: DataTypes.STRING,
             allowNull: false,
         },

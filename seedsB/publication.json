@@ -3,36 +3,30 @@
         "pub_name":"A Legit Nature Journal",
         "pub_date":"2023-12-31",
         "article_title":"This one weird geology trick",
-        "name":"Allison Fisher",
-        "other_contrib":"Ann Timony",
-        "user_id":1
+        "author_name":"Allison Fisher"
     },
     {
         "pub_name":"Nature!",
         "pub_date":"2022-07-06",
         "article_title":"Look at this cool rock!",
-        "name":"Wendy Starlink",
-        "user_id":5
+        "author_name":"Wendy Starlink"
     },
     {
         "pub_name":"Fish and Fowl",
         "pub_date":"2022-09-19",
         "article_title":"Our manifesto against Cat Fancy Magazine",
-        "name":"Brandon Ursus",
-        "user_id":2
+        "author_name":"Brandon Ursus"
     },
     {
         "pub_name":"Nature!",
         "pub_date":"2022-10-11",
         "article_title":"How to Recognise Different Types of Trees From Quite a Long Way Away",
-        "name":"Aruthur Tree",
-        "user_id":4
+        "author_name":"Aruthur Tree"
     },
     {
         "pub_name":"Geology Today",
         "pub_date":"2199-12-31",
         "article_title":"The conceptual flat-topped hill with steep sides as a social construct",
-        "name":"Richard Druphus",
-        "user_id":3
+        "author_name":"Richard Druphus"
     }   
 ]
