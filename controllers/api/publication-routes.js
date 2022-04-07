@@ -26,11 +26,15 @@ router.get('/:id', async (req, res) => {
 
     try {
         
+<<<<<<< HEAD
+        const pubData = await Publication.findByPk(req.params.id)
+=======
         const pubData = await Publication.findByPk(req.params.id, {
             include: [
                 {model: User}
             ]
         });
+>>>>>>> 55d9973a050376a799d0da0c4a449ee4ec770764
 
         if (!pubData) {
 
@@ -69,17 +73,40 @@ router.post('/', async (req, res) => {
 // update an existing publication record
 router.put('/:id', async (req, res) => {
 
+    let data = {};
+
     try {
 
+        // these if statements verify which fields are being updated
+        if (req.body.pub_name) {
+            data.pub_name = req.body.pub_name;
+        }
+
+        if (req.body.pub_date) {
+            data.pub_date = req.body.pub_date;
+        }
+
+        if (req.body.keywords) {
+            data.keywords = req.body.keywords;
+        }
+
+        if (req.body.article_title) {
+            data.article_title = req.body.article_title;
+        }
+
+        if (req.body.author_name) {
+            data.author_name = req.body.author_name;
+        }
+
+        if (req.body.other_contrib) {
+            data.other_contrib = req.body.other_contrib;
+        }
+
+        console.log('routes body:')
+        console.log(data);
+
         const pubData = await Publication.update(
-            {pub_name: req.body.pub_name},
-            {pub_date: req.body.pub_date},
-            {keywords: req.body.keywords},
-            {article_title: req.body.article_title},
-            {emp_id: req.body.emp_id},
-            {usgs_contrib: req.body.usgs_contrib},
-            {other_contrib: req.body.other_contrib},
-            {off_id: req.body.off_id},
+            data,
             {where: {id: req.params.id}}
         );
 

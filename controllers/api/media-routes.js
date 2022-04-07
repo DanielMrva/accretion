@@ -67,15 +67,25 @@ router.post('/', async (req, res) => {
 // update an existing media record
 router.put('/:id', async (req, res) => {
 
+    let data = {};
+
     try {
 
-        let data = {
-            outlet: req.body.outlet,
-            topic: req.body.topic,
-            date: req.body.date,
-            off_id: req.body.off_id
-        };
+        if (req.body.outlet) {
+            data.outlet = req.body.outlet;
+        }
 
+        if (req.body.topic) {
+            data.topic = req.body.topic;
+        }
+
+        if (req.body.date) {
+            data.date = req.body.date;
+        }
+
+        if (req.body.off_id) {
+            data.off_id = req.body.off_id;
+        }
 
         const mediaData = await Media.update(
             data,
