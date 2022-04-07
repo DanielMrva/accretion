@@ -2,11 +2,11 @@
     {
         "mtg_name":"Lets get together",
         "title":"Yeah yeah yeah",
-        "off_id":4
+        "office_id":4
     },
     {
         "mtg_name":"Meeting in the Aisle",
         "title":"A discussion of the installation of raido tracker chips in craniums of mammals",
-        "off_id":1
+        "office_id":1
     }
 ]

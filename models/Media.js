@@ -23,22 +23,6 @@ Media.init(
             type: DataTypes.DATEONLY,
             allowNull: false,
         },
-        emp_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: "user",
-                key: "id"
-            }
-        },
-        off_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: "office",
-                key: "id"
-            }
-        }
     },
     {
         sequelize,

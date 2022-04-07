@@ -19,7 +19,7 @@ Achievement.init(
             type: DataTypes.DATEONLY,
             allowNull: false,
         },
-        emp_id: {
+        user_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
@@ -27,7 +27,7 @@ Achievement.init(
                 key: "id"
             }
         },
-        off_id: {
+        office_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
