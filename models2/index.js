@@ -5,10 +5,8 @@ const Achievement = require('./Achievement');
 const Congress = require('./Congress');
 const Media = require('./Media');
 const Meeting = require('./Meeting');
-const UserPub = require('./UserPub');
-const UserMeeting = require('./UserMeeting')
-const UserMedia = require('./UserMedia');
-const UserCongress = require('./UserCongress');
+
+// const { User, Office, Publication, Achievement, Congress, Media, Meeting } = require('../models2')
 
 Office.hasMany(User);
 User.belongsTo(Office);
@@ -30,4 +28,4 @@ User.belongsToMany(Meeting, {through: UserMeeting} );
 Meeting.belongsToMany(User, {through: UserMeeting} );
 
 
-module.exports = { User, Office, Publication, Achievement, Congress, Media, Meeting, UserPub, UserMeeting, UserCongress, UserMedia };
+module.exports = { User, Office, Publication, Achievement, Congress, Media, Meeting };
