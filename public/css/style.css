@@ -113,6 +113,44 @@ video {
   opacity: .5;
 }
 
+.button-3 {
+  background-color:rgba(85, 141, 41, 0.1);
+  border: 1px solid rgba(255, 255, 255, .5);
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: var(--green);
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Cantarell', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  height: 80px;
+  width: 275px;
+}
+
+.button-3:hover,
+.button-3:active {
+  background-color: initial;
+  background-position: 0 0;
+  border: 1px solid var(--green);
+}
+
+.button-3:active {
+  opacity: .5;
+}
+
 .login {
   height: 300px;
   width: 700px;
@@ -134,7 +172,7 @@ video {
   border-radius: 40px;
   background-color:rgba(255, 255, 255, .4);
   padding: 40px;
-  }
+}
 
 
 input {
@@ -185,8 +223,12 @@ h2 {
 
 .right-main {
   transition: 0.5s;
-  padding-top: 20px;
-  padding-left: 20px;
+  padding-top: 10px;
+  /* padding-left: 10px; */
+  height: auto;
+  width: 1020px;
+  align-content: center;
+  justify-content: space-between;
 }
 
 .expand-arrow {
@@ -224,5 +266,22 @@ h2 {
   text-align: center;
 }
 
+.user-icon {
+  height: 500px;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.dashboard-buttons {
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px;
+  display: flex;
+  justify-content: space-evenly;
+}
 
+h2.welcome {
+  padding: 10px;
+}
