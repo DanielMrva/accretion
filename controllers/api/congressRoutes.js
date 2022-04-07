@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const { Congress } = require('../../models');
+const { Congress, User } = require('../../models');
 
 //endpoint: /api/congress
 //gets a list of all congressional hearings in database
 router.get('/', async (req, res) => {
     try {
-      const congressData = await Congress.findAll({
+      const congressData = await Congress.findAll({include: [{model: User}]
       });
       res.status(200).json(congressData);
     } catch (err) {
@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 //gets one congressional hearing, needs id 
 router.get('/:id', async (req, res) => {
 try {
-    const congressData = await Congress.findByPk(req.params.id, {
+    const congressData = await Congress.findByPk(req.params.id, {include: [{model: User}]
     });
     if (!congressData) {
     res.status(404).json({ message: 'No congressional hearings found with this id!' });

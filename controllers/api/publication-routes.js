@@ -26,7 +26,11 @@ router.get('/:id', async (req, res) => {
 
     try {
         
-        const pubData = await Publication.findByPk(req.params.id)
+        const pubData = await Publication.findByPk(req.params.id, {
+            include: [
+                {model: User}
+            ]
+        });
 
         if (!pubData) {
 

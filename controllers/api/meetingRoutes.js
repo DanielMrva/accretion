@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const { Meeting } = require('../../models');
+const { Meeting, User } = require('../../models');
 
 //endpoint location: /api/meetings
 //gets a list of all meetings in the database
 router.get('/', async (req, res) => {
     try {
-      const meetingData = await Meeting.findAll({
+      const meetingData = await Meeting.findAll({include: [{model: User}]
       });
       res.status(200).json(meetingData);
     } catch (err) {
@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 //gets one meeting from the database, needs an id
 router.get('/:id', async (req, res) => {
 try {
-    const meetingData = await Meeting.findByPk(req.params.id, {
+    const meetingData = await Meeting.findByPk(req.params.id, {include: [{model: User}]
     });
     if (!meetingData) {
     res.status(404).json({ message: 'No meetings found with this id!' });

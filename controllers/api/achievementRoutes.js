@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const { Achievement } = require('../../models');
+const { Achievement, User } = require('../../models');
 
 //endpoint location: /api/achievements
 //get a list of all achievements in database
 router.get('/', async (req, res) => {
     try {
-      const achievementData = await Achievement.findAll({
+      const achievementData = await Achievement.findAll({include: [{model: User}]
       });
       res.status(200).json(achievementData);
     } catch (err) {
@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 //get one achievement by giving the id of the achievement
 router.get('/:id', async (req, res) => {
 try {
-    const achievementData = await Achievement.findByPk(req.params.id, {
+    const achievementData = await Achievement.findByPk(req.params.id, {include: [{model: User}]
     });
     if (!achievementData) {
     res.status(404).json({ message: 'No achievement found with this id!' });

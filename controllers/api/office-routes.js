@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const req = require('express/lib/request');
-const { Office } = require('../../models');
+const { Office, User } = require('../../models');
 
 
 // api/offices endpoint
