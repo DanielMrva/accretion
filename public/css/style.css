@@ -255,7 +255,7 @@ video {
   padding: 40px;
 }
 
-#existLogin {
+#login-btn {
   color: var(--green);
   border: 1px solid var(--green);
   border-width: 2px;
