@@ -1,12 +1,4 @@
 const router = require('express').Router();
-<<<<<<< HEAD
-
-const { User } = require ('../models');
-const withAuth = require('../utils/auth');
-
-
-
-=======
 const { User } = require ('../models');
 const withAuth = require('../utils/auth');
 
@@ -51,6 +43,5 @@ router.get('/form', async (req, res) => {
     res.status(500).json(err);
   }
 });
->>>>>>> 047924d71fbec30543b756b7c2faf4b07f021c3d
 
 module.exports = router;

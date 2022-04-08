@@ -1,6 +1,6 @@
 // const { goGetter, posterChild, updater, terminator } = require('./fetch')
 
-const post = document.getElementById('post');
+const pubPost = document.getElementById('submitPublications');
 
 // let url = 'http://localhost:3001/api/'
 
@@ -47,7 +47,7 @@ async function fetcher(method, category, id=undefined, body=undefined) {
 
 
 // currently this is for the publication table
-async function btnPress(event) {
+async function pubSubmit(event) {
 
     event.preventDefault();
 
@@ -59,7 +59,7 @@ async function btnPress(event) {
         keywords: document.getElementById("keywords").value,
         article_title: document.getElementById("title").value,
         author_name: document.getElementById("authName").value,
-        other_contrib: document.getElementById("contributors").value,
+        other_contrib: document.getElementById("contributor").value,
     }
 
 
@@ -78,4 +78,4 @@ async function btnPress(event) {
 
 
 // this is the action on button press. Expand this out for the queries
-post.addEventListener('click', btnPress)
+pubPost.addEventListener('click', pubSubmit)
