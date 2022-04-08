@@ -20,17 +20,86 @@ video {
   left: 0;
 }
 
-.homepage-logo {
+.view {
+  display: grid;
+  height: 768px;
+  width: 1024px;
+  grid-template-columns: 1fr 1fr 1fr 256px 1fr 256px 256px 1fr 1fr;
+  /* grid-template-columns: 115px 256px 55px 256px 256px 85px; */
+}
+
+.square-home {
+  width: 266px;
+  position: absolute;
+}
+
+.square {
+  grid-column: 4;
+  top: 50%;
+  left: 50%;
+  align-items: center;
+  margin-top: 155px;
+}
+
+.square-1 {
+  grid-column: 6;
+  top: 50%;
+  left: 50%;
+  align-items: center;
+  margin-top: 441px;
+}
+
+.square-2 {
+  grid-column: 7;
+  top: 50%;
+  left: 50%;
+  align-items: center;
+  margin-top: 185px;
+}
+
+/* .homepage-logo {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
+} */
 
 .logo {
-  height: 110px;
-  width:auto;
-  padding: 7px;
+  height: 80px;
+    width: auto;
+    position: absolute;
+    margin-top: 90px;
+    margin-left: 20px;
+}
+
+#loginBtn {
+  position: absolute;
+  margin-top: 110px;
+  margin-left: 50px;
+  width: 155px;
+  font-size: 23px;
+  color: black;
+  background-color: rgba(255, 255, 255, .6);
+}
+
+#signUpBtn {
+  position: absolute;
+  margin-top: 110px;
+  margin-left: 50px;
+  width: 155px;
+  font-size: 23px;
+  color: black;
+  background-color: rgba(255, 255, 255, .6);
+}
+
+#loginBtn:hover {
+  background-color: rgba(255, 255, 255, .2);
+  color: white;
+}
+
+#signUpBtn:hover {
+  background-color: rgba(255, 255, 255, .1);
+  color: white;
 }
 
 .button-1 {
@@ -152,8 +221,9 @@ video {
 }
 
 #login {
+  display: flex;
   height: 300px;
-  width: 700px;
+  width: 768px;
   border-color: red;
   position: fixed;
   display: none;
@@ -167,13 +237,39 @@ video {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 260px;
-  width: 300px;
+  height: 200px;
+  width: 350px;
   border-radius: 40px;
   background-color:rgba(255, 255, 255, .4);
   padding: 40px;
 }
 
+.home-signup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 350px;
+  border-radius: 40px;
+  background-color:rgba(255, 255, 255, .4);
+  padding: 40px;
+}
+
+#existLogin {
+  color: var(--green);
+  border: 1px solid var(--green);
+  border-width: 2px;
+  width: 160px;
+  background-color: rgba(255, 255, 255, .6);
+}
+
+#newLogin {
+  color: var(--green);
+  border: 1px solid var(--green);
+  border-width: 2px;
+  width: 160px;
+  background-color: rgba(255, 255, 255, .6);
+}
 
 input {
   display:block;
@@ -185,6 +281,11 @@ input {
 h2 {
   font-family: 'Cantarell', sans-serif;
   color: grey;
+  text-align: center;
+}
+
+h2.welcome {
+  padding: 10px;
 }
 
 .side-nav {
@@ -264,10 +365,6 @@ h2 {
   box-shadow: 0 0 0 0.25rem rgba(85, 141, 41, 0.2);
 }
 
-h2 {
-  text-align: center;
-}
-
 .user-icon {
   height: 500px;
   width: auto;
@@ -284,11 +381,164 @@ h2 {
   justify-content: space-evenly;
 }
 
-h2.welcome {
-  padding: 10px;
-}
 
-.square-home {
-  width: 200px;
-  height: auto;
-}
+
+/* This is for desktop viewing */
+@media screen and (min-width: 1025px)
+   {
+    .view {
+      display: grid;
+      /* height: 100vh; */
+      width: 100vw;
+      grid-template-columns: 10px 1fr 1fr 300px 1fr 300px 300px 1fr 1fr;
+    }
+    
+    .square-home {
+      display: flex;
+      width: 300px;
+      height: auto;
+      position: absolute;
+    }
+    
+    .square {
+      grid-column: 4;
+      top: 50%;
+      left: 50%;
+      align-items: center;
+      margin-top: 100px;
+    }
+    
+    .square-1 {
+      grid-column: 6;
+      top: 50%;
+      left: 50%;
+      align-items: center;
+      margin-top: 440px;
+    }
+    
+    .square-2 {
+      grid-column: 7;
+      top: 50%;
+      left: 50%;
+      align-items: center;
+      margin-top: 140px;
+    }
+    
+    /* .homepage-logo {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    } */
+    
+    .logo {
+      height: 92px;
+        width: auto;
+        position: absolute;
+        margin-top: 105px;
+        margin-left: 30px;
+    }
+
+    #loginBtn {
+      position: absolute;
+      margin-top: 140px;
+      margin-left: 70px;
+      width: 155px;
+      font-size: 23px;
+      color: black;
+      background-color: rgba(255, 255, 255, .6);
+    }
+    
+    #signUpBtn {
+      position: absolute;
+      margin-top: 140px;
+      margin-left: 70px;
+      width: 155px;
+      font-size: 23px;
+      color: black;
+      background-color: rgba(255, 255, 255, .6);
+    }
+    
+
+    
+} 
+
+/* big monitor */
+@media screen and (min-width: 1330px)
+   {
+    .view {
+      display: grid;
+      /* height: 100vh; */
+      width: 100vw;
+      grid-template-columns: 10px 1fr 1fr 375px 1fr 375px 375px 1fr 1fr;
+    }
+    
+    .square-home {
+      display: flex;
+      width: 375px;
+      height: auto;
+      position: absolute;
+    }
+    
+    .square {
+      grid-column: 4;
+      top: 50%;
+      left: 50%;
+      align-items: center;
+      margin-top: 100px;
+    }
+    
+    .square-1 {
+      grid-column: 6;
+      top: 50%;
+      left: 50%;
+      align-items: center;
+      margin-top: 515px;
+    }
+    
+    .square-2 {
+      grid-column: 7;
+      top: 50%;
+      left: 50%;
+      align-items: center;
+      margin-top: 140px;
+    }
+    
+    /* .homepage-logo {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    } */
+    
+    .logo {
+      height: 110px;
+        width: auto;
+        position: absolute;
+        margin-top: 135px;
+        margin-left: 40px;
+    }
+
+    #loginBtn {
+      position: absolute;
+      margin-top: 160px;
+      margin-left: 70px;
+      width: 240px;
+      font-size: 28px;
+      color: black;
+      background-color: rgba(255, 255, 255, .6);
+    }
+    
+    #signUpBtn {
+      position: absolute;
+      margin-top: 140px;
+      margin-left: 70px;
+      width: 240px;
+      font-size: 28px;
+      color: black;
+      background-color: rgba(255, 255, 255, .6);
+    }
+    
+
+    
+} 

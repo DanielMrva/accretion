@@ -1,10 +1,18 @@
 const loginContainer = document.getElementById("login");
 const loginBtn = document.getElementById("loginBtn");
+const signUpBtn = document.getElementById("signUpBtn");
+const square = document.querySelector(".square");
+const squareOne = document.querySelector(".square-1");
+const squareTwo = document.querySelector(".square-2");
 
 loginBtn.onclick = function () {
     if (loginContainer.style.display !== "none") {
         loginContainer.style.display = "flex";
         loginBtn.style.display = "none";
+        signUpBtn.style.display = "none";
+        square.style.display = "none";
+        squareOne.style.display = "none";
+        squareTwo.style.display = "none";
     }
 };
 
