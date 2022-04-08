@@ -2,11 +2,17 @@
     {
         "reps_comm":"Burro of Land Management",
         "topic":"Why do we have a jackass here anyway?",
-        "date":"2022-01-25"
+        "names":"Ann Timony",
+        "date":"2022-01-25",
+        "user_id":2,
+        "office_id":2
     },
     {
         "reps_comm":"Committee on Space, Science, and Technology",
         "topic":"The Earth is round, NASA can prove it!",
-        "date":"2019-7-20"
+        "names":"Barry Rillium",
+        "date":"2019-7-20",
+        "user_id":4,
+        "office_id":4
     }
 ]

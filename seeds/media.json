@@ -2,16 +2,25 @@
     {
         "outlet":"KNYX",
         "topic":"Younger Dryas Impact",
-        "date":"2022-05-02"
+        "date":"2022-05-02",
+        "names":"Mica Fore, Barry Rillium",
+        "user_id":5,
+        "office_id":5
     },
     {
         "outlet":"BBC",
         "topic":"Trees what are they good for?",
-        "date":"2022-04-02"
+        "date":"2022-04-02",
+        "names":"Ann Timony",
+        "user_id":3,
+        "office_id":3
     },
     {
         "outlet":"WNYC",
         "topic":"Truffle hunting in city parks",
-        "date":"2022-07-11"
+        "date":"2022-07-11",
+        "names":"Hall Ite",
+        "user_id":2,
+        "office_id":2
     }
 ]
