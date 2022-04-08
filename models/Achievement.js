@@ -19,6 +19,10 @@ Achievement.init(
             type: DataTypes.DATEONLY,
             allowNull: false,
         },
+        names: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         user_id: {
             type: DataTypes.INTEGER,
             allowNull: false,

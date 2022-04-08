@@ -19,10 +19,30 @@ Congress.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        names: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         date: {
             type: DataTypes.DATEONLY,
             allowNull: false,
-        }
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: "user",
+                key: "id"
+            }
+        },
+        office_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: "office",
+                key: "id"
+            }
+        } 
     },
     {
         sequelize,

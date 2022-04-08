@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection');
-const {User, Office, Publication, Meeting, Media, Achievement, Congress} = require('../models');
+const {User, Office, Publication, Meeting, Media, Achievement, Congress, UserPub, UserMeeting, UserCongress, UserMedia} = require('../models');
 
 const userData = require('./user.json');
 const officeData = require('./office.json');
@@ -8,7 +8,10 @@ const meetData = require('./meeting.json');
 const mediaData = require('./media.json');
 const achData = require('./achievement.json');
 const conData = require('./congress.json');
-
+const upData = require('./userPub.json')
+const umData = require('./userMeeting.json');
+const ucData = require('./userCongress.json');
+const umdData = require('./userMedia.json');
 
 const seedDatabase = async () => {
     await sequelize.sync({ force:true });
@@ -28,6 +31,14 @@ const seedDatabase = async () => {
     const ach = await Achievement.bulkCreate(achData);
 
     const con = await Congress.bulkCreate(conData);
+
+    const up = await UserPub.bulkCreate(upData);
+
+    const um = await UserMeeting.bulkCreate(umData);
+
+    const uc = await UserCongress.bulkCreate(ucData);
+
+    const umd = await UserMedia.bulkCreate(umdData);
 
     process.exit(0);
 };
