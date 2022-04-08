@@ -1,5 +1,8 @@
 const router = require('express').Router();
+const { Sequelize } = require('../../config/connection');
 const { Publication, User, UserPub } = require('../../models');
+const Op = Sequelize.Op;
+
 
 // api/publications endpoint
 
@@ -26,15 +29,11 @@ router.get('/:id', async (req, res) => {
 
     try {
         
-<<<<<<< HEAD
-        const pubData = await Publication.findByPk(req.params.id)
-=======
         const pubData = await Publication.findByPk(req.params.id, {
             include: [
                 {model: User}
             ]
         });
->>>>>>> 55d9973a050376a799d0da0c4a449ee4ec770764
 
         if (!pubData) {
 
@@ -148,5 +147,34 @@ router.delete('/:id', async (req, res) => {
     }
 
 });
+
+// make a new route with every table
+router.get('/weekly', async (req, res) => {
+
+    try {
+
+        // create a new date with the same format as the db
+        let date = new Date();
+
+        const pubData = await Publication.findAll(
+            {
+                where: {
+                    created_at: {
+                        // use Op.between and use current date and -7 days
+                        [Op.gte]: Sequelize.literal('NOW() - INTERVAL \'7d\'')
+                    }
+                }
+            }
+        );
+
+        res.status(200).json(pubData);
+
+    } catch (err) {
+
+        res.status(500).json(err);
+
+    }
+
+})
 
 module.exports = router;

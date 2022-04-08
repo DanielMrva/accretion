@@ -1,4 +1,4 @@
-let url = 'http://localhost:3001/api/'
+let url = '/api/'
 
 // get request for a specific category. Search by id optional
 // try to implement the search engine in to this

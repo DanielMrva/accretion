@@ -8,44 +8,6 @@ const post = document.getElementById('post');
 // work with optional query info in the url to accomplish. create those in the routes
 
 
-// function to generate the weekly report
-async function weeklyReport(event) {
-
-    event.preventDefault();
-
-    let report = [];
-
-    // publications
-    const publications = await (await fetch('http://localhost:3001/api/publications')).json();
-
-    // meetings
-    // const meetings = await (await fetch('http://localhost:3001/api/meetings')).json();
-
-    // media
-    const media = await (await fetch('http://localhost:3001/api/media')).json();
-
-    // acheivements
-    // const  acheivements = await fetch('http://localhost:3001/api/acheivements');
-
-    // congress
-    // const congress = await fetch('http://localhost:3001/api/congress');
-
-    console.log('publications:');
-    console.log(publications);
-    console.log('media');
-    console.log(media)
-
-    // carry this out for each category once the routes are merged 
-    report = [publications, media];
-
-    console.log('report:')
-    console.log(report)
-
-    return report;
-
-}
-
-
 async function fetcher(method, category, id=undefined, body=undefined) {
 
     let data;
@@ -84,7 +46,7 @@ async function fetcher(method, category, id=undefined, body=undefined) {
 }
 
 
-
+// currently this is for the publication table
 async function btnPress(event) {
 
     event.preventDefault();
@@ -110,7 +72,7 @@ async function btnPress(event) {
 
     console.log(pubData);
 
-    terminator('publications', 10)
+    goGetter('publications')
 
 }
 
