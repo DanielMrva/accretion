@@ -6,52 +6,67 @@
 
 <div class="view">
 
-  <header class="homepage-logo">
+  {{!-- <header class="homepage-logo"> --}}
 
-    <img class="square-home" src="../assets/images/usgs-image-small.jpg" />
-    <img
-      class="logo"
-      src="../assets/images/usgs_logo.png"
-      alt="USGS logo white"
-    />
+    <div class="square">
+      <img
+        id="square-home-pos"
+        class="square-home"
+        src="../assets/images/usgs-image2-small.jpg"
+      />
+      <img
+        class="logo"
+        src="../assets/images/usgs_logo.png"
+        alt="USGS logo white"
+      />
+    </div>
 
-    <img class="square-home1" src="../assets/images/usgs-image1-small.jpg" />
-    <button id="loginBtn" class="button-1" role="button">LOGIN</button>
+    <div class="square-1">
+      <img
+        id="square1-home-pos1"
+        class="square-home"
+        src="../assets/images/usgs-image-small.jpg"
+      />
+      <button id="loginBtn" class="button-1" role="button">LOGIN</button>
+    </div>
 
-    <img class="square-home2" src="../assets/images/usgs-image2-small.jpg" />
-    <button class="button-1" role="button">SIGN UP</button>
+    <div class="square-2">
+      <img
+        id="square1-home-pos2"
+        class="square-home"
+        src="../assets/images/usgs-image1-small.jpg"
+      />
+      <button id="signUpBtn" class="button-1" role="button">SIGN UP</button>
+    </div>
 
     <div id="login">
 
       <div class="home-login-container">
         <form>
-          <h2 class="text">LOGIN</h2>
           <input type="text" class="email" placeholder="EMAIL" id="email-login" />
           <input type="password" class="password" placeholder="PASSWORD" id="password-login" />
 
               <button class="button-1" role="button" id="login-btn">LOGIN</button>
 
-          
         </form>
       </div>
 
-      <div class="home-login-container">
+      <div class="home-signup-container">
         <form>
-          <h2 class="text">SIGN UP</h2>
           <input type="text" class="first-name" placeholder="FIRST NAME" />
           <input type="text" class="last-name" placeholder="LAST NAME" />
           <input type="text" class="office" placeholder="OFFICE" />
           <input type="text" class="email" placeholder="EMAIL" />
           <input type="password" class="password" placeholder="PASSWORD" />
 
-              <button class="button-1" role="button">SIGN UP</button>
+          <button id="newLogin" class="button-2" role="button">SIGN UP</button>
 
         </form>
       </div>
 
     </div>
 
-  </header>
+  {{!-- </header> --}}
 
 </div>
 
