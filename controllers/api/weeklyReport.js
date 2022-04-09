@@ -1,5 +1,7 @@
 const router = require('express').Router();
-const { User, Office, Publication, Media, Congress, Meeting } = require('../../models');
+
+const { User, Office, Publication, Media, Congress, Meeting, Achievement } = require('../../models');
+
 const { Op } = require('sequelize');
 
 
@@ -28,15 +30,17 @@ router.get('/', async (req, res) => {
             }   
         );
 
-        // const congressData = await Congress.findAll(
-        //     {
-        //         where: {
-        //             created_at: { 
-        //                 [Op.gte]: new Date(new Date() - 7* 24 * 60 * 60 * 1000)
-        //             }
-        //         }
-        //     }   
-        // );
+
+        const congressData = await Congress.findAll(
+            {
+                where: {
+                    created_at: { 
+                        [Op.gte]: new Date(new Date() - 7 * 24 * 60 * 60 * 1000)
+                    }
+                }
+            }   
+        );
+
 
         const meetingData = await Meeting.findAll(
             {
@@ -48,15 +52,27 @@ router.get('/', async (req, res) => {
             }   
         );
 
+
+        const achievementData = await Achievement.findAll(
+            {
+                where: {
+                    created_at: {
+                        [Op.gte]: new Date(new Date() - 7 * 24 * 60 * 60 * 1000)
+                    }
+                }
+            }
+        );
+
         let data = [
             {publications: pubData},
             {media: mediaData},
-            // {congress: congressData},
-            {meetings: meetingData}
+            {congress: congressData},
+            {meetings: meetingData},
+            {achievements: achievementData}
         ]
 
         res.status(200).json(data);
-    
+
     } catch (err) {
 
         res.status(500).json(err);
@@ -65,6 +81,5 @@ router.get('/', async (req, res) => {
 
 });
 
-// there's an issue with the congress route
 
 module.exports = router;
