@@ -1,32 +1,10 @@
-{{#if loggedIn}}
-<section>
-    <div class="page-header">
-        <h1>Media</h1>
-    </div>
-    {{#each MAGICAL_UNICORN_MEDIA}}
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Topic</th>
-                <th scope="col">Date</th>
-                <th scope="col">Media Outlet</th>
-                <th scope="col">Employee</th>
-                <th scope="col">Office</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row"></th>
-                <td>{{media.topic}}</td>
-                <td>{{media.date}}</td>
-                <td>{{media.outlet}}</td>
-                <td>{{media.user_id}}</td>
-                <td>{{media.office}}</td>
-            </tr>
-        </tbody>
-    </table>{{/each}}
-</section>
+<div class="card">
+  <div class="card-body">
+    <h4> Interaction with {{media.outlet}} ({{media.office_id}})</h4>
+    <br>
+    <p>Description: {{media.desc}}
+    <br>
+    <p>Employee: {{media.employee_name}}, {{media.employee_email}}</p>
+  </div>
+</div> 
 
-{{else}}
-<a href="/login">You must login first to view this information.</a>
-{{/if}}
