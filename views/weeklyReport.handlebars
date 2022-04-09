@@ -1,0 +1,53 @@
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <a href="https://www.usgs.gov/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+      <img src="../assets/images/usgs_logo.png" alt="usgs logo" class="header-image">
+    </a>
+    
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a href="#" class="nav-link" id="pdf-kit">PDF</a></li>
+      <li class="nav-item"><a href="#" class="nav-link" id="dashboard-link">Dashboard</a></li>
+    </ul>
+</header>
+
+<section id="weekly-report">
+    <div class="page-header container" id="Pub-Head">
+        <h2 class="report-heading">Upcoming Significant Publications or Science Products (not yet published)</h2>
+        <div class="entries-container">
+            {{#each publications as |publication|}}
+                {{>publication-details}}
+            {{/each}}
+        </div>
+    </div>
+    <div class="page-header container" id="Meeting-Head">
+        <h2 class="report-heading">Upcoming Meetings, Events, or Scientific Achievements</h2>
+        <div class="entries-container">
+            {{#each meetings as |meeting|}}
+                {{>meeting-details}}
+            {{/each}}
+        </div>
+    </div>
+    <div class="page-header container" id="Media-Head">
+        <h2 class="report-heading">Media Interactions</h2>
+        <div class="entries-container">
+            {{#each mediaInteraction as |media|}}
+                {{>media-details}}
+            {{/each}}
+        </div>
+    </div>
+    <div class="page-header container" id="FTR-Head">
+        <h2 class="report-heading">For the Record</h2>
+        <div class="entries-container">
+            {{#each records as |forTheRecord|}}
+                {{>ftr-details}}
+            {{/each}}
+        </div>
+    </div>
+    <div class="page-header container" id="Con-Head">
+        <h2 class="report-heading">Congressional Interactions</h2>
+        <div class="entries-container">
+            {{#each conInteractions as |congress|}}
+                {{>congress-details}}
+            {{/each}}
+        </div>
+    </div>
+</section>
