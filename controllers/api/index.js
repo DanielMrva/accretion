@@ -9,6 +9,8 @@ const meetingRoutes = require('./meetingRoutes');
 const achievementRoutes = require('./achievementRoutes');
 const congressRoutes = require('./congressRoutes');
 
+const weeklyReport = require('./weeklyReport');
+
 
 
 router.use('/users', userRoutes);
@@ -19,5 +21,6 @@ router.use('/offices', officeRoutes);
 router.use('/achievements', achievementRoutes);
 router.use('/meetings', meetingRoutes);
 router.use('/congress', congressRoutes);
+router.use('/weekly-report', weeklyReport);
 
 module.exports = router;
