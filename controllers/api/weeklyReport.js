@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { User, Office, Publication, Media, Congress, Meeting, Achievement } = require('../../models');
+const { User, Office, Publication, Media, Congress, Meeting, FTR } = require('../../models');
 
 const { Op } = require('sequelize');
 
@@ -9,7 +9,7 @@ const { Op } = require('sequelize');
 router.get('/', async (req, res) => {
 
     try {
-
+        //publications get
         const pubData = await Publication.findAll(
             {
                 where: {
@@ -19,29 +19,11 @@ router.get('/', async (req, res) => {
                 }
             }   
         );
+        const publications = pubData.map((publication) => {
+            publication.get({plain: true})
+        });
 
-        const mediaData = await Media.findAll(
-            {
-                where: {
-                    created_at: { 
-                        [Op.gte]: new Date(new Date() - 7 * 24 * 60 * 60 * 1000)
-                    }
-                }
-            }   
-        );
-
-
-        const congressData = await Congress.findAll(
-            {
-                where: {
-                    created_at: { 
-                        [Op.gte]: new Date(new Date() - 7 * 24 * 60 * 60 * 1000)
-                    }
-                }
-            }   
-        );
-
-
+        //meetings get
         const meetingData = await Meeting.findAll(
             {
                 where: {
@@ -51,9 +33,26 @@ router.get('/', async (req, res) => {
                 }
             }   
         );
+        const meetings = meetingData.map((meeting) => {
+            meeting.get({plain: true})
+        });
 
+        //media get
+        const mediaData = await Media.findAll(
+            {
+                where: {
+                    created_at: { 
+                        [Op.gte]: new Date(new Date() - 7 * 24 * 60 * 60 * 1000)
+                    }
+                }
+            }   
+        );
+        const mediaInteractions = mediaData.map((media) => {
+            media.get({plain: true})
+        });
 
-        const achievementData = await Achievement.findAll(
+        //for the record
+        const recordData = await FTR.findAll(
             {
                 where: {
                     created_at: {
@@ -62,14 +61,32 @@ router.get('/', async (req, res) => {
                 }
             }
         );
+        const records = recordData.map((forTheRecord) => {
+            forTheRecord.get({plain: true})
+        });
 
-        let data = [
-            {publications: pubData},
-            {media: mediaData},
-            {congress: congressData},
-            {meetings: meetingData},
-            {achievements: achievementData}
-        ]
+        //congress get
+        const congressData = await Congress.findAll(
+            {
+                where: {
+                    created_at: { 
+                        [Op.gte]: new Date(new Date() - 7 * 24 * 60 * 60 * 1000)
+                    }
+                }
+            }   
+        );
+        const conInteractions = congressData.map((congress) => {
+            congress.get({plain: true})
+        });
+
+        // let data = [
+        //     {publications: pubData},
+        //     {media: mediaData},
+        //     {congress: congressData},
+        //     {meetings: meetingData},
+        //     {achievements: achievementData}
+        // ]
+        res.render('weeklyReport', {publications, meetings, mediaInteractions, records, conInteractions});
 
         res.status(200).json(data);
 
