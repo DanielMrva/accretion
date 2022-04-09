@@ -52,17 +52,20 @@ async function pubSubmit(event) {
     event.preventDefault();
 
 
+    console.log(1)
     // defines the data
     let pubData = {
         pub_name: document.getElementById("pubName").value,
         pub_date: document.getElementById("pubDate").value,
-        keywords: document.getElementById("keywords").value,
         article_title: document.getElementById("title").value,
-        author_name: document.getElementById("authName").value,
+        name: document.getElementById("authName").value,
         other_contrib: document.getElementById("contributor").value,
+        user_id: 1,
+        office_id: 1
     }
 
 
+    console.log(2)
     // assigns a null value to any empty fields
     for (const property in pubData) {
         if (pubData[property] === "") {
@@ -70,12 +73,16 @@ async function pubSubmit(event) {
         }
     }
 
-    console.log(pubData);
+    console.log(3)
+    posterChild('publications', pubData)
+    // goGetter('publications')
 
-    goGetter('publications')
+    console.log(4)
 
 }
 
 
 // this is the action on button press. Expand this out for the queries
 pubPost.addEventListener('click', pubSubmit)
+
+

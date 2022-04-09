@@ -33,6 +33,11 @@ async function posterChild(category, body) {
 
     url += category;
 
+    console.log('post1')
+
+    console.log('post url')
+    console.log(url)
+
     console.log('posterChild body:')
     console.log(body)
 
@@ -41,6 +46,8 @@ async function posterChild(category, body) {
         body: JSON.stringify(body),
         headers: {'Content-Type': 'application/json' },
     });
+
+    console.log('post2')
 
     if (response.ok) {
         console.log('Success!');
