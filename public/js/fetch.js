@@ -33,21 +33,12 @@ async function posterChild(category, body) {
 
     url += category;
 
-    console.log('post1')
-
-    console.log('post url')
-    console.log(url)
-
-    console.log('posterChild body:')
-    console.log(body)
 
     let response = await fetch(url, {
         method: 'POST',
         body: JSON.stringify(body),
         headers: {'Content-Type': 'application/json' },
     });
-
-    console.log('post2')
 
     if (response.ok) {
         console.log('Success!');
@@ -62,9 +53,6 @@ async function posterChild(category, body) {
 async function updater(category, body, id) {
 
     url = `${url}${category}/${id}`;
-
-    console.log('updater body:')
-    console.log(body)
 
     let response = await fetch(url, {
         method: 'PUT',
@@ -96,5 +84,3 @@ async function terminator(category, id) {
     }
 
 }
-
-// module.exports = { goGetter, posterChild, updater, terminator }
