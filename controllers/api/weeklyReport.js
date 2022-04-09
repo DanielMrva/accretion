@@ -79,14 +79,14 @@ router.get('/', async (req, res) => {
             congress.get({plain: true})
         });
 
-        // let data = [
-        //     {publications: pubData},
-        //     {media: mediaData},
-        //     {congress: congressData},
-        //     {meetings: meetingData},
-        //     {achievements: achievementData}
-        // ]
-        res.render('weeklyReport', {publications, meetings, mediaInteractions, records, conInteractions});
+        let data = [
+            {publications: publications},
+            {media: mediaInteractions},
+            {congress: conInteractions},
+            {ftr: records},
+        
+        ]
+        // res.render('weeklyReport', {publications, meetings, mediaInteractions, records, conInteractions});
 
         res.status(200).json(data);
 
