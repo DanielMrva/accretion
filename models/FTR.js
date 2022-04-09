@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Office extends Model {}
+class FTR extends Model {}
 
-Office.init(
+FTR.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,13 +11,29 @@ Office.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        office_name: {
+        note: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        abbreviation: {
+        desc: {
+            type: DataTypes.TEXT,
+            allowNull: false,
+        },
+        employee_name: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        employee_email: {
             type: DataTypes.STRING,
             allowNull: false,
+        },
+        office_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'office',
+                key: 'id'
+            }
         }
     },
     {
@@ -25,8 +41,8 @@ Office.init(
         timestamps: true,
         freezeTableName: true,
         underscored: true,
-        modelName: 'office'
+        modelName: 'FTR',
     }
 );
-    
-module.exports = Office;
+
+module.exports = FTR;

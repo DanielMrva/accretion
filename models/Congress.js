@@ -11,45 +11,38 @@ Congress.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        reps_comm: {
+        // the representative or committee that was met with
+        rep_committee:{
             type: DataTypes.STRING,
             allowNull: false,
         },
-        topic: {
+        desc: {
+            type: DataTypes.TEXT,
+            allowNull: false,
+        },
+        employee_name: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        employee_email: {
             type: DataTypes.STRING,
             allowNull: false,
-        },
-        names: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        date: {
-            type: DataTypes.DATEONLY,
-            allowNull: false,
-        },
-        user_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: "user",
-                key: "id"
-            }
         },
         office_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: "office",
-                key: "id"
+                model: 'office',
+                key: 'id'
             }
-        } 
+        }
     },
     {
         sequelize,
         timestamps: true,
         freezeTableName: true,
         underscored: true,
-        modelName: 'congress'
+        modelName: 'congress',
     }
 );
 

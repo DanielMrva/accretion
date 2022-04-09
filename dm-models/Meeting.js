@@ -1,9 +1,9 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Media extends Model {}
+class Meeting extends Model {}
 
-Media.init(
+Meeting.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,42 +11,42 @@ Media.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        name: {
+        mtg_name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        outlet: {
-            type: DataTypes.STRING,
+        title: {
+            type: DataTypes.TEXT,
             allowNull: true,
         },
-        desc: {
-            type: DataTypes.TEXT,
-            allowNull: false,
-        },
-        employee_name: {
+        names: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        employee_email: {
-            type: DataTypes.STRING,
+        user_id: {
+            type: DataTypes.INTEGER,
             allowNull: false,
+            references: {
+                model: "user",
+                key: "id"
+            }
         },
         office_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: 'office',
-                key: 'id',
+                model: "office",
+                key: "id"
             }
-        }
+        } 
     },
     {
         sequelize,
         timestamps: true,
         freezeTableName: true,
         underscored: true,
-        modelName: 'media',
+        modelName: 'meeting',
     }
 );
 
-module.exports = Media;
+module.exports = Meeting;

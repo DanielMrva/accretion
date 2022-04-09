@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Media extends Model {}
+class Publication extends Model {};
 
-Media.init(
+Publication.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,13 +11,13 @@ Media.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        outlet: {
+        pub_name: {
             type: DataTypes.STRING,
             allowNull: true,
+        },
+        title: {
+            type: DataTypes.STRING,
+            allowNull: false,
         },
         desc: {
             type: DataTypes.TEXT,
@@ -29,6 +29,10 @@ Media.init(
         },
         employee_email: {
             type: DataTypes.STRING,
+            allowNull: false,
+        },
+        authors: {
+            type: DataTypes.TEXT,
             allowNull: false,
         },
         office_id: {
@@ -45,8 +49,8 @@ Media.init(
         timestamps: true,
         freezeTableName: true,
         underscored: true,
-        modelName: 'media',
+        modelName: 'publication'
     }
 );
 
-module.exports = Media;
+module.exports = Publication;

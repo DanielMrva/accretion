@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Media extends Model {}
+class Congress extends Model {}
 
-Media.init(
+Congress.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,42 +11,46 @@ Media.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        name: {
+        reps_comm: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        outlet: {
-            type: DataTypes.STRING,
-            allowNull: true,
-        },
-        desc: {
-            type: DataTypes.TEXT,
-            allowNull: false,
-        },
-        employee_name: {
+        topic: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        employee_email: {
+        names: {
             type: DataTypes.STRING,
             allowNull: false,
+        },
+        date: {
+            type: DataTypes.DATEONLY,
+            allowNull: false,
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: "user",
+                key: "id"
+            }
         },
         office_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: 'office',
-                key: 'id',
+                model: "office",
+                key: "id"
             }
-        }
+        } 
     },
     {
         sequelize,
         timestamps: true,
         freezeTableName: true,
         underscored: true,
-        modelName: 'media',
+        modelName: 'congress'
     }
 );
 
-module.exports = Media;
+module.exports = Congress;

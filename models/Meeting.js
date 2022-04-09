@@ -1,7 +1,7 @@
-const { Model, DataTypes} = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Meeting extends Model {}
+class Meeting extends Model {};
 
 Meeting.init(
     {
@@ -11,34 +11,31 @@ Meeting.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        mtg_name: {
+        // the name of thae meeting or achievement
+        mtg_ach: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        title: {
+        desc: {
             type: DataTypes.TEXT,
-            allowNull: true,
+            allowNull: false,
         },
-        names: {
+        employee_name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        user_id: {
-            type: DataTypes.INTEGER,
+        employee_email: {
+            type: DataTypes.STRING,
             allowNull: false,
-            references: {
-                model: "user",
-                key: "id"
-            }
         },
         office_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: "office",
-                key: "id"
+                model: 'office',
+                key: 'id',
             }
-        } 
+        }
     },
     {
         sequelize,
