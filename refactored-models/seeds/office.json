@@ -1,0 +1,30 @@
+[
+    {
+        "office_name": "Northern Prairie Wildlife Research Center",
+        "abbreviation": "NPWRC"
+    },
+    {
+        "office_name": "National Wildlife Health Center",
+        "abbreviation": "NWHC"
+    },
+    {
+        "office_name": "Wyoming-Montana Water Science Center",
+        "abbreviation": "WY-MT WSC"
+    },
+    {
+        "office_name": "Northern Rocky Mountain Science Center",
+        "abbreviation": "NOROCK"
+    },
+    {
+        "office_name": "Great lakes Science Center, Ecosystems",
+        "abbreviation": "GLSC, ECO"
+    },
+    {
+        "office_name": "Upper Midwest Environmental Science Center",
+        "abbreviation":"UMESC"
+    },
+    {
+        "office_name": "Upper Midwest Water Science Center",
+        "abbreviation": "UMid"
+    }
+]
