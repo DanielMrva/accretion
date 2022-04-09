@@ -1,7 +1,7 @@
 // const { goGetter, posterChild, updater, terminator } = require('./fetch')
 
 const pubPost = document.getElementById('submitPublications');
-
+const achPost = document.getElementById('submitAchievement');
 // let url = 'http://localhost:3001/api/'
 
 
@@ -44,7 +44,14 @@ async function fetcher(method, category, id=undefined, body=undefined) {
     }
 
 }
+// for achievement table
+async function achSumbit(event) {
+    event.preventDefault();
 
+    let achData = {
+        
+    }
+}
 
 // currently this is for the publication table
 async function pubSubmit(event) {
