@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class FTR extends Model {}
+class Publication extends Model {};
 
-FTR.init(
+Publication.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,7 +11,11 @@ FTR.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        note: {
+        pub_name: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        title: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -21,21 +25,22 @@ FTR.init(
         },
         employee_name: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
         },
         employee_email: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                isEmail: true
-            }
+        },
+        authors: {
+            type: DataTypes.TEXT,
+            allowNull: false,
         },
         office_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
                 model: 'office',
-                key: 'id'
+                key: 'id',
             }
         }
     },
@@ -44,8 +49,8 @@ FTR.init(
         timestamps: true,
         freezeTableName: true,
         underscored: true,
-        modelName: 'FTR',
+        modelName: 'publication'
     }
 );
 
-module.exports = FTR;
+module.exports = Publication;

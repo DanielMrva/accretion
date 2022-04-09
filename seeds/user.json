@@ -1,44 +1,44 @@
 [
     {
-        "first_name":"Allison",
-        "last_name":"Fisher",
+        "user_name":"Allison Fisher",
         "email":"aFisher@usgs.gov",
         "password":"fishfriend94",
         "office_id":1
     },
     {
-        "first_name":"Brandon",
-        "last_name":"Ursus",
+        "user_name":"Brandon Ursus",
         "email":"bUrsus@usgs.gov",
         "password":"whinneyTheP00",
         "office_id":2
     },
     {
-        "first_name":"Aruthur",
-        "last_name":"Tree",
+        "user_name":"Aruthur Tree",
         "email":"aTree@usgs.gov",
         "password":"notAFlyingCircusReferance01",
         "office_id":3
     },
     {
-        "first_name":"Hugh",
-        "last_name":"Woo",
+        "user_name":"Hugh Woo",
         "email":"hWoo@usgs.gov",
         "password":"aFungi007",
         "office_id":4
     },
     {
-        "first_name":"Richard",
-        "last_name":"Druphus",
+        "user_name":"Richard Druphus",
         "email":"rDruphus@usgs.gov",
         "password":"IWannaMesa77",
         "office_id":5
     },
     {
-        "first_name":"Wendy",
-        "last_name":"Starlink",
+        "user_name":"Wendy Starlink",
         "email":"wStarlink@usgs.gov",
         "password":"weStar1337",
-        "office_id":1
+        "office_id":6
+    },
+    {
+        "user_name":"Joey Joe Joe Junior Shabadoo",
+        "email":"HSimpson@usgs.gov",
+        "password":"mrthompson",
+        "office_id":6
     }
 ]

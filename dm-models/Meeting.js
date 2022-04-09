@@ -1,9 +1,9 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Publication extends Model {};
+class Meeting extends Model {}
 
-Publication.init(
+Meeting.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,49 +11,42 @@ Publication.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        pub_name: {
+        mtg_name: {
             type: DataTypes.STRING,
-            allowNull: true,
+            allowNull: false,
         },
         title: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        desc: {
             type: DataTypes.TEXT,
-            allowNull: false,
+            allowNull: true,
         },
-        employee_name: {
+        names: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        employee_email: {
-            type: DataTypes.STRING,
+        user_id: {
+            type: DataTypes.INTEGER,
             allowNull: false,
-            validate: {
-                isEmail: true
+            references: {
+                model: "user",
+                key: "id"
             }
-        },
-        authors: {
-            type: DataTypes.TEXT,
-            allowNull: false,
         },
         office_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: 'office',
-                key: 'id',
+                model: "office",
+                key: "id"
             }
-        }
+        } 
     },
     {
         sequelize,
         timestamps: true,
         freezeTableName: true,
         underscored: true,
-        modelName: 'publication'
+        modelName: 'meeting',
     }
 );
 
-module.exports = Publication;
+module.exports = Meeting;
