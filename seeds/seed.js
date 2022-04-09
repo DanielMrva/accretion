@@ -1,6 +1,5 @@
 const sequelize = require('../config/connection');
-const { Office, Publication, Meeting, Media, Congress, FTR } = require('../models');
-const User = require('../models/User')
+const { Office, User, Publication, Meeting, Media, Congress, FTR } = require('../models');
 
 const userData = require('./user.json');
 const officeData = require('./office.json');

@@ -4,6 +4,10 @@ const Meeting = require('./Meeting');
 const Media = require('./Media');
 const Congress = require('./Congress');
 const FTR = require('./FTR');
+const  User = require('./User');
+
+Office.hasMany(User);
+User.belongsTo(Office);
 
 Office.hasMany(Publication);
 Publication.belongsTo(Office);
@@ -20,4 +24,4 @@ Congress.belongsTo(Office);
 Office. hasMany(FTR);
 FTR.belongsTo(Office);
 
-module.exports = { Office, Publication, Meeting, Media, Congress, FTR };
+module.exports = { Office, User, Publication, Meeting, Media, Congress, FTR };

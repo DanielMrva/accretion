@@ -51,8 +51,6 @@ async function pubSubmit(event) {
 
     event.preventDefault();
 
-
-    console.log(1)
     // defines the data
     let pubData = {
         pub_name: document.getElementById("pubName").value,
@@ -64,8 +62,6 @@ async function pubSubmit(event) {
         office_id: 1
     }
 
-
-    console.log(2)
     // assigns a null value to any empty fields
     for (const property in pubData) {
         if (pubData[property] === "") {
@@ -73,11 +69,8 @@ async function pubSubmit(event) {
         }
     }
 
-    console.log(3)
     posterChild('publications', pubData)
     // goGetter('publications')
-
-    console.log(4)
 
 }
 
