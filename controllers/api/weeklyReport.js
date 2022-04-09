@@ -1,5 +1,7 @@
 const router = require('express').Router();
+
 const { User, Office, Publication, Media, Congress, Meeting, Achievement } = require('../../models');
+
 const { Op } = require('sequelize');
 
 
@@ -28,6 +30,7 @@ router.get('/', async (req, res) => {
             }   
         );
 
+
         const congressData = await Congress.findAll(
             {
                 where: {
@@ -38,6 +41,7 @@ router.get('/', async (req, res) => {
             }   
         );
 
+
         const meetingData = await Meeting.findAll(
             {
                 where: {
@@ -47,6 +51,7 @@ router.get('/', async (req, res) => {
                 }
             }   
         );
+
 
         const achievementData = await Achievement.findAll(
             {
@@ -67,7 +72,7 @@ router.get('/', async (req, res) => {
         ]
 
         res.status(200).json(data);
-        
+
     } catch (err) {
 
         res.status(500).json(err);
