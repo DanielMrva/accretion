@@ -11,41 +11,45 @@ Media.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        name: {
+        outlet: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        outlet: {
-            type: DataTypes.STRING,
-            allowNull: true,
-        },
-        desc: {
+        topic: {
             type: DataTypes.TEXT,
             allowNull: false,
         },
-        employee_name: {
+        date: {
+            type: DataTypes.DATEONLY,
+            allowNull: false,
+        },
+        names: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        employee_email: {
-            type: DataTypes.STRING,
+        user_id: {
+            type: DataTypes.INTEGER,
             allowNull: false,
+            references: {
+                model: "user",
+                key: "id"
+            }
         },
         office_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: 'office',
-                key: 'id',
+                model: "office",
+                key: "id"
             }
-        }
+        } 
     },
     {
         sequelize,
         timestamps: true,
         freezeTableName: true,
         underscored: true,
-        modelName: 'media',
+        modelName: 'media'
     }
 );
 
