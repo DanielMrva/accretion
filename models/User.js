@@ -31,21 +31,22 @@ User.init(
           validate: {
             isEmail: true,
             },
-          },
-          password: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-              len: [8],
-              },
-          },
-          password: {
+        },
+        password: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
               len: [8],
             },
           },
+        office_id: {
+          type: DataTypes.INTEGER,
+          allowNull: false,
+          references: {
+          model: "office",
+          key: "id"
+            },
+          },  
         },
         {
           hooks: {
