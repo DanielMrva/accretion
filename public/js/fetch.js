@@ -1,4 +1,4 @@
-let url = '/api/'
+// let url = '/api/'
 
 // general function to fetch data
 async function fetcher(method, category, id=undefined, body=undefined) {
@@ -42,6 +42,8 @@ async function fetcher(method, category, id=undefined, body=undefined) {
 // specific get function
 async function goGetter(category, id=undefined) {
 
+    let url = '/api/'
+
     if (!id) {
 
         url += category;
@@ -69,8 +71,11 @@ async function goGetter(category, id=undefined) {
 // specific post function
 async function posterChild(category, body) {
 
+    let url = '/api/'
+
     url += category;
 
+    console.log(body)
 
     let response = await fetch(url, {
         method: 'POST',
@@ -90,6 +95,8 @@ async function posterChild(category, body) {
 // specific update function
 async function updater(category, body, id) {
 
+    let url = '/api/'
+
     url = `${url}${category}/${id}`;
 
     let response = await fetch(url, {
@@ -108,6 +115,8 @@ async function updater(category, body, id) {
 
 // specific delete function
 async function terminator(category, id) {
+
+    let url = '/api/'
 
     url = `${url}${category}/${id}`; 
 

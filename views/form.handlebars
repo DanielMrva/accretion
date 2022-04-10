@@ -3,11 +3,12 @@
       <img class="logo" src="../assets/images/usgs_logo.png" alt="USGS logo white">
           <ul>
               <li>WEEKLY REPORT</li>
-              <li>ACHIEVEMENTS</li>
+              {{!-- <li>ACHIEVEMENTS</li> --}}
               <li>CONGRESS</li>
               <li>MEDIA</li>
               <li>MEETINGS</li>
               <li>PUBLICATIONS</li>
+              <li>FOR THE RECORD</li>
               <li>SEARCH</li>
           </ul>
   
@@ -26,7 +27,7 @@
     <!-- ACHIEVEMENTS part of form -->
     <div id="form" class="form-body">
       <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
+        {{!-- <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
             <button
               class="accordion-button"
@@ -70,7 +71,7 @@
 
             </div>
           </div>
-        </div>
+        </div> --}}
 
         <!-- CONGRESS part of form -->
         <div class="accordion-item">
@@ -97,10 +98,10 @@
                 <textarea
                   class="form-control"
                   placeholder="Leave a comment here"
-                  id="floatingTextarea"
+                  id="rep-committee"
                 ></textarea>
                 <label for="floatingTextarea"
-                  >Meeting date (will be date picker)</label
+                  >Representative or Committee:</label
                 >
               </div>
 
@@ -108,10 +109,10 @@
                 <textarea
                   class="form-control"
                   placeholder="Leave a comment here"
-                  id="floatingTextarea"
+                  id="congress-desc"
                 ></textarea>
                 <label for="floatingTextarea"
-                  >List any representatives or the commitee you met with</label
+                  >Description of meeting:</label
                 >
               </div>
 
@@ -119,22 +120,19 @@
                 <textarea
                   class="form-control"
                   placeholder="Leave a comment here"
-                  id="floatingTextarea"
+                  id="congress-name"
                 ></textarea>
-                <label for="floatingTextarea">List what was discussed</label>
+                <label for="floatingTextarea">Name(s):</label>
               </div>
-
-              <!-- <p">OTHER USGS CONTRIBUTORS:</p> -->
-    
 
               <div class="form-floating">
                 <textarea
                   class="form-control"
                   placeholder="Leave a comment here"
-                  id="floatingTextarea"
+                  id="congress-email"
                 ></textarea>
                 <label for="floatingTextarea"
-                  >USGS Contributer First Name</label
+                  >Email(s):</label
                 >
               </div>
 
@@ -142,9 +140,9 @@
                 <textarea
                   class="form-control"
                   placeholder="Leave a comment here"
-                  id="floatingTextarea"
+                  id="congress-office"
                 ></textarea>
-                <label for="floatingTextarea">USGS Contributer Last Name</label>
+                <label for="floatingTextarea">Office (use id# for now; will be a dropdown)</label>
               </div>
 
               <button class="button-2" id="submitCongress" role="button">SUBMIT</button>
@@ -179,19 +177,55 @@
                 <textarea
                   class="form-control"
                   placeholder="Leave a comment here"
-                  id="floatingTextarea"
+                  id="media-interaction"
                 ></textarea>
-                <label for="floatingTextarea">What was the media outet</label>
+                <label for="floatingTextarea">What was the media interaction?:</label>
               </div>
 
               <div class="form-floating">
                 <textarea
                   class="form-control"
                   placeholder="Leave a comment here"
-                  id="floatingTextarea"
+                  id="media-outlet"
                 ></textarea>
-                <label for="floatingTextarea">Topic of media interaction</label>
+                <label for="floatingTextarea">Media Outlet:</label>
               </div>
+
+              <div class="form-floating">
+                <textarea
+                  class="form-control"
+                  placeholder="Leave a comment here"
+                  id="media-desc"
+                ></textarea>
+                <label for="floatingTextarea">Description:</label>
+              </div>
+
+              <div class="form-floating">
+                <textarea
+                  class="form-control"
+                  placeholder="Leave a comment here"
+                  id="media-emp-name"
+                ></textarea>
+                <label for="floatingTextarea">Name(s):</label>
+              </div>
+
+              <div class="form-floating">
+                <textarea
+                  class="form-control"
+                  placeholder="Leave a comment here"
+                  id="media-emp-email"
+                ></textarea>
+                <label for="floatingTextarea">Email(s):</label>
+              </div>
+
+              <div class="form-floating">
+                <textarea
+                  class="form-control"
+                  placeholder="Leave a comment here"
+                  id="media-office"
+                ></textarea>
+                <label for="floatingTextarea">Office (use id# for now; will be a dropdown):</label>
+              </div>                                                      
 
               <button class="button-2" id="submitMedia" role="button">SUBMIT</button>
 
@@ -211,7 +245,7 @@
               aria-expanded="false"
               aria-controls="collapseThree"
             >
-              MEETINGS
+              MEETINGS/ACHIEVEMENTS
             </button>
           </h2>
           <div
@@ -225,10 +259,10 @@
                 <textarea
                   class="form-control"
                   placeholder="Leave a comment here"
-                  id="floatingTextarea"
+                  id="mtg-ach"
                 ></textarea>
                 <label for="floatingTextarea"
-                  >Meeting date (will be date picker)</label
+                  >Meeting or Achievement:</label
                 >
               </div>
 
@@ -236,28 +270,43 @@
                 <textarea
                   class="form-control"
                   placeholder="Leave a comment here"
-                  id="floatingTextarea"
+                  id="mtg-desc"
                 ></textarea>
-                <label for="floatingTextarea">Meeting details</label>
+                <label for="floatingTextarea">Description:</label>
               </div>
 
               <div class="form-floating">
                 <textarea
                   class="form-control"
                   placeholder="Leave a comment here"
-                  id="floatingTextarea"
+                  id="mtg-name"
                 ></textarea>
-                <label for="floatingTextarea"
-                  >If you are presenting, list details</label
-                >
+                <label for="floatingTextarea">Name(s):</label>
               </div>
+
+              <div class="form-floating">
+                <textarea
+                  class="form-control"
+                  placeholder="Leave a comment here"
+                  id="mtg-name"
+                ></textarea>
+                <label for="mtg-email">Email(s):</label>
+              </div>   
+
+              <div class="form-floating">
+                <textarea
+                  class="form-control"
+                  placeholder="Leave a comment here"
+                  id="mtg-office"
+                ></textarea>
+                <label for="mtg-email">Office (use id# for now; will be a dropdown):</label>
+              </div>                             
 
               <button class="button-2" id="submitMeetings" role="button">SUBMIT</button>
 
             </div>
           </div>
         </div>
-
 
         <!-- PUBLICATIONS part of form -->
         <div class="accordion-item">
@@ -286,10 +335,10 @@
                   <textarea
                     class="form-control"
                     placeholder="Leave a comment here"
-                    id="pubName"
+                    id="pub-name"
                   ></textarea>
                   <label for="floatingTextarea"
-                    >Publication</label
+                    >Publication:</label
                   >
                 </div>
 
@@ -297,28 +346,28 @@
                   <textarea
                     class="form-control"
                     placeholder="Leave a comment here"
-                    id="title"
+                    id="pub-title"
                   ></textarea>
-                  <label for="floatingTextarea">Article Title</label>
+                  <label for="floatingTextarea">Article Title:</label>
                 </div>
 
                 <div class="form-floating">
                   <textarea
                     class="form-control"
                     placeholder="Leave a comment here"
-                    id="desc"
+                    id="pub-desc"
                   ></textarea>
-                  <label for="floatingTextarea">Description</label>
+                  <label for="floatingTextarea">Description:</label>
                 </div>
 
                 <div class="form-floating">
                   <textarea
                     class="form-control"
                     placeholder="Leave a comment here"
-                    id="name"
+                    id="pub-emp-name"
                   ></textarea>
                   <label for="floatingTextarea"
-                    >Name</label
+                    >Name(s):</label
                   >
                 </div>
 
@@ -326,16 +375,16 @@
                   <textarea
                     class="form-control"
                     placeholder="Leave a comment here"
-                    id="email"
+                    id="pub-emp-email"
                   ></textarea>
-                  <label for="floatingTextarea">email</label>
+                  <label for="floatingTextarea">Email(s):</label>
                 </div>
 
                 <div class="form-floating">
                   <textarea
                     class="form-control"
                     placeholder="Leave a comment here"
-                    id="authors"
+                    id="pub-authors"
                   ></textarea>
                   <label for="floatingTextarea"
                     >Authors</label
@@ -346,9 +395,9 @@
                   <textarea
                     class="form-control"
                     placeholder="Leave a comment here"
-                    id="office"
+                    id="pub-office"
                   ></textarea>
-                  <label for="floatingTextarea">Office (will be a dropdown)</label>
+                  <label for="floatingTextarea">Office (use id# for now; will be a dropdown):</label>
                 </div>                
 
                 <button class="button-2" id="submitPublications" role="button">SUBMIT</button>
@@ -356,10 +405,85 @@
           </div>
         </div>
       </div>
+
+       <!-- FOR THE RECORD part of form -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSix">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseSix"
+              aria-expanded="false"
+              aria-controls="collapseSix"
+            >
+              FOR THE RECORD
+            </button>
+          </h2>
+          <div
+            id="collapseSix"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingSix"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <div class="form-floating">
+                <textarea
+                  class="form-control"
+                  placeholder="Leave a comment here"
+                  id="ftr-note"
+                ></textarea>
+                <label for="floatingTextarea"
+                  >Title: </label
+                >
+              </div>
+
+              <div class="form-floating">
+                <textarea
+                  class="form-control"
+                  placeholder="Leave a comment here"
+                  id="ftr-desc"
+                ></textarea>
+                <label for="floatingTextarea">Description:</label>
+              </div>
+
+              <div class="form-floating">
+                <textarea
+                  class="form-control"
+                  placeholder="Leave a comment here"
+                  id="ftr-emp-name"
+                ></textarea>
+                <label for="floatingTextarea">Name(s):</label>
+              </div>
+
+              <div class="form-floating">
+                <textarea
+                  class="form-control"
+                  placeholder="Leave a comment here"
+                  id="ftr-emp-email"
+                ></textarea>
+                <label for="floatingTextarea">Email(s):</label>
+              </div>
+
+              <div class="form-floating">
+                <textarea
+                  class="form-control"
+                  placeholder="Leave a comment here"
+                  id="ftr-office"
+                ></textarea>
+                <label for="floatingTextarea">Office (use id# for now; will be a dropdown):</label>
+              </div>                            
+
+              <button class="button-2" id="submitFTR" role="button">SUBMIT</button>
+
+            </div>
+          </div>
+        </div>
+
+
     </div>
 </div>
 </div>
 
 <script src="./js/fetch.js"></script>
 <script src="./js/form.js"></script>
-<script src="./js/weekly-report.js"></script>
