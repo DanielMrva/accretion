@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Media, User, UserMedia } = require('../../models');
+const { Media, Office } = require('../../models');
 
 
 // api/media endpoint
@@ -11,7 +11,9 @@ router.get('/', async (req, res) => {
 
         // const mediaData = await Media.findAll({include: [{model:User, through: UserMedia, as: 'users'}]});
 
-        const mediaData = await Media.findAll({include: User});
+        const mediaData = await Media.findAll({
+            include: [{model: Office}]
+        });
 
         res.status(200).json(mediaData);
 
@@ -28,7 +30,9 @@ router.get('/:id', async (req, res) => {
 
     try {
 
-        const mediaData = await Media.findByPk(req.params.id, {include: [{model: User}]});
+        const mediaData = await Media.findByPk(req.params.id, {
+            include: [{model: Office}]
+        });
 
         if (!mediaData) {
 
@@ -71,20 +75,28 @@ router.put('/:id', async (req, res) => {
 
     try {
 
+        if(req.body.name) {
+            data.name = req.body.name;
+        }
+
         if (req.body.outlet) {
             data.outlet = req.body.outlet;
         }
 
-        if (req.body.topic) {
-            data.topic = req.body.topic;
+        if (req.body.desc) {
+            data.desc = req.body.desc;
         }
 
-        if (req.body.date) {
-            data.date = req.body.date;
+        if (req.body.employee_name) {
+            data.employee_name = req.body.employee_name;
         }
 
-        if (req.body.off_id) {
-            data.off_id = req.body.off_id;
+        if (req.body.employee_email) {
+            data.employee_email = req.body.employee_email;
+        }
+
+        if (req.body.office_id) {
+            data.office_id = req.body.office_id;
         }
 
         const mediaData = await Media.update(

@@ -5,6 +5,8 @@ const square = document.querySelector(".square");
 const squareOne = document.querySelector(".square-1");
 const squareTwo = document.querySelector(".square-2");
 
+
+
 loginBtn.onclick = function () {
     if (loginContainer.style.display !== "none") {
         loginContainer.style.display = "flex";
@@ -15,8 +17,6 @@ loginBtn.onclick = function () {
         squareTwo.style.display = "none";
     }
 };
-
-
 
 function openNav () {
     document.getElementById('sideNav').style.marginLeft = '0';
