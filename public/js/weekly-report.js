@@ -1,10 +1,17 @@
-
 async function weeklyReport(){
+    console.log("weekly report running");
+    const response = await fetch('/api/weekly-report', {
+        method: 'GET',
+    });
 
-    const reportData = await fetcher('GET', 'weekly-report')
-
-    console.log(reportData[2].congress);
+    if (response.ok) {
+    document.location.replace('/api/weekly-report');
+    } else {
+        alert(response.statusText); 
+    }
 
 }
 
-weeklyReport()
+document.getElementById('weeklyReport').addEventListener('click', weeklyReport);
+
+
