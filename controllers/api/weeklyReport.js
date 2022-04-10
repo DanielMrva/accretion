@@ -19,9 +19,7 @@ router.get('/', async (req, res) => {
                 }
             }   
         );
-        const publications = pubData.map(async (publication) => {
-            return publication.get({plain: true});
-        });
+        const publications = pubData.map((publication) => publication.get({plain: true}));
 
         //meetings get
         const meetingData = await Meeting.findAll(
@@ -33,9 +31,7 @@ router.get('/', async (req, res) => {
                 }
             }   
         );
-        const meetings = meetingData.map(async (meeting) => {
-            return meeting.get({plain: true});
-        });
+        const meetings = meetingData.map((meeting) => meeting.get({plain: true}));
 
         //media get
         const mediaData = await Media.findAll(
@@ -47,9 +43,7 @@ router.get('/', async (req, res) => {
                 }
             }   
         );
-        const mediaInteractions = mediaData.map(async (media) => {
-            return media.get({plain: true});
-        });
+        const mediaInteractions = mediaData.map((media) => media.get({plain: true}));
 
         //for the record
         const recordData = await FTR.findAll(
@@ -61,9 +55,7 @@ router.get('/', async (req, res) => {
                 }
             }
         );
-        const records = recordData.map(async (forTheRecord) => {
-            return forTheRecord.get({plain: true});
-        });
+        const records = recordData.map((forTheRecord) => forTheRecord.get({plain: true}));
 
         //congress get
         const congressData = await Congress.findAll(
@@ -75,9 +67,7 @@ router.get('/', async (req, res) => {
                 }
             }   
         );
-        const conInteractions = congressData.map(async (congress) => {
-            return congress.get({plain: true});
-        });
+        const conInteractions = congressData.map((congress) => congress.get({plain: true}));
 
         // let data = {
         //     publications: pubData,
@@ -95,14 +85,14 @@ router.get('/', async (req, res) => {
             congress: conInteractions
         }
 
-        let dataType = typeof(data);
+        // let dataType = typeof(data);
 
         // let data = [
         //     {publications: publications},
         //     {meetings: meetings},
         //     {media: mediaInteractions},
-        //     {congress: conInteractions},
         //     {ftr: records},
+        //     {congress: conInteractions},
         // ]
         
         // let data = [
@@ -112,14 +102,16 @@ router.get('/', async (req, res) => {
         //     {ftr: recordData},
         //     {congress: congressData},
         // ]
-        // res.render('weeklyReport', {publications, meetings, mediaInteractions, records, conInteractions});   
+        // res.render('weeklyReport', {publications});
+        res.render('weeklyReport', {publications, meetings, mediaInteractions, records, conInteractions});   
         // res.render('weeklyReport', {pubData, meetingData, mediaData, recordData, congressData});
-        res.status(200).json(data);
+        // res.status(200).json(data[0].publications[0]);
+        // res.status(200).json(publications)
 
     } catch (err) {
 
         res.status(500).json(err);
-
+        return;
     }
 
 });

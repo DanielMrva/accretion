@@ -14,7 +14,7 @@
     <div class="page-header container" id="Pub-Head">
         <h2 class="report-heading">Upcoming Significant Publications or Science Products (not yet published)</h2>
         <div class="entries-container">
-            {{#each publications as |publication|}}
+            {{#each publications}}
                 {{>publication-details}}
             {{/each}}
         </div>
@@ -22,7 +22,7 @@
     <div class="page-header container" id="Meeting-Head">
         <h2 class="report-heading">Upcoming Meetings, Events, or Scientific Achievements</h2>
         <div class="entries-container">
-            {{#each meetings as |meeting|}}
+            {{#each meetings}}
                 {{>meeting-achievement-details}}
             {{/each}}
         </div>
@@ -30,7 +30,7 @@
     <div class="page-header container" id="Media-Head">
         <h2 class="report-heading">Media Interactions</h2>
         <div class="entries-container">
-            {{#each mediaInteractions as |media|}}
+            {{#each mediaInteractions}}
                 {{>media-details}}
             {{/each}}
         </div>
@@ -38,7 +38,7 @@
     <div class="page-header container" id="FTR-Head">
         <h2 class="report-heading">For the Record</h2>
         <div class="entries-container">
-            {{#each records as |forTheRecord|}}
+            {{#each records}}
                 {{>ftr-details}}
             {{/each}}
         </div>
@@ -46,7 +46,7 @@
     <div class="page-header container" id="Con-Head">
         <h2 class="report-heading">Congressional Interactions</h2>
         <div class="entries-container">
-            {{#each conInteractions as |congress|}}
+            {{#each conInteractions}}
                 {{>congress-details}}
             {{/each}}
         </div>
