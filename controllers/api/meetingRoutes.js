@@ -1,11 +1,12 @@
 const router = require('express').Router();
-const { Meeting, User } = require('../../models');
+const { Meeting, Office } = require('../../models');
 
 //endpoint location: /api/meetings
 //gets a list of all meetings in the database
 router.get('/', async (req, res) => {
     try {
-      const meetingData = await Meeting.findAll({include: [{model: User}]
+      const meetingData = await Meeting.findAll({
+        include: [{model: Office}]
       });
       res.status(200).json(meetingData);
     } catch (err) {
@@ -17,7 +18,8 @@ router.get('/', async (req, res) => {
 //gets one meeting from the database, needs an id
 router.get('/:id', async (req, res) => {
 try {
-    const meetingData = await Meeting.findByPk(req.params.id, {include: [{model: User}]
+    const meetingData = await Meeting.findByPk(req.params.id, {
+      include: [{model: Office}]
     });
     if (!meetingData) {
     res.status(404).json({ message: 'No meetings found with this id!' });
@@ -36,7 +38,7 @@ router.post('/', async (req, res) => {
       const meetingData = await Meeting.create(req.body);
       res.status(200).json(meetingData);
     } catch (err) {
-      res.status(400).json(err);
+      res.status(500).json(err);
     }
   });
 
@@ -44,14 +46,43 @@ router.post('/', async (req, res) => {
 //endpoint location: /api/meetings/:id
 //updates a meeting in the database, needs an id
 router.put('/:id', async (req, res) => {
+
+  let data = {};
+
     try {
+
+          if (req.body.mtg_ach) {
+            data.mtg_ach = req.body.mtg_ach;
+          }
+
+          if (req.body.desc) {
+            data.desc = req.body.desc;
+          }
+
+          if (req.body.employee_name) {
+            data.employee_name = req.body.employee_name;
+          }
+
+          if (req.body.employee_email) {
+            data.employee_email = req.body.employee_email;
+          }
+
+          if (req.body.office_id) {
+            data.office_id = req.body.office_id;
+          }
+
         const meetingData = await Meeting.update(
-        {mtg_name: req.body.mtg_name},
+        data,
         {where: {id: req.params.id}}
         );
+
+        if (!meetingData) {
+          res.status(404).json({message: "Could not find that record"});
+          return;
+        }
         res.status(200).json(meetingData);
     } catch (err) {
-        res.status(400).json(err);
+        res.status(500).json(err);
     }
 });
 

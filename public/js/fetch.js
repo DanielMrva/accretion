@@ -1,7 +1,45 @@
 let url = '/api/'
 
-// get request for a specific category. Search by id optional
-// try to implement the search engine in to this
+// general function to fetch data
+async function fetcher(method, category, id=undefined, body=undefined) {
+
+    let data;
+
+    switch (method) {
+
+        case 'GET':
+            
+            if (!id) {
+
+                data = await goGetter(category);
+                return data;
+
+            } else {
+
+                data = await goGetter(category, id);
+                return data;
+            }
+        
+        case 'POST':
+
+            data = await posterChild(category, body);
+            return;
+
+        case 'PUT': 
+
+            data = await updater(category, body, id);
+            return;
+
+        case 'DELETE':
+            
+            data = await terminator(category, id)
+            return;
+    }
+
+}
+
+
+// specific get function
 async function goGetter(category, id=undefined) {
 
     if (!id) {
@@ -28,7 +66,7 @@ async function goGetter(category, id=undefined) {
 
 }
 
-// post function
+// specific post function
 async function posterChild(category, body) {
 
     url += category;
@@ -49,7 +87,7 @@ async function posterChild(category, body) {
     return;
 }
 
-// update function
+// specific update function
 async function updater(category, body, id) {
 
     url = `${url}${category}/${id}`;
@@ -68,7 +106,7 @@ async function updater(category, body, id) {
 
 }
 
-// delete function
+// specific delete function
 async function terminator(category, id) {
 
     url = `${url}${category}/${id}`; 

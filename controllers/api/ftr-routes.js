@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const { Sequelize } = require('../../config/connection');
 const { FTR, Office } = require('../../models');
 
 
@@ -10,7 +9,9 @@ router.get('/', async (req, res) => {
 
     try {
 
-        const ftrData = await FTR.findAll();
+        const ftrData = await FTR.findAll({
+            include: [{model: Office}]
+        });
 
         res.status(200).json(ftrData);
 
@@ -27,7 +28,9 @@ router.get('/:id', async (req, res) => {
 
     try {
 
-        const ftrData = await FTR.findByPk(req.params.id);
+        const ftrData = await FTR.findByPk(req.params.id, {
+            include: [{model: Office}]
+        });
 
 
         if (!ftrData) {
@@ -67,7 +70,7 @@ router.post('/', async (req, res) => {
 //update an existing ftr record
 router.put('/:id', async (req, res) => {
 
-    let data = [];
+    let data = {};
 
     try {
 
@@ -116,12 +119,18 @@ router.delete('/:id', async (req, res) => {
 
     try {
 
-        const pubData = await FTR.destroy(
+        const ftrData = await FTR.destroy(
             {
                 where: 
                 {id: req.params.id}
             }
         );
+
+        if (!ftrData) {
+
+            res.status(404).json({message: 'Could not find that record'})
+            return;
+        }
 
         res.status(200).json(ftrData);
 

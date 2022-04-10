@@ -1,7 +1,5 @@
 const router = require('express').Router();
-const { Sequelize } = require('../../config/connection');
-const { Publication, User, UserPub } = require('../../models');
-const Op = Sequelize.Op;
+const { Publication, Office } = require('../../models');
 
 
 // api/publications endpoint
@@ -12,7 +10,9 @@ router.get('/', async (req, res) => {
 
     try { 
 
-        const pubData = await Publication.findAll();
+        const pubData = await Publication.findAll({
+            include: [{model: Office}]
+        });
 
         res.status(200).json(pubData);
 
@@ -29,7 +29,9 @@ router.get('/:id', async (req, res) => {
 
     try {
         
-        const pubData = await Publication.findByPk(req.params.id);
+        const pubData = await Publication.findByPk(req.params.id, {
+            include: [{model: Office}]
+        });
 
         if (!pubData) {
 
@@ -77,28 +79,29 @@ router.put('/:id', async (req, res) => {
             data.pub_name = req.body.pub_name;
         }
 
-        if (req.body.pub_date) {
-            data.pub_date = req.body.pub_date;
+        if (req.body.title) {
+            data.title = req.body.title;
         }
 
-        if (req.body.keywords) {
-            data.keywords = req.body.keywords;
+        if (req.body.desc) {
+            data.desc = req.body.desc;
         }
 
-        if (req.body.article_title) {
-            data.article_title = req.body.article_title;
+        if (req.body.employee_name) {
+            data.employee_name = req.body.employee_name;
         }
 
-        if (req.body.author_name) {
-            data.author_name = req.body.author_name;
+        if (req.body.employee_email) {
+            data.employee_email = req.body.employee_email;
         }
 
-        if (req.body.other_contrib) {
-            data.other_contrib = req.body.other_contrib;
+        if (req.body.authors) {
+            data.authors = req.body.authors;
         }
 
-        console.log('routes body:')
-        console.log(data);
+        if (req.body.office_id) {
+            data.office_id = req.body.office_id;
+        }
 
         const pubData = await Publication.update(
             data,
@@ -144,33 +147,5 @@ router.delete('/:id', async (req, res) => {
 
 });
 
-// make a new route with every table
-router.get('/weekly', async (req, res) => {
-
-    try {
-
-        // create a new date with the same format as the db
-        let date = new Date();
-
-        const pubData = await Publication.findAll(
-            {
-                where: {
-                    created_at: {
-                        // use Op.between and use current date and -7 days
-                        [Op.gte]: Sequelize.literal('NOW() - INTERVAL \'7d\'')
-                    }
-                }
-            }
-        );
-
-        res.status(200).json(pubData);
-
-    } catch (err) {
-
-        res.status(500).json(err);
-
-    }
-
-})
 
 module.exports = router;

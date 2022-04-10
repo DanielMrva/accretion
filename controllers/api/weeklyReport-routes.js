@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { User, Office, Publication, Media, Congress, Meeting, FTR } = require('../../models');
+const { Office, Publication, Media, Congress, Meeting, FTR } = require('../../models');
 
 const { Op } = require('sequelize');
 
@@ -12,6 +12,7 @@ router.get('/', async (req, res) => {
         //publications get
         const pubData = await Publication.findAll(
             {
+                include: [{model: Office}],
                 where: {
                     created_at: { 
                         [Op.gte]: new Date(new Date() - 7 * 24 * 60 * 60 * 1000)
@@ -24,6 +25,7 @@ router.get('/', async (req, res) => {
         //meetings get
         const meetingData = await Meeting.findAll(
             {
+                include: [{model: Office}],
                 where: {
                     created_at: { 
                         [Op.gte]: new Date(new Date() - 7 * 24 * 60 * 60 * 1000)
@@ -36,6 +38,7 @@ router.get('/', async (req, res) => {
         //media get
         const mediaData = await Media.findAll(
             {
+                include: [{model: Office}],
                 where: {
                     created_at: { 
                         [Op.gte]: new Date(new Date() - 7 * 24 * 60 * 60 * 1000)
@@ -47,19 +50,21 @@ router.get('/', async (req, res) => {
 
         //for the record
         const recordData = await FTR.findAll(
-            {
+           {
+                include: [{model: Office}],
                 where: {
-                    created_at: {
+                    created_at: { 
                         [Op.gte]: new Date(new Date() - 7 * 24 * 60 * 60 * 1000)
                     }
                 }
-            }
+            }   
         );
         const records = recordData.map((forTheRecord) => forTheRecord.get({plain: true}));
 
         //congress get
         const congressData = await Congress.findAll(
             {
+                include: [{model: Office}],
                 where: {
                     created_at: { 
                         [Op.gte]: new Date(new Date() - 7 * 24 * 60 * 60 * 1000)
@@ -69,6 +74,15 @@ router.get('/', async (req, res) => {
         );
         const conInteractions = congressData.map((congress) => congress.get({plain: true}));
 
+
+        // let data = [
+        //     {publications: pubData},
+        //     {media: mediaData},
+        //     {congress: congressData},
+        //     {meetings: meetingData},
+        //     {ftr: ftrData}
+        // ]
+
         // let data = {
         //     publications: pubData,
         //     meetings: meetingData,
@@ -77,13 +91,13 @@ router.get('/', async (req, res) => {
         //     congress: congressData
         // }
 
-        let data = {
-            publications: publications,
-            meetings: meetings,
-            media: mediaInteractions,
-            ftr: records,
-            congress: conInteractions
-        }
+        // let data = {
+        //     publications: publications,
+        //     meetings: meetings,
+        //     media: mediaInteractions,
+        //     ftr: records,
+        //     congress: conInteractions
+        // }
 
         // let dataType = typeof(data);
 
@@ -103,10 +117,12 @@ router.get('/', async (req, res) => {
         //     {congress: congressData},
         // ]
         // res.render('weeklyReport', {publications});
-        res.render('weeklyReport', {publications, meetings, mediaInteractions, records, conInteractions});   
+
+        // res.render('weeklyReport', {publications, meetings, mediaInteractions, records, conInteractions}); 
+
         // res.render('weeklyReport', {pubData, meetingData, mediaData, recordData, congressData});
         // res.status(200).json(data[0].publications[0]);
-        // res.status(200).json(publications)
+        res.status(200).json(publications);
 
     } catch (err) {
 

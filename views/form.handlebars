@@ -281,14 +281,15 @@
           >
             <div class="accordion-body">
               <form class="form publication-form">
+
                 <div class="form-floating">
                   <textarea
                     class="form-control"
                     placeholder="Leave a comment here"
-                    id="pubDate"
+                    id="pubName"
                   ></textarea>
                   <label for="floatingTextarea"
-                    >Date of Publication, Will be a datepicker</label
+                    >Publication</label
                   >
                 </div>
 
@@ -305,19 +306,19 @@
                   <textarea
                     class="form-control"
                     placeholder="Leave a comment here"
-                    id="pubName"
+                    id="desc"
                   ></textarea>
-                  <label for="floatingTextarea">Publication Name</label>
+                  <label for="floatingTextarea">Description</label>
                 </div>
 
                 <div class="form-floating">
                   <textarea
                     class="form-control"
                     placeholder="Leave a comment here"
-                    id="authName"
+                    id="name"
                   ></textarea>
                   <label for="floatingTextarea"
-                    >Author Name</label
+                    >Name</label
                   >
                 </div>
 
@@ -325,12 +326,30 @@
                   <textarea
                     class="form-control"
                     placeholder="Leave a comment here"
-                    id="contributor"
+                    id="email"
+                  ></textarea>
+                  <label for="floatingTextarea">email</label>
+                </div>
+
+                <div class="form-floating">
+                  <textarea
+                    class="form-control"
+                    placeholder="Leave a comment here"
+                    id="authors"
                   ></textarea>
                   <label for="floatingTextarea"
-                    >Contributer Name</label
+                    >Authors</label
                   >
                 </div>
+
+                <div class="form-floating">
+                  <textarea
+                    class="form-control"
+                    placeholder="Leave a comment here"
+                    id="office"
+                  ></textarea>
+                  <label for="floatingTextarea">Office (will be a dropdown)</label>
+                </div>                
 
                 <button class="button-2" id="submitPublications" role="button">SUBMIT</button>
 
@@ -343,3 +362,4 @@
 
 <script src="./js/fetch.js"></script>
 <script src="./js/form.js"></script>
+<script src="./js/weekly-report.js"></script>

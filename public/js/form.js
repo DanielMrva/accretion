@@ -1,6 +1,6 @@
-// const { goGetter, posterChild, updater, terminator } = require('./fetch')
 
 const pubPost = document.getElementById('submitPublications');
+<<<<<<< HEAD
 const achPost = document.getElementById('submitAchievement');
 // let url = 'http://localhost:3001/api/'
 
@@ -52,8 +52,12 @@ async function achSumbit(event) {
         
     }
 }
+=======
+
+>>>>>>> 304ccea6a035df42fc80813d2ca38ae29be1044f
 
 // currently this is for the publication table
+// replicate this for each entry type
 async function pubSubmit(event) {
 
     event.preventDefault();
@@ -61,13 +65,22 @@ async function pubSubmit(event) {
     // defines the data
     let pubData = {
         pub_name: document.getElementById("pubName").value,
-        pub_date: document.getElementById("pubDate").value,
-        article_title: document.getElementById("title").value,
-        name: document.getElementById("authName").value,
-        other_contrib: document.getElementById("contributor").value,
-        user_id: 1,
-        office_id: 1
+        title: document.getElementById("title").value,
+        desc: document.getElementById("desc").value,
+        employee_name: document.getElementById("name").value,
+        employee_email: document.getElementById("email").value,
+        authors: document.getElementById("authors").value,
+        // office needs to be a dropdown of all the offices, which in turn queries for the id of that office abbrev/name
     }
+
+
+    // this converts the office selected to an id for use in the post. Have the default office be the office of the user.
+    // let office = document.getElementById("office");
+
+    // let offID = await fetch(`/api/offices/abbrev/${office}`);
+
+    // pubData.office_id = offID.id;
+
 
     // assigns a null value to any empty fields
     for (const property in pubData) {
