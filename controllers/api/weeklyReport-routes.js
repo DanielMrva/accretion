@@ -9,7 +9,7 @@ const { Op } = require('sequelize');
 router.get('/', async (req, res) => {
 
     try {
-
+        //publications get
         const pubData = await Publication.findAll(
             {
                 include: [{model: Office}],
@@ -20,31 +20,9 @@ router.get('/', async (req, res) => {
                 }
             }   
         );
+        const publications = pubData.map((publication) => publication.get({plain: true}));
 
-        const mediaData = await Media.findAll(
-            {
-                include: [{model: Office}],
-                where: {
-                    created_at: { 
-                        [Op.gte]: new Date(new Date() - 7 * 24 * 60 * 60 * 1000)
-                    }
-                }
-            }   
-        );
-
-
-        const congressData = await Congress.findAll(
-            {
-                include: [{model: Office}],
-                where: {
-                    created_at: { 
-                        [Op.gte]: new Date(new Date() - 7 * 24 * 60 * 60 * 1000)
-                    }
-                }
-            }   
-        );
-
-
+        //meetings get
         const meetingData = await Meeting.findAll(
             {
                 include: [{model: Office}],
@@ -55,8 +33,10 @@ router.get('/', async (req, res) => {
                 }
             }   
         );
+        const meetings = meetingData.map((meeting) => meeting.get({plain: true}));
 
-        const ftrData = await FTR.findAll(
+        //media get
+        const mediaData = await Media.findAll(
             {
                 include: [{model: Office}],
                 where: {
@@ -66,21 +46,88 @@ router.get('/', async (req, res) => {
                 }
             }   
         );
+        const mediaInteractions = mediaData.map((media) => media.get({plain: true}));
 
-        let data = [
-            {publications: pubData},
-            {media: mediaData},
-            {congress: congressData},
-            {meetings: meetingData},
-            {ftr: ftrData}
-        ]
+        //for the record
+        const recordData = await FTR.findAll(
+           {
+                include: [{model: Office}],
+                where: {
+                    created_at: { 
+                        [Op.gte]: new Date(new Date() - 7 * 24 * 60 * 60 * 1000)
+                    }
+                }
+            }   
+        );
+        const records = recordData.map((forTheRecord) => forTheRecord.get({plain: true}));
 
-        res.status(200).json(data);
+        //congress get
+        const congressData = await Congress.findAll(
+            {
+                include: [{model: Office}],
+                where: {
+                    created_at: { 
+                        [Op.gte]: new Date(new Date() - 7 * 24 * 60 * 60 * 1000)
+                    }
+                }
+            }   
+        );
+        const conInteractions = congressData.map((congress) => congress.get({plain: true}));
+
+
+        // let data = [
+        //     {publications: pubData},
+        //     {media: mediaData},
+        //     {congress: congressData},
+        //     {meetings: meetingData},
+        //     {ftr: ftrData}
+        // ]
+
+        // let data = {
+        //     publications: pubData,
+        //     meetings: meetingData,
+        //     media: mediaData,
+        //     ftr: recordData,
+        //     congress: congressData
+        // }
+
+        // let data = {
+        //     publications: publications,
+        //     meetings: meetings,
+        //     media: mediaInteractions,
+        //     ftr: records,
+        //     congress: conInteractions
+        // }
+
+        // let dataType = typeof(data);
+
+        // let data = [
+        //     {publications: publications},
+        //     {meetings: meetings},
+        //     {media: mediaInteractions},
+        //     {ftr: records},
+        //     {congress: conInteractions},
+        // ]
+        
+        // let data = [
+        //     {publications: pubData},
+        //     {meetings: meetingData},
+        //     {media: mediaData},
+        //     {ftr: recordData},
+        //     {congress: congressData},
+        // ]
+        // res.render('weeklyReport', {publications});
+
+        // res.render('weeklyReport', {publications, meetings, mediaInteractions, records, conInteractions}); 
+
+        // res.render('weeklyReport', {pubData, meetingData, mediaData, recordData, congressData});
+        // res.status(200).json(data[0].publications[0]);
+        res.status(200).json(publications);
 
     } catch (err) {
 
         res.status(500).json(err);
-
+        return;
     }
 
 });
