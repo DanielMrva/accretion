@@ -118,11 +118,11 @@ router.get('/', async (req, res) => {
         // ]
         // res.render('weeklyReport', {publications});
 
-        // res.render('weeklyReport', {publications, meetings, mediaInteractions, records, conInteractions}); 
+        res.render('weeklyReport', {publications, meetings, mediaInteractions, records, conInteractions}); 
 
         // res.render('weeklyReport', {pubData, meetingData, mediaData, recordData, congressData});
         // res.status(200).json(data[0].publications[0]);
-        res.status(200).json(publications);
+        // res.status(200).json(publications);
 
     } catch (err) {
 
