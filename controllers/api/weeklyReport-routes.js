@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { User, Office, Publication, Media, Congress, Meeting, Achievement } = require('../../models');
+const { Office, Publication, Media, Congress, Meeting, FTR } = require('../../models');
 
 const { Op } = require('sequelize');
 
@@ -12,6 +12,7 @@ router.get('/', async (req, res) => {
 
         const pubData = await Publication.findAll(
             {
+                include: [{model: Office}],
                 where: {
                     created_at: { 
                         [Op.gte]: new Date(new Date() - 7 * 24 * 60 * 60 * 1000)
@@ -22,6 +23,7 @@ router.get('/', async (req, res) => {
 
         const mediaData = await Media.findAll(
             {
+                include: [{model: Office}],
                 where: {
                     created_at: { 
                         [Op.gte]: new Date(new Date() - 7 * 24 * 60 * 60 * 1000)
@@ -33,6 +35,7 @@ router.get('/', async (req, res) => {
 
         const congressData = await Congress.findAll(
             {
+                include: [{model: Office}],
                 where: {
                     created_at: { 
                         [Op.gte]: new Date(new Date() - 7 * 24 * 60 * 60 * 1000)
@@ -44,6 +47,7 @@ router.get('/', async (req, res) => {
 
         const meetingData = await Meeting.findAll(
             {
+                include: [{model: Office}],
                 where: {
                     created_at: { 
                         [Op.gte]: new Date(new Date() - 7 * 24 * 60 * 60 * 1000)
@@ -52,15 +56,15 @@ router.get('/', async (req, res) => {
             }   
         );
 
-
-        const achievementData = await Achievement.findAll(
+        const ftrData = await FTR.findAll(
             {
+                include: [{model: Office}],
                 where: {
-                    created_at: {
+                    created_at: { 
                         [Op.gte]: new Date(new Date() - 7 * 24 * 60 * 60 * 1000)
                     }
                 }
-            }
+            }   
         );
 
         let data = [
@@ -68,7 +72,7 @@ router.get('/', async (req, res) => {
             {media: mediaData},
             {congress: congressData},
             {meetings: meetingData},
-            {achievements: achievementData}
+            {ftr: ftrData}
         ]
 
         res.status(200).json(data);
