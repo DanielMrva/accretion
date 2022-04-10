@@ -381,6 +381,10 @@ h2.welcome {
   justify-content: space-evenly;
 }
 
+#danHeader {
+  background-color: var(--green);
+}
+
 
 
 /* This is for desktop viewing */
