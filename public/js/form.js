@@ -1,11 +1,17 @@
 // submit buttons
 const pubPost = document.getElementById('submitPublications');
+<<<<<<< HEAD
 const congPost = document.getElementById('submitCongress');
 const mediaPost = document.getElementById('submitMedia');
 const meetingPost = document.getElementById('submitMeetings');
 const ftrPost = document.getElementById('submitFTR');
 
 
+=======
+
+// currently this is for the publication table
+// replicate this for each entry type
+>>>>>>> 5fa71e5042954bf088acbcd012a5ebb30a2b3673
 async function pubSubmit(event) {
 
     event.preventDefault();
