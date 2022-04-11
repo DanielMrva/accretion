@@ -31,8 +31,8 @@ User.init(
           validate: {
             isEmail: true,
             },
-        },
-        password: {
+          },
+          password: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
