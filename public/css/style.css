@@ -40,23 +40,23 @@ video {
   height: auto;
   width: 100%;
   min-width: 160px;
-  max-width: 300px;
+  max-width: 280px;
 }
 
 #loginBtn {
-  width: 155px;
+  width: 145px;
   font-size: 23px;
   color: var(--green);
   background-color: rgba(255, 255, 255, .6);
-  margin: 10px;
+  margin: 10px 8px 15px 8px;
 }
 
 #signUpBtn {
-  width: 155px;
+  width: 145px;
   font-size: 23px;
   color: var(--green);
   background-color: rgba(255, 255, 255, .6);
-  margin: 10px;
+  margin: 10px 8px 15px 8px;
 }
 
 #loginBtn:hover {
@@ -69,7 +69,7 @@ video {
   color: white;
 }
 
-.button-1 {
+button {
   background-color:rgba(255, 255, 255, .5);
   border: 1px solid rgba(255, 255, 255, .5);
   border-radius: 22px;
@@ -111,31 +111,12 @@ video {
 
 .button-2 {
   background-color:rgba(85, 141, 41, 0.1);
-  border: 1px solid rgba(255, 255, 255, .5);
   border-radius: 15px;
-  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
-  box-sizing: border-box;
   color: var(--green);
-  cursor: pointer;
-  display: inline-block;
-  font-family: 'Cantarell', sans-serif;
   font-size: 16px;
-  font-weight: 800;
-  line-height: 16px;
-  min-height: 40px;
-  outline: 0;
-  padding: 12px 14px;
   margin-top: 18px;
-  text-align: center;
-  text-rendering: geometricprecision;
-  text-transform: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
   height: 45px;
   width:105px;
-  
 }
 
 .button-2:hover,
@@ -151,29 +132,10 @@ video {
 
 .button-3 {
   background-color:rgba(85, 141, 41, 0.1);
-  border: 1px solid rgba(255, 255, 255, .5);
   border-radius: 15px;
-  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
-  box-sizing: border-box;
   color: var(--green);
-  cursor: pointer;
-  display: inline-block;
-  font-family: 'Cantarell', sans-serif;
-  font-size: 20px;
-  font-weight: 800;
-  line-height: 16px;
-  min-height: 40px;
-  outline: 0;
-  padding: 12px 14px;
-  text-align: center;
-  text-rendering: geometricprecision;
-  text-transform: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
   height: 80px;
-  width: 275px;
+  width: 200px;
 }
 
 .button-3:hover,
@@ -211,6 +173,17 @@ video {
   padding: 40px;
 }
 
+.home-signup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 350px;
+  border-radius: 40px;
+  background-color:rgba(255, 255, 255, .4);
+  padding: 40px;
+}
+
 #login-btn {
   color: var(--green);
   border: 1px solid var(--green);
@@ -234,8 +207,24 @@ input {
   width: 260px;
 }
 
+.user-icon {
+  height: 500px;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dashboard-buttons {
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
 h2 {
-  font-family: 'Cantarell', sans-serif;
+  font-family: var(--main-font);
   color: grey;
   text-align: center;
 }
@@ -244,9 +233,17 @@ h2.welcome {
   padding: 10px;
 }
 
+.logo-nav {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  width: 250px;
+  height: auto;
+}
+
 .side-nav {
   height: 100%;
-  width: 270px;
+  width: 300px;
   position: fixed;
   top: 0;
   left: 0;
@@ -269,6 +266,76 @@ h2.welcome {
   font-size: 20px;
   display: block;
   color: white;
-  font-family: 'Cantarell', sans-serif;
+  font-family: var(--main-font);
 
+}
+
+.side-arrow {
+  height: 50px;
+  width:auto;
+}
+
+.right-main {
+  transition: 0.5s;
+  padding-top: 10px;
+  /* padding-left: 10px; */
+  height: auto;
+  width: 1020px;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.form-body {
+  width: 700px;
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.accordian-button {
+  font-family: 'Cantarell', sans-serif;
+  font-weight: 700;
+}
+
+.accordion-button:not(.collapsed) {
+  color: rgb(85, 141, 41);
+  background-color: #e7f1ff;
+  box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+}
+
+.accordion-button:focus {
+  z-index: 3;
+  border-color: rgb(85, 141, 41);
+  background-color: rgba(85, 141, 41, 0.1);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(85, 141, 41, 0.2);
+}
+
+
+/* This is for phone viewing */
+@media screen and (max-width: 750px) {
+  .left-logo {
+    flex: 1 0 100%;
+    justify-content: center;
+    flex-flow: row;
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .left-logo {
+    display: flex;
+    justify-content:center;
+  }
+
+  .right-buttons {
+    display: flex;
+    flex: 1 0 100%;
+    height: fit-content;
+    flex-flow: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    padding-top: 40px;
+  }
 }

@@ -387,3 +387,162 @@ h2.welcome {
 
 
 
+/* This is for desktop viewing */
+@media screen and (min-width: 1025px)
+   {
+    .view {
+      display: grid;
+      /* height: 100vh; */
+      width: 100vw;
+      grid-template-columns: 10px 1fr 1fr 300px 1fr 300px 300px 1fr 1fr;
+    }
+    
+    .square-home {
+      display: flex;
+      width: 300px;
+      height: auto;
+      position: absolute;
+    }
+    
+    .square {
+      grid-column: 4;
+      top: 50%;
+      left: 50%;
+      align-items: center;
+      margin-top: 100px;
+    }
+    
+    .square-1 {
+      grid-column: 6;
+      top: 50%;
+      left: 50%;
+      align-items: center;
+      margin-top: 440px;
+    }
+    
+    .square-2 {
+      grid-column: 7;
+      top: 50%;
+      left: 50%;
+      align-items: center;
+      margin-top: 140px;
+    }
+    
+    /* .homepage-logo {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    } */
+    
+    .logo {
+      height: 92px;
+        width: auto;
+        position: absolute;
+        margin-top: 105px;
+        margin-left: 30px;
+    }
+
+    #loginBtn {
+      position: absolute;
+      margin-top: 140px;
+      margin-left: 70px;
+      width: 155px;
+      font-size: 23px;
+      color: black;
+      background-color: rgba(255, 255, 255, .6);
+    }
+    
+    #signUpBtn {
+      position: absolute;
+      margin-top: 140px;
+      margin-left: 70px;
+      width: 155px;
+      font-size: 23px;
+      color: black;
+      background-color: rgba(255, 255, 255, .6);
+    }
+    
+
+    
+} 
+
+/* big monitor */
+@media screen and (min-width: 1330px)
+   {
+    .view {
+      display: grid;
+      /* height: 100vh; */
+      width: 100vw;
+      grid-template-columns: 10px 1fr 1fr 375px 1fr 375px 375px 1fr 1fr;
+    }
+    
+    .square-home {
+      display: flex;
+      width: 375px;
+      height: auto;
+      position: absolute;
+    }
+    
+    .square {
+      grid-column: 4;
+      top: 50%;
+      left: 50%;
+      align-items: center;
+      margin-top: 100px;
+    }
+    
+    .square-1 {
+      grid-column: 6;
+      top: 50%;
+      left: 50%;
+      align-items: center;
+      margin-top: 515px;
+    }
+    
+    .square-2 {
+      grid-column: 7;
+      top: 50%;
+      left: 50%;
+      align-items: center;
+      margin-top: 140px;
+    }
+    
+    /* .homepage-logo {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    } */
+    
+    .logo {
+      height: 110px;
+        width: auto;
+        position: absolute;
+        margin-top: 135px;
+        margin-left: 40px;
+    }
+
+    #loginBtn {
+      position: absolute;
+      margin-top: 160px;
+      margin-left: 70px;
+      width: 240px;
+      font-size: 28px;
+      color: black;
+      background-color: rgba(255, 255, 255, .6);
+    }
+    
+    #signUpBtn {
+      position: absolute;
+      margin-top: 140px;
+      margin-left: 70px;
+      width: 240px;
+      font-size: 28px;
+      color: black;
+      background-color: rgba(255, 255, 255, .6);
+    }
+    
+
+    
+} 
