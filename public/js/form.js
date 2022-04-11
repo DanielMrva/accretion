@@ -1,17 +1,11 @@
 // submit buttons
 const pubPost = document.getElementById('submitPublications');
-<<<<<<< HEAD
 const congPost = document.getElementById('submitCongress');
 const mediaPost = document.getElementById('submitMedia');
 const meetingPost = document.getElementById('submitMeetings');
 const ftrPost = document.getElementById('submitFTR');
 
-
-=======
-
-// currently this is for the publication table
-// replicate this for each entry type
->>>>>>> 5fa71e5042954bf088acbcd012a5ebb30a2b3673
+// function to post publication data to the db
 async function pubSubmit(event) {
 
     event.preventDefault();
@@ -50,7 +44,7 @@ async function pubSubmit(event) {
 
 }
 
-
+// function to post congress data to the db
 async function congSubmit(event) {
 
     event.preventDefault();
@@ -75,7 +69,7 @@ async function congSubmit(event) {
 
 }
 
-
+// function to post media data to the db
 async function mediaSubmit(event) {
 
     event.preventDefault();
@@ -102,7 +96,7 @@ async function mediaSubmit(event) {
 
 }
 
-
+// function to post meeting/achievement data to the db
 async function meetingsSubmit(event) {
 
     event.preventDefault();
@@ -127,7 +121,7 @@ async function meetingsSubmit(event) {
 
 }
 
-
+// function to post For the Record data to the db
 async function ftrSubmit(event) {
 
     event.preventDefault();
