@@ -7,7 +7,18 @@ const squareTwo = document.querySelector(".square-2");
 
 
 
-loginBtn.onclick = function () {
+// loginBtn.onclick = function () {
+//     if (loginContainer.style.display !== "none") {
+//         loginContainer.style.display = "flex";
+//         loginBtn.style.display = "none";
+//         signUpBtn.style.display = "none";
+//         square.style.display = "none";
+//         squareOne.style.display = "none";
+//         squareTwo.style.display = "none";
+//     }
+// };
+
+function displayLogin () {
     if (loginContainer.style.display !== "none") {
         loginContainer.style.display = "flex";
         loginBtn.style.display = "none";
