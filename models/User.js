@@ -31,29 +31,14 @@ User.init(
           validate: {
             isEmail: true,
             },
-<<<<<<< HEAD
-          },
-          password: {
-=======
         },
         password: {
->>>>>>> 5fa71e5042954bf088acbcd012a5ebb30a2b3673
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
               len: [8],
             },
           },
-<<<<<<< HEAD
-          office_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-              model: "office",
-              key: "id"
-              },
-          },
-=======
         office_id: {
           type: DataTypes.INTEGER,
           allowNull: false,
@@ -62,7 +47,6 @@ User.init(
           key: "id"
             },
           },  
->>>>>>> 5fa71e5042954bf088acbcd012a5ebb30a2b3673
         },
         {
           hooks: {
