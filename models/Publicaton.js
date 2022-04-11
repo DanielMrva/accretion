@@ -1,7 +1,7 @@
-const { Model, DataTypes} = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Publication extends Model {}
+class Publication extends Model {};
 
 Publication.init(
     {
@@ -13,51 +13,43 @@ Publication.init(
         },
         pub_name: {
             type: DataTypes.STRING,
-            allowNull: false,
-        },
-        pub_date: {
-            type: DataTypes.DATEONLY,
             allowNull: true,
         },
-        keywords: {
-            type: DataTypes.STRING,
-            allowNull: true,
-        },
-        article_title: {
+        title: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        name: {
+        desc: {
+            type: DataTypes.TEXT,
+            allowNull: false,
+        },
+        employee_name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        other_contrib: {
+        employee_email: {
             type: DataTypes.STRING,
-            allowNull: true,
-        },
-        user_id: {
-            type: DataTypes.INTEGER,
             allowNull: false,
-            references: {
-                model: "user",
-                key: "id"
-            }
+        },
+        authors: {
+            type: DataTypes.TEXT,
+            allowNull: false,
         },
         office_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: "office",
-                key: "id"
+                model: 'office',
+                key: 'id',
             }
-        } 
+        }
     },
     {
         sequelize,
         timestamps: true,
         freezeTableName: true,
         underscored: true,
-        modelName: 'publication',
+        modelName: 'publication'
     }
 );
 

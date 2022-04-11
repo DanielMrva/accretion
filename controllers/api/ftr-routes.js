@@ -1,21 +1,19 @@
 const router = require('express').Router();
-const { Media, Office } = require('../../models');
+const { FTR, Office } = require('../../models');
 
 
-// api/media endpoint
+// api/ftr endpoint
 
-// get all media data
+// get all FTR records
 router.get('/', async (req, res) => {
 
     try {
 
-        // const mediaData = await Media.findAll({include: [{model:User, through: UserMedia, as: 'users'}]});
-
-        const mediaData = await Media.findAll({
+        const ftrData = await FTR.findAll({
             include: [{model: Office}]
         });
 
-        res.status(200).json(mediaData);
+        res.status(200).json(ftrData);
 
     } catch (err) {
 
@@ -25,23 +23,24 @@ router.get('/', async (req, res) => {
 
 });
 
-// get one media record
+// get one ftr record
 router.get('/:id', async (req, res) => {
 
     try {
 
-        const mediaData = await Media.findByPk(req.params.id, {
+        const ftrData = await FTR.findByPk(req.params.id, {
             include: [{model: Office}]
         });
 
-        if (!mediaData) {
 
-            res.status(404).json({message: 'Cannot find that entry'})
+        if (!ftrData) {
+
+            res.status(404).json({message: 'Could not find that record'});
             return;
 
         }
 
-        res.status(200).json(mediaData);
+        res.status(200).json(ftrData);
 
     } catch (err) {
 
@@ -51,14 +50,14 @@ router.get('/:id', async (req, res) => {
 
 });
 
-//post a new media record
+// post a new ftr record
 router.post('/', async (req, res) => {
 
     try {
 
-        const mediaData = await Media.create(req.body);
+        const ftrData = await FTR.create(req.body);
 
-        res.status(200).json(mediaData);
+        res.status(200).json(ftrData);
 
     } catch (err) {
 
@@ -68,19 +67,15 @@ router.post('/', async (req, res) => {
 
 });
 
-// update an existing media record
+//update an existing ftr record
 router.put('/:id', async (req, res) => {
 
     let data = {};
 
     try {
 
-        if(req.body.name) {
-            data.name = req.body.name;
-        }
-
-        if (req.body.outlet) {
-            data.outlet = req.body.outlet;
+        if (req.body.note) {
+            data.note = req.body.note;
         }
 
         if (req.body.desc) {
@@ -94,24 +89,22 @@ router.put('/:id', async (req, res) => {
         if (req.body.employee_email) {
             data.employee_email = req.body.employee_email;
         }
-
+        
         if (req.body.office_id) {
             data.office_id = req.body.office_id;
         }
 
-        const mediaData = await Media.update(
+        const ftrData = await FTR.update(
             data,
             {where: {id: req.params.id}}
         );
 
-        if (!mediaData) {
-
-            res.status(404).json({message: 'Cannot find that entry'})
+        if(!ftrData) {
+            res.status(404).json({message: 'Could not find that record'});
             return;
+        };
 
-        }
-
-        res.status(200).json(mediaData);
+        res.status(200).json(ftrData);
 
     } catch (err) {
 
@@ -121,29 +114,31 @@ router.put('/:id', async (req, res) => {
 
 });
 
-// delete a media record
+// delete an ftr record
 router.delete('/:id', async (req, res) => {
 
     try {
 
-        const mediaData = Media.destroy({where: {id: req.params.id}})
+        const ftrData = await FTR.destroy(
+            {
+                where: 
+                {id: req.params.id}
+            }
+        );
 
-        if (!mediaData) {
+        if (!ftrData) {
 
-            res.status(404).json({message: 'Cannot find that entry'})
+            res.status(404).json({message: 'Could not find that record'})
             return;
-
         }
 
-        res.status(200).json(mediaData);
-        
+        res.status(200).json(ftrData);
+
     } catch (err) {
 
         res.status(500).json(err);
 
     }
-
-
 });
 
-module.exports = router
+module.exports = router;

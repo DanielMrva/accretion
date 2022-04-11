@@ -1,30 +1,27 @@
-const User = require('./User');
 const Office = require('./Office');
-const Publication = require('./Publication');
-const Achievement = require('./Achievement');
-const Congress = require('./Congress');
-const Media = require('./Media');
+const Publication = require('./Publicaton');
 const Meeting = require('./Meeting');
-
-// const { User, Office, Publication, Achievement, Congress, Media, Meeting } = require('../models2')
+const Media = require('./Media');
+const Congress = require('./Congress');
+const FTR = require('./FTR');
+const  User = require('./User');
 
 Office.hasMany(User);
 User.belongsTo(Office);
 
-User.hasMany(Publication);
-Publication.belongsTo(User);
+Office.hasMany(Publication);
+Publication.belongsTo(Office);
 
-User.hasMany(Congress);
-Congress.belongsTo(User);
+Office.hasMany(Meeting);
+Meeting.belongsTo(Office);
 
-User.hasMany(Media);
-Media.belongsTo(User);
+Office.hasMany(Media);
+Media.belongsTo(Office);
 
-User.hasMany(Meeting);
-Meeting.belongsTo(User);
+Office.hasMany(Congress);
+Congress.belongsTo(Office);
 
-User.hasMany(Achievement);
-Achievement.belongsTo(User);
+Office. hasMany(FTR);
+FTR.belongsTo(Office);
 
-
-module.exports = { User, Office, Publication, Achievement, Congress, Media, Meeting };
+module.exports = { Office, User, Publication, Meeting, Media, Congress, FTR };

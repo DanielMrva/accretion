@@ -1,27 +1,34 @@
 [
     {
-        "name":"Wyoming-Montana Water Science Center",
-        "state":"WY",
-        "city":"Cheyenne"
+        "office_name": "Northern Prairie Wildlife Research Center",
+        "abbreviation": "NPWRC"
     },
     {
-        "name":"National Earthquake Information Center",
-        "state":"CO",
-        "city":"Golden"
+        "office_name": "National Wildlife Health Center",
+        "abbreviation": "NWHC"
     },
     {
-        "name":"Colorado Water Science Center - Southeast Colorado Office",
-        "state":"CO",
-        "city":"Pueblo"
+        "office_name": "Wyoming-Montana Water Science Center",
+        "abbreviation": "WY-MT WSC"
     },
     {
-        "name":"Moab Field Office",
-        "state":"UT",
-        "city":"Moab"
+        "office_name": "Northern Rocky Mountain Science Center",
+        "abbreviation": "NOROCK"
     },
     {
-        "name":"Roswell Field Office",
-        "state":"NM",
-        "city":"Roswell"
+        "office_name": "Great lakes Science Center, Ecosystems",
+        "abbreviation": "GLSC, ECO"
+    },
+    {
+        "office_name": "Upper Midwest Environmental Science Center",
+        "abbreviation":"UMESC"
+    },
+    {
+        "office_name": "Upper Midwest Water Science Center",
+        "abbreviation": "UMid"
+    },
+    {
+        "office_name": "Dakota Water Science Center",
+        "abbreviation": "DWSC"
     }
 ]

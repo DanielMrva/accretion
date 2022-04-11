@@ -1,26 +1,74 @@
 [
     {
-        "outlet":"KNYX",
-        "topic":"Younger Dryas Impact",
-        "date":"2022-05-02",
-        "names":"Mica Fore, Barry Rillium",
-        "user_id":5,
-        "office_id":5
+        "name": "Two articles published about grizzly bear emergence from hibernation at Yellowstone Nationals Park",
+        "outlet": "Newsweek",
+        "desc": "NOROCK's Frank van Manen, Interagency Grizzly Bear Study Team (IGBST) lead, was interviewed by Newsweek on March 4 about grizzly bears emerging from hibernation in Yellowstone National Park.  The articles were published on March 7 and 9 and collectively they mentioned that the first grizzly bear of the season was spotted, tips regarding bear safety, the Yellowstone Greater Ecosystem grizzly bear population size, and general bear hibernation biology.  The titles of the articles are 'Big Male Grizzly Bear Is First To Wake Up From Hibernation at Yellowstone' (https://www.newsweek.com/big-male-grizzly-bear-first-wake-hibernation-yellowstone-1686249) and 'Hungry Grizzly Bears Are About To Start Waking Up in Yellowstone' (https://www.newsweek.com/hungry-grizzly-bears-start-waking-yellowstone-1685476).",
+        "employee_name": "Frank van Manen",
+        "employee_email": "fvanmanen@usgs.gov",
+        "office_id": 4
     },
     {
-        "outlet":"BBC",
-        "topic":"Trees what are they good for?",
-        "date":"2022-04-02",
-        "names":"Ann Timony",
-        "user_id":3,
-        "office_id":3
+        "name": "Article published about grizzly bear mortality trends in the Greater Yellowstone Ecosystem",
+        "outlet": "Billings Gazette",
+        "desc": "On March 11, Frank van Manen (NOROCK) was interviewed by a reporter from the Billings Gazette about mortality trends and the population status of grizzly bears in the Greater Yellowstone Ecosystem.  The article was published on March 13 with quotes from van Manen and a representative from the Wyoming Game and Fish Department.  The article is titled 'Wyoming bear relocation report reveals grizzly details' and can be found here: https://billingsgazette.com/news/state-and-regional/wyoming-bear-relocation-report-reveals-grizzly-details/article_ebe822e5-f6ef-57e0-bf42-904defcea43b.html.",
+        "employee_name": "Frank van Manen",
+        "employee_email": "fvanmanen@usgs.gov",
+        "office_id": 4
     },
     {
-        "outlet":"WNYC",
-        "topic":"Truffle hunting in city parks",
-        "date":"2022-07-11",
-        "names":"Hall Ite",
-        "user_id":2,
-        "office_id":2
+        "name": "Interview about grizzly bears",
+        "outlet": "Outdoor Life",
+        "desc": "On March 3, NOROCK's Frank van Manen, team lead of the Interagency Grizzly Bear Study Team (IGBST), was interviewed by Outdoor Life magazine.  Several topics were discussed, including the current status of grizzly bears in the Greater Yellowstone Ecosystem and the lower-48 states, IGBST history, monitoring efforts, patterns with human-bear conflicts, etc.  The article is expected to be published in late April.",
+        "employee_name": "Frank van Manen", 
+        "employee_email": "fvanmanen@usgs.gov",
+        "office_id": 4
+    },
+    {
+        "name": "Article published about invasive smallmouth bass near Yellowstone National Park",
+        "outlet": "Bozeman Daily Chronicle",
+        "desc": "On March 9, NOROCK's Adam Sepulveda was interviewed by a reporter from the Bozeman Daily Chronicle and the article was published the same day.  The article discusses an invasive smallmouth bass being recently caught outside Yellowstone National Park, Sepulveda's past research into whether smallmouth bass could establish in Yellowstone River, and the use of environmental DNA (eDNA) in that research.  The article also mentioned that Sepulveda was traveling to the area where the fish was caught to take water samples and use eDNA to determine how abundant smallmouth bass are in the area.  The article is titled “Following smallmouth find, officials hunt for evidence of more bass near Yellowstone”: https://www.bozemandailychronicle.com/news/county/following-smallmouth-find-officials-hunt-for-evidence-of-more-bass-near-yellowstone/article_f655ca19-d75f-59fe-aae9-f81b41f22d4f.html.",
+        "employee_name": "Adam Sepulveda", 
+        "employee_email": "asepulveda@usgs.gov",
+        "office_id": 4
+    },
+    {
+        "name": "National Park Service press release promotes special journal issues containing NPS-USGS science and monitoring program",
+        "outlet": "National Park Service",
+        "desc": "On March 9, the National Park Service (NPS) published a press release to promote a special issue in Ecological Indicators titled “Long-term monitoring of a species suite of Ecological Indicators: A coordinated conservation framework for the Greater Yellowstone Ecosystem”.  The special issues focuses on the importance of long-term monitoring programs using the amphibian monitoring program used in Grand Teton and Yellowstone National Parks as an example.  The National Park Service (lead editor), NOROCK’s Blake Hossack, and the University of Montana were the editors of the special issue.  Scientists from NOROCK, SBSC, and FRESC contributed to the issue.  The NPS press release is titled “Amphibians of Grand Teton and Yellowstone National Parks” and can be found here: https://www.nps.gov/orgs/1778/grynamphibians.htm.",
+        "employee_name": "Blake Hossack",
+        "employee_email": "blake_hossack@usgs.gov",
+        "office_id": 4
+    },
+    {
+        "name": "Scienceline Interview",
+        "outlet": "Scienceline",
+        "desc": "Dave Mech was interviewed by a reporter from Scienceline about causes of wolf mortality, average wolf age, and associated information about the life cycles of wolves.",
+        "employee_name": "Dave Mech",
+        "employee_email": "david_mech@usgs.gov",
+        "office_id": 1
+    },
+    {
+        "name": "Interview about pikas as a possible book topic",
+        "outlet": "Independant science writer",
+        "desc": "NOROCK’s Erik Beever and Aaron Johnston were interviewed by an independent science writer who in the early stages of developing a book about human and natural history in the Cascade Mountains.  The author is exploring potential topics that could be part of the book and the effects of climate on American pikas in the Cascade Mountains in one topic of interest.  Beever and Johnston discussed some of their research on this topic, including the effects of snow drought on picas and hoary marmots and climate refugia for American pikas.  It is not clear when the book will be completed and released, but it is not expected to be any time soon.",
+        "employee_name": "Erik Beever, Aaron Johnston",
+        "employee_email": "ebeever@usgs.gov , ajohnston@usgs.gov",
+        "office_id": 4
+    },
+    {
+        "name": "New Yorker article",
+        "outlet": "New Yorker",
+        "desc": "Dave Mech was quoted in the April 4th New Yorker article, “Killing Wolves to Own the Libs?” https://www.newyorker.com/magazine/2022/04/04/killing-wolves-to-own-the-libs-idaho.",
+        "employee_name": "Dave Mech",
+        "employee_email": "david_mech@usgs.gov",
+        "office_id": 1
+    },
+    {
+        "name": "Interview about elk in the Great Smokey Mountains National Park",
+        "outlet": "Great Smokey Mountains (podcast)",
+        "desc": "On March 29, NOROCK’s Joe Clark was interviewed for a Great Smokey Mountains National Park podcast called Smokey Signal.  The interview focused on elk ecology, their reintroduction into the Great Smokey Mountains, the use of fecal pellets to obtain DNA, and what Clark hopes to learn from his research.  It is not clear when the podcast will be published, but it is expected to be at least a month from now.",
+        "employee_name": "Joe Clark", 
+        "employee_email": "jclark1@usgs.gov",
+        "office_id": 4
     }
 ]

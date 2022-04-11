@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const req = require('express/lib/request');
-const { Office, User } = require('../../models');
+const { Office } = require('../../models');
 
 
 // api/offices endpoint
@@ -46,6 +46,32 @@ router.get('/:id', async (req, res) => {
 
 });
 
+// find an office by abbreviation
+router.get('/abbrev/:abbrev', async (req, res) => {
+
+    try {
+
+        const offData = await Office.findAll({
+            where: {
+                abbreviation: req.params.abbrev
+            }
+        })
+
+        if (!offData) {
+            res.status(404).json({message: 'Could not find that office'})
+            return;
+        }
+
+        res.status(200).json(offData);
+
+    } catch (err) {
+
+        res.status(500).json(err);
+
+    }
+
+});
+
 // post a new office
 router.post('/', async (req, res) => {
 
@@ -69,16 +95,12 @@ router.put('/:id', async (req, res) => {
 
     try {
 
-        if (req.body.name) {
-            data.name = req.body.name;
+        if (req.body.office_name) {
+            data.office_name = req.body.office_name;
         }
 
-        if (req.body.state) {
-            data.state = req.body.state;
-        }
-
-        if (req.body.city) {
-            data.city = req.body.city;
+        if (req.body.abbreviation) {
+            data.abbreviation = req.body.abbreviation;
         }
 
         const offData = await Office.update(
@@ -126,5 +148,6 @@ router.delete('/:id', async (req, res) => {
     }
 
 });
+
 
 module.exports = router

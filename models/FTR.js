@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Achievement extends Model {}
+class FTR extends Model {}
 
-Achievement.init(
+FTR.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,42 +11,38 @@ Achievement.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        achievement_name: {
+        note: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        date_received: {
-            type: DataTypes.DATEONLY,
+        desc: {
+            type: DataTypes.TEXT,
             allowNull: false,
         },
-        names: {
+        employee_name: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        employee_email: {
             type: DataTypes.STRING,
             allowNull: false,
-        },
-        user_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: "user",
-                key: "id"
-            }
         },
         office_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: "office",
-                key: "id"
+                model: 'office',
+                key: 'id'
             }
-        }   
+        }
     },
     {
         sequelize,
         timestamps: true,
         freezeTableName: true,
         underscored: true,
-        modelName: 'achievement',
+        modelName: 'FTR',
     }
 );
 
-module.exports = Achievement;
+module.exports = FTR;

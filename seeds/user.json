@@ -40,5 +40,12 @@
         "email":"wStarlink@usgs.gov",
         "password":"weStar1337",
         "office_id":1
+    },
+    {
+        "first_name":"Joey Joe Joe Junior",
+        "last_name": "Shabadoo",
+        "email":"HSimpson@usgs.gov",
+        "password":"mrthompson",
+        "office_id":6
     }
 ]
