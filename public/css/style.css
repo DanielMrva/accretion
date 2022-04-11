@@ -241,6 +241,13 @@ h2.welcome {
   height: auto;
 }
 
+.nav-icon {
+  height: 40px;
+  width: auto;
+  margin-right: 8px;
+  display:inline-block;
+}
+
 .side-nav {
   height: 100%;
   width: 300px;
@@ -280,10 +287,11 @@ h2.welcome {
   padding-top: 10px;
   /* padding-left: 10px; */
   height: auto;
-  width: 1020px;
+  width: 100vw;
   align-content: center;
   justify-content: space-between;
 }
+
 
 .form-body {
   width: 700px;
