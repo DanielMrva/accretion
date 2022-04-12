@@ -211,6 +211,7 @@ input {
   margin-top: 8px;
   height: 28px;
   width: 260px;
+  font-family: 'Merriweather', serif;
 }
 
 .user-icon {
@@ -229,6 +230,16 @@ input {
   justify-content: space-evenly;
 }
 
+h1 {
+  font-family: var(--main-font);
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 28px;
+  padding: 30px;
+  color: var(--green);
+  text-align: center;
+}
+
 h2 {
   font-family: var(--main-font);
   color: grey;
@@ -240,10 +251,15 @@ h2.welcome {
   text-transform: uppercase;
 }
 
+ul {
+  list-style: none;
+  padding: none;
+}
+
 .logo-nav {
   display: flex;
   justify-content: center;
-  margin: 20px;
+  margin: -10px 20px 20px 20px;
   width: 250px;
   height: auto;
 }
@@ -262,7 +278,7 @@ h2.welcome {
   top: 0;
   left: 0;
   background: rgb(85, 141, 41);
-  margin-left: -320px;
+  /* margin-left: -320px; */
   transition: 0.5s;
   z-index: 1;
 }
@@ -288,7 +304,32 @@ h2.welcome {
   height: 50px;
   width:auto;
   transition: 0.5s;
+  margin-left: 320px;
   z-index: 1;
+}
+
+.right-buttons2 {
+  display: flex;
+  flex: 1 0 70%;
+  height: auto;
+  flex-flow: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width:fit-content;
+  padding-right: 40px;
+}
+
+.dash-main {
+  display: flex;
+  flex-direction: row;
+  transition: 0.5s;
+  padding-top: 40px;
+  height: auto;
+  width: fit-content;
+  align-content: center;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  margin-left: 320px;
 }
 
 .right-main {
@@ -301,16 +342,14 @@ h2.welcome {
   justify-content: space-between;
 }
 
-.dash-main {
-  display: flex;
-  flex-direction: row;
+.right-main-report {
   transition: 0.5s;
-  padding-top: 10px;
+  padding: 10px 60px;
+  /* padding-left: 10px; */
   height: auto;
   width: fit-content;
   align-content: center;
-  /* justify-content: space-between; */
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .user-icon {
