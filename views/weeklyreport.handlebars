@@ -1,4 +1,4 @@
-<div id="rightMain" class="dash-main">
+<div id="rightMain" class="dash-main-report">
 
 {{!-- <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom" id="danHeader">
     <a href="https://www.usgs.gov/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
@@ -27,7 +27,7 @@
         </div>
     </div>
     <div class="page-header container" id="Meeting-Head">
-        <h2 class="report-heading">Upcoming Meetings, Events, or Scientific Achievements</h2>
+        <h1 class="report-heading">Upcoming Meetings, Events, or Scientific Achievements</h1>
         <div class="entries-container">
             {{#each meetings}}
                 {{>meeting-achievement-details}}
@@ -35,7 +35,7 @@
         </div>
     </div>
     <div class="page-header container" id="Media-Head">
-        <h2 class="report-heading">Media Interactions</h2>
+        <h1 class="report-heading">Media Interactions</h1>
         <div class="entries-container">
             {{#each mediaInteractions}}
                 {{>media-details}}
@@ -43,7 +43,7 @@
         </div>
     </div>
     <div class="page-header container" id="FTR-Head">
-        <h2 class="report-heading">For the Record</h2>
+        <h1 class="report-heading">For the Record</h1>
         <div class="entries-container">
             {{#each records}}
                 {{>ftr-details}}
@@ -51,7 +51,7 @@
         </div>
     </div>
     <div class="page-header container" id="Con-Head">
-        <h2 class="report-heading">Congressional Interactions</h2>
+        <h1 class="report-heading">Congressional Interactions</h1>
         <div class="entries-container">
             {{#each conInteractions}}
                 {{>congress-details}}

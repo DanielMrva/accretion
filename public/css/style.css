@@ -345,7 +345,7 @@ li:hover {
   flex-direction: row;
   transition: 0.5s;
   padding-top: 40px;
-  height: auto;
+  height: 100vh;
   width: fit-content;
   align-content: center;
   justify-content: center;
@@ -355,12 +355,24 @@ li:hover {
 
 .right-main {
   transition: 0.5s;
-  padding-top: 10px;
   /* padding-left: 10px; */
-  height: auto;
+  height: 100vh;
   width: 100vw;
   align-content: center;
   justify-content: space-between;
+}
+
+.dash-main-report {
+  display: flex;
+  flex-direction: row;
+  transition: 0.5s;
+  padding-top: 40px;
+  height: auto;
+  width: fit-content;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: 320px;
 }
 
 .right-main-report {
