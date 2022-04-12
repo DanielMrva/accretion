@@ -1,7 +1,7 @@
 const router = require('express').Router();
-const { Congress, Office, FTR, Media, Meeting, Publication  } = require('../../models');
+const { Congress, Office, FTR, Media, Meeting, Publication  } = require('../models');
 
-//endpoint: /api/navbar-routes/congress
+//endpoint: /navbar-routes/congress
 router.get('/congress', async (req, res) => {
     try {
       const congressData = await Congress.findAll({
@@ -9,8 +9,6 @@ router.get('/congress', async (req, res) => {
       });
 
       const conInteractions = congressData.map((congress) => congress.get({plain: true}));
-
-      //res.status(200).json(conInteractions);
 
       res.render('congress', {conInteractions}); 
 
