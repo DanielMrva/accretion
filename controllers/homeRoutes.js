@@ -37,7 +37,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
     }
 });
 
-router.get('/form', async (req, res) => {
+router.get('/form', withAuth, async (req, res) => {
   try {
     res.render('form')
   } catch (err) {
