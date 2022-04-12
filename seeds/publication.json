@@ -1,0 +1,38 @@
+[
+    {
+        "pub_name": "Microbiology",
+        "title": "A global perspective on bacterial diversity in the terrestrial deep subsurface",
+        "desc": "It was an international effort to understand important microorganisms in the subsurface.",
+        "employee_name": "Elliott Barnhart",
+        "employee_email": "epbarnhart@usgs.gov",
+        "authors": "A. Soares; A. Edwards; D. An; A. Bagnoud; J. Bradley; E. Barnhart; M. Bomberg; K. Budwill; S. M. Caffrey; M. Fields; J. Gralnick; V. Kadnikov; L. Momper; M. Osburn; A. Mu; J. W. Moreau; D. Moser; L. Purkamo; S. M. Rassner; C. S. Sheik; B. Sherwood Lollar; B. M. Toner; G. Voordouw; K. Wouters; A. C. Mitchell",
+        "office_id": 3
+    },
+    {
+        "pub_name": "European Journal of Forest Research",
+        "title": "Interpreting wind damage risk: how multifunctional forest management impacts standing timber at risk of wind felling",
+        "desc": "Ryan Burner and co-authors in Finland, Norway, Sweden, and Germany are publishing a paper in European Journal of Forest Research showing how forest management practices in the face of climate change may be adapted to balance trade-offs between forest products and biodiversity, with special attention to mitigating wind damage risk.  An early view of the article is available at https://doi.org/10.1007/s10342-022-01442-y.",
+        "employee_name": "Ryan Burner",
+        "employee_email": "rburner@usgs.gov",
+        "authors": "Potterf, M., Eyvindson, K., Blattert, C., Burgas, D., Burner,  R. C., Stephan J., & Mönkkönen, M. 2022. Interpreting wind damage risk–how multifunctional forest management impacts standing timber at risk of wind felling. European Journal of Forest Research https://doi.org/10.1007/s10342-022-01442-y.",
+        "office_id": 6
+    },
+    {
+        "pub_name": "Journal of Fish and Wildlife", 
+        "title": "Assessing conservation and management actions with ecosystem services better communicates conservation value to the public” accepted for publication",
+        "desc": "In this paper, we present ecosystem services as a means to quantify the additional benefits derived from lands conserved and managed primarily for wildlife habitat.  To demonstrate the utility of such an approach, we present a case study using the InVEST modeling platform and simulations of changes in conservation lands within Stutsman County, North Dakota.",
+        "employee_name": "David Mushet", 
+        "employee_email": "dmushet@usgs.gov",
+        "authors": "Mushet, D.M., Post van der Burg, M., and Anteau, MJ., 2022, Assessing conservation and management actions with ecosystem services better communicates conservation value to the public.",
+        "office_id": 1
+    },
+    {
+        "pub_name": "bioRxiv", 
+        "title": "Population genetic analysis of Ophidiomyces ophidiicola, the causative agent of snake fungal disease, indicates recent introductions to the USA",
+        "desc": "Dan Grear and Jeff Lorch have co-authored the upcoming publication “Population genetic analysis of Ophidiomyces ophidiicola, the causative agent of snake fungal disease, indicates recent introductions to the USA” that has been released in bioRxiv.  Snake fungal disease is emerging in the eastern US and is considered a conservation concern.  It was previously thought that the fungus that causes the disease was native to the US.  We examined the genetics of the fungus and determined that it was most likely introduced to the US (likely through importation of snakes for the pet trade).  Other introduced fungal diseases such as white-nose syndrome (bats) and chytridiomycosis (amphibians) have led to massive population declines of native species. https://doi.org/10.1101/2022.03.23.485546",
+        "employee_name": "Abigail Ward",
+        "employee_email": "award@contractor.usgs.gov",
+        "authors": "Ladner, J.T., Palmer, J.M., Ettinger, C.L., Stajich, J.E., Farrell, T.M.,  Glorioso, B.M., Lawson, B.,  Price, S.J.,  Stengle, A.G.,  Grear, D.A.,  Lorch, J.M. 2022.  Population genetic analysis of Ophidiomyces ophidiicola, the causative agent of snake fungal disease, indicates recent introductions to the USA bioRxiv 2022.03.23.485546.",  
+        "office_id": 2
+    }
+]
