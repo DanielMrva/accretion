@@ -1,6 +1,5 @@
-async function weeklyPDF(event){
+async function weeklyPDF(){
 
-    event.preventDefault(); 
     
     console.log("weekly report PDF running");
     const response = await fetch('/api/weekly-PDF', {
