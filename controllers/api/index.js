@@ -8,8 +8,8 @@ const meetingRoutes = require('./meetingRoutes');
 const congressRoutes = require('./congressRoutes');
 const ftrRoutes = require('./ftr-routes');
 const weeklyReport = require('./weeklyReport-routes');
+const navRoutes = require('./navbar-routes')
 const weeklyPDF = require('./weeklyPDF-routes');
-
 
 
 
@@ -21,6 +21,6 @@ router.use('/meetings', meetingRoutes);
 router.use('/congress', congressRoutes);
 router.use('/ftr', ftrRoutes);
 router.use('/weekly-report', weeklyReport);
+router.use('/navbar-routes', navRoutes);
 router.use('/weekly-pdf', weeklyPDF);
-
 module.exports = router;
