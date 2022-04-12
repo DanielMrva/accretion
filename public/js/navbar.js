@@ -5,12 +5,12 @@ async function congressReport(){
     
     console.log("congress report running");
 
-    const response = await fetch('/api/navbar-routes/congress', {
+    const response = await fetch('/navbar-routes/congress', {
         method: 'GET',
     });
 
     if (response.ok) {
-    document.location.replace('/api/navbar-routes/congress');
+    document.location.replace('/navbar-routes/congress');
     } else {
         alert(response.statusText); 
     }
@@ -22,12 +22,12 @@ async function pubReport(){
     
     console.log("publication report running");
 
-    const response = await fetch('/api/navbar-routes/publication', {
+    const response = await fetch('/navbar-routes/publication', {
         method: 'GET',
     });
 
     if (response.ok) {
-    document.location.replace('/api/navbar-routes/publication');
+    document.location.replace('/navbar-routes/publication');
     } else {
         alert(response.statusText); 
     }
@@ -39,12 +39,12 @@ async function meetingReport(){
     
     console.log("meeting report running");
 
-    const response = await fetch('/api/navbar-routes/meeting', {
+    const response = await fetch('/navbar-routes/meeting', {
         method: 'GET',
     });
 
     if (response.ok) {
-    document.location.replace('/api/navbar-routes/meeting');
+    document.location.replace('/navbar-routes/meeting');
     } else {
         alert(response.statusText); 
     }
@@ -56,12 +56,12 @@ async function mediaReport(){
     
     console.log("media report running");
 
-    const response = await fetch('/api/navbar-routes/media', {
+    const response = await fetch('/navbar-routes/media', {
         method: 'GET',
     });
 
     if (response.ok) {
-    document.location.replace('/api/navbar-routes/media');
+    document.location.replace('/navbar-routes/media');
     } else {
         alert(response.statusText); 
     }
@@ -73,12 +73,12 @@ async function ftrReport(){
     
     console.log("for the record report running");
 
-    const response = await fetch('/api/navbar-routes/ftr', {
+    const response = await fetch('/navbar-routes/ftr', {
         method: 'GET',
     });
 
     if (response.ok) {
-    document.location.replace('/api/navbar-routes/ftr');
+    document.location.replace('/navbar-routes/ftr');
     } else {
         alert(response.statusText); 
     }
