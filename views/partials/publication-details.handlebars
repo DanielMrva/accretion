@@ -1,11 +1,21 @@
 <div class="card">
   <div class="card-body">
-    <h4> Publication: {{this.pub_name}} ({{this.office.abbreviation}})</h4>
-    <div>Title: {{this.title}}</div>
+    
+    <div>
+    <h3 class="card-title">{{this.pub_name}} ({{this.office.abbreviation}})</h3>
+    </div>
     <br>
-    <p>Description: {{this.desc}} 
-    <br>
-    <p>Employee: {{this.employee_name}}, {{this.employee_email}}</p>
-    <div>Authors: {{this.authors}}</div>
+
+    <div><h3 class="card-title">Title:</h3><p>
+   {{this.title}}</p></div>
+    
+    <div><h3 class="card-title">Description:</h3>
+    <p>{{this.desc}}</p></div>
+    
+    <div><h3 class="card-title">Employee:</h3> 
+    <p>{{this.employee_name}} ({{this.employee_email}})</p></div>
+    
+    <div><h3 class="card-title">Authors:</h3> 
+    <p>{{this.authors}}</p></div>
   </div>
 </div> 
