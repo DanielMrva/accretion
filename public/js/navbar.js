@@ -92,3 +92,12 @@ document.getElementById('publication-report').addEventListener('click', pubRepor
 document.getElementById('meeting-report').addEventListener('click', meetingReport);
 document.getElementById('media-report').addEventListener('click', mediaReport);
 document.getElementById('record-report').addEventListener('click', ftrReport);
+
+//logic for moving to form from new submission in dashboard and submit on the dashboard
+document.getElementById('newsubmission').addEventListener('click', function() {
+    document.location.replace('/form');
+});
+
+document.getElementById('submit').addEventListener('click', function() {
+    document.location.replace('/form');
+});
