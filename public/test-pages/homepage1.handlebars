@@ -6,9 +6,14 @@
 
 <div class="view">
 
-  <div class="video-home-nav">
-    
-    <div class="left-logo">
+  {{!-- <header class="homepage-logo"> --}}
+
+    <div class="square">
+      <img
+        id="square-home-pos"
+        class="square-home"
+        src="../assets/images/usgs-image2-small.jpg"
+      />
       <img
         class="logo"
         src="../assets/images/usgs_logo.png"
@@ -16,14 +21,26 @@
       />
     </div>
 
-    <div class="right-buttons">
+    <div class="square-1">
+      <img
+        id="square1-home-pos1"
+        class="square-home"
+        src="../assets/images/usgs-image-small.jpg"
+      />
       <button 
         id="loginBtn" 
         class="button-1" 
         role="button"
         onclick="displayLogin()">
         LOGIN</button>
+    </div>
 
+    <div class="square-2">
+      <img
+        id="square1-home-pos2"
+        class="square-home"
+        src="../assets/images/usgs-image1-small.jpg"
+      />
       <button 
       id="signUpBtn" 
       class="button-1" 
@@ -39,7 +56,7 @@
           <input type="text" class="email" placeholder="EMAIL" id="email-login" />
           <input type="password" class="password" placeholder="PASSWORD" id="password-login" />
 
-              <button class="button-2" role="button" id="login-btn">LOGIN</button>
+              <button class="button-1" role="button" id="login-btn">LOGIN</button>
 
         </form>
       </div>
@@ -59,7 +76,7 @@
 
     </div>
 
-  </div>
+  {{!-- </header> --}}
 
 </div>
 
