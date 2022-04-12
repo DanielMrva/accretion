@@ -1,5 +1,6 @@
 async function weeklyReport(){
-; 
+
+    //event.preventDefault(); 
     
     console.log("weekly report running");
     const response = await fetch('/api/weekly-report', {
