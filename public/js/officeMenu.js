@@ -49,7 +49,6 @@ async function menuGen() {
 
     }
 
-
     // ftr
     for (let i = 0; i < officeData.length; i++) {
 
