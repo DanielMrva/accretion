@@ -1,42 +1,42 @@
 // let url = '/api/'
 
 // general function to fetch data
-async function fetcher(method, category, id=undefined, body=undefined) {
+// async function fetcher(method, category, id=undefined, body=undefined) {
 
-    let data;
+//     let data;
 
-    switch (method) {
+//     switch (method) {
 
-        case 'GET':
+//         case 'GET':
             
-            if (!id) {
+//             if (!id) {
 
-                data = await goGetter(category);
-                return data;
+//                 data = await goGetter(category);
+//                 return data;
 
-            } else {
+//             } else {
 
-                data = await goGetter(category, id);
-                return data;
-            }
+//                 data = await goGetter(category, id);
+//                 return data;
+//             }
         
-        case 'POST':
+//         case 'POST':
 
-            data = await posterChild(category, body);
-            return;
+//             data = await posterChild(category, body);
+//             return;
 
-        case 'PUT': 
+//         case 'PUT': 
 
-            data = await updater(category, body, id);
-            return;
+//             data = await updater(category, body, id);
+//             return;
 
-        case 'DELETE':
+//         case 'DELETE':
             
-            data = await terminator(category, id)
-            return;
-    }
+//             data = await terminator(category, id)
+//             return;
+//     }
 
-}
+// }
 
 
 // specific get function
