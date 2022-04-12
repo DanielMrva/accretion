@@ -1,5 +1,5 @@
-async function weeklyReport(){ 
-    
+async function weeklyReport(event){ 
+    event.preventDefault();
 
     console.log("weekly report running");
 
@@ -16,5 +16,5 @@ async function weeklyReport(){
 }
 
 document.getElementById('weeklyReport').addEventListener('click', weeklyReport);
-
+document.getElementById('weekly-report').addEventListener('click', weeklyReport);
 
