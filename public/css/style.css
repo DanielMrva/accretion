@@ -155,6 +155,17 @@ button {
   opacity: .5;
 }
 
+.button-4 {
+  background-color:white(85, 141, 41, 0.3);
+  border-radius: 15px;
+  color: white;
+  font-size: 16px;
+  margin: 80px 40px;
+  height: 65px;
+  width:200px;
+  
+}
+
 #login {
   display: flex;
   height: 300px;
@@ -256,6 +267,14 @@ ul {
   padding: none;
 }
 
+li:hover {
+  background-color: rgb(255, 255, 255, 0.4);
+}
+
+.nav-link {
+  padding: none;
+}
+
 .logo-nav {
   display: flex;
   justify-content: center;
@@ -317,6 +336,8 @@ ul {
   flex-wrap: wrap;
   width:fit-content;
   padding-right: 40px;
+  align-items: center;
+  margin-top: -15px;
 }
 
 .dash-main {
@@ -357,7 +378,8 @@ ul {
 }
 
 .user-icon-small {
-  width: 50px;
+  width: 80px;
+  padding: none;
 }
 
 .user-welcome {
