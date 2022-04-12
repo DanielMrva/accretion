@@ -2,8 +2,8 @@
     {
         "mtg_ach": "North Dakota Water Quality Monitoring Conference",
         "desc": "Staff from the Dakota Water Science Center will give the following presentations at the North Dakota Water Quality Monitoring Conference in Bismarck, March 21–23: Climate extremes as drivers of surface water quality trends in the US and water quality in the National Climate Assessment, (Karen Ryberg); Salinity and nutrients in Heart River Basin, (Joel Galloway); Better or worse? Considerations in trend analysis, (Rochelle Nustad); Fargo-Moorhead Diversion water quality, (Spencer Wheeling); Recent declines in river chloride concentrations point to success of management actions, though more progress to be made, poster, (Lindsey Schafer, lschafer@usgs.gov; Jennifer Murphy) (Central Midwest Water Science Center) and presenter, (Karen Ryberg)",
-        "employee_name": "Karen Ryberg, Joel Galloway, Rochelle Nustad, Spencer Wheeling, Lindsey Schafer, Jennifer Murphy",
-        "employee_email": "kryberg@usgs.gov, jgallowa@usgs.gov, ranustad@usgs.gov, swheeling@usgs.gov, lschafer@usgs.gov, jmurphy@usgs.gov",
+        "employee_name": "Karen Ryberg",
+        "employee_email": "kryberg@usgs.gov",
         "office_id": 8
     },
     {
@@ -23,8 +23,8 @@
     {
         "mtg_ach": "North Central branch of the Entomological Society of America meeting",
         "desc": "Mike Simanonok will present “Historical and modern pollen diets of the rusty patched bumble bee (Bombus affinis)” at the North Central branch of the Entomological Society of America meeting in Minneapolis, MN on March 20.  Clint Otto will present “Estimating occupancy and detection of Bombus affinis to inform monitoring.”",
-        "employee_name": "Mike Simanonok, Clint Otto", 
-        "employee_email": "msimanonok@usgs.gov, cotto@usgs.gov",
+        "employee_name": "Mike Simanonok", 
+        "employee_email": "msimanonok@usgs.gov",
         "office_id": 1
     },
     {
@@ -51,8 +51,8 @@
     {
         "mtg_ach": "GLSC to present at State of Lake Erie Conference",
         "desc": "Several GLSC scientists will attend and present at the State of Lake Erie Conference in Cleveland, Ohio, March 16-17, 2022.  Mary Anne Evans (GLSC, Ann Arbor, Michigan) will be co-leading the 'Lake Erie Harmful and Nuisance Algal Blooms' session highlighting recent research on Great Lakes harmful and nuisance algal blooms (HABs and NABs).  The session will include a talk by Kasia Przybyla-Kelly (GLSC, Chesterton, Indiana) on 'Four lakes, four years: How does Cladophora biomass in Lake Erie weigh in against other Great Lakes?' as well as a panel of resource managers discussing their science information needs.  Beth Sparks-Jackson (GLSC, Ann Arbor, Michigan) will also deliver a presentation, “Science-based decisions guide the development of ecological restoration projects in the Maumee River,” describing the collaborative, science-based approach used to develop aquatic restoration projects within the Maumee Area of Concern.",
-        "employee_name": "Mary Anne Evans, Kasia Przybyla-Kelly, Beth Sparks-Jackson", 
-        "employee_email": "maevans@usgs.gov, kprzybyla-kelly@usgs.gov, bsparks-jackson@contractor.usgs.gov",
+        "employee_name": "Mary Anne Evans", 
+        "employee_email": "maevans@usgs.gov",
         "office_id": 5
     },
     {
@@ -65,8 +65,8 @@
     {
         "mtg_ach": "USGS symposium “Informing Species Conservation in a Changing World – Science Addressing Climate Change and Climate Drivers for Decision-Makers”",
         "desc": "NOROCK’s Tabitha Graves, Clint Muhlfeld, and Erik Beever will be presenting at the USGS symposium titled “Informing Species Conservation in a Changing World – Science Addressing Climate Change and Climate Drivers for Decision-Makers” hosted by the Species Management Research Program.  Graves will be presenting on March 29 and Muhlfeld and Beever will be presentation on March 30: [Graves, T.A., and Janousek, W.J., 2022, Understanding current cumulative influences on and projecting future occupancy for Western and McKay's bumble bees—presentation: USGS symposium “Informing Species Conservation in a Changing World – Science Addressing Climate Change and Climate Drivers for Decision-Makers”.  (Tabitha Graves)], [Muhlfeld, C., 2022, Vulnerability of native salmonids in the Northern Rockies: Linking science and management for climate adaptation—presentation: USGS symposium “Informing Species Conservation in a Changing World – Science Addressing Climate Change and Climate Drivers for Decision-Makers”.  (Clint Muhlfeld)],[Beever, E., 2022, Adaptive capacity: The linchpin for understanding and addressing species vulnerability to climate-change impacts—presentation: USGS symposium “Informing Species Conservation in a Changing World – Science Addressing Climate Change and Climate Drivers for Decision-Makers” (Erik Beever)].",
-        "employee_name": "Tabitha Graves, Clint Muhlfeld, Erik Beever", 
-        "employee_email": "tgraves@usgs.gov, cmuhlfeld@usgs.gov, ebeever@usgs.gov",
+        "employee_name": "Tabitha Graves", 
+        "employee_email": "tgraves@usgs.gov",
         "office_id": 4
     },
     {
