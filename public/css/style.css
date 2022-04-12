@@ -4,12 +4,9 @@ Desktop/laptop- 1366x768 (22.98%)
  */
 
 :root {
-  --green: rgb(85, 141, 41);
+    --green: rgb(85, 141, 41);
+    --main-font: 'Cantarell', sans-serif;
 }
-
-body {
-  font-family: 'Cantarell', sans-serif;
-}	
 
 video {
   object-fit: cover;
@@ -20,76 +17,51 @@ video {
   left: 0;
 }
 
-.view {
-  display: grid;
-  height: 768px;
-  width: 1024px;
-  grid-template-columns: 1fr 1fr 1fr 256px 1fr 256px 256px 1fr 1fr;
-  /* grid-template-columns: 115px 256px 55px 256px 256px 85px; */
-}
-
-.square-home {
-  width: 266px;
-  position: absolute;
-}
-
-.square {
-  grid-column: 4;
-  top: 50%;
-  left: 50%;
-  align-items: center;
-  margin-top: 155px;
-}
-
-.square-1 {
-  grid-column: 6;
-  top: 50%;
-  left: 50%;
-  align-items: center;
-  margin-top: 441px;
-}
-
-.square-2 {
-  grid-column: 7;
-  top: 50%;
-  left: 50%;
-  align-items: center;
-  margin-top: 185px;
-}
-
-/* .homepage-logo {
+.video-home-nav {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-} */
+  /* justify-content: space-between; */
+  margin: 30px;
+  flex-wrap: wrap;
+}
+
+.left-logo {
+  flex: 1 0 30%;
+  justify-content:flex-start;
+}
+
+.right-buttons {
+  display: flex;
+  flex: 1 0 70%;
+  height: auto;
+  flex-flow: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
 
 .logo {
-  height: 80px;
-    width: auto;
-    position: absolute;
-    margin-top: 90px;
-    margin-left: 20px;
+  flex-grow: inherit;
+  height: auto;
+  width: 100%;
+  min-width: 160px;
+  max-width: 280px;
 }
 
 #loginBtn {
-  position: absolute;
-  margin-top: 110px;
-  margin-left: 50px;
-  width: 155px;
+  width: 145px;
   font-size: 23px;
-  color: black;
+  color: var(--green);
   background-color: rgba(255, 255, 255, .6);
+  margin: 10px 8px 15px 8px;
 }
 
 #signUpBtn {
-  position: absolute;
-  margin-top: 110px;
-  margin-left: 50px;
-  width: 155px;
+  width: 145px;
   font-size: 23px;
-  color: black;
+  color: var(--green);
   background-color: rgba(255, 255, 255, .6);
+  margin: 10px 8px 15px 8px;
 }
 
 #loginBtn:hover {
@@ -102,35 +74,35 @@ video {
   color: white;
 }
 
-.button-1 {
-    background-color:rgba(255, 255, 255, .5);
-    border: 1px solid rgba(255, 255, 255, .5);
-    border-radius: 22px;
-    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-family: 'Cantarell', sans-serif;
-    font-size: 20px;
-    font-weight: 800;
-    line-height: 16px;
-    min-height: 40px;
-    outline: 0;
-    padding: 12px 14px;
-    margin-right: 40px;
-    text-align: center;
-    text-rendering: geometricprecision;
-    text-transform: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: middle;
-    height: 55px;
-    width:115px;
-    
-  }
+button {
+  background-color:rgba(255, 255, 255, .5);
+  border: 1px solid rgba(255, 255, 255, .5);
+  border-radius: 22px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Cantarell', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  margin-right: 40px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  height: 55px;
+  width:115px;
   
+}
+
 .button-1:hover,
 .button-1:active {
   background-color: initial;
@@ -144,31 +116,12 @@ video {
 
 .button-2 {
   background-color:rgba(85, 141, 41, 0.1);
-  border: 1px solid rgba(255, 255, 255, .5);
   border-radius: 15px;
-  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
-  box-sizing: border-box;
   color: var(--green);
-  cursor: pointer;
-  display: inline-block;
-  font-family: 'Cantarell', sans-serif;
   font-size: 16px;
-  font-weight: 800;
-  line-height: 16px;
-  min-height: 40px;
-  outline: 0;
-  padding: 12px 14px;
   margin-top: 18px;
-  text-align: center;
-  text-rendering: geometricprecision;
-  text-transform: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
   height: 45px;
   width:105px;
-  
 }
 
 .button-2:hover,
@@ -184,29 +137,11 @@ video {
 
 .button-3 {
   background-color:rgba(85, 141, 41, 0.1);
-  border: 1px solid rgba(255, 255, 255, .5);
   border-radius: 15px;
-  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
-  box-sizing: border-box;
   color: var(--green);
-  cursor: pointer;
-  display: inline-block;
-  font-family: 'Cantarell', sans-serif;
-  font-size: 20px;
-  font-weight: 800;
-  line-height: 16px;
-  min-height: 40px;
-  outline: 0;
-  padding: 12px 14px;
-  text-align: center;
-  text-rendering: geometricprecision;
-  text-transform: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
   height: 80px;
-  width: 275px;
+  width: 200px;
+  margin: 0px;
 }
 
 .button-3:hover,
@@ -278,24 +213,56 @@ input {
   width: 260px;
 }
 
+.user-icon {
+  height: 500px;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dashboard-buttons {
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
 h2 {
-  font-family: 'Cantarell', sans-serif;
+  font-family: var(--main-font);
   color: grey;
   text-align: center;
 }
 
 h2.welcome {
   padding: 10px;
+  text-transform: uppercase;
+}
+
+.logo-nav {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  width: 250px;
+  height: auto;
+}
+
+.nav-icon {
+  height: 40px;
+  width: auto;
+  margin-right: 8px;
+  display:inline-block;
 }
 
 .side-nav {
   height: 100%;
-  width: 270px;
+  width: 320px;
   position: fixed;
   top: 0;
   left: 0;
   background: rgb(85, 141, 41);
-  margin-left: -300px;
+  margin-left: -320px;
   transition: 0.5s;
   z-index: 1;
 }
@@ -313,13 +280,15 @@ h2.welcome {
   font-size: 20px;
   display: block;
   color: white;
-  font-family: 'Cantarell', sans-serif;
+  font-family: var(--main-font);
 
 }
 
 .side-arrow {
   height: 50px;
   width:auto;
+  transition: 0.5s;
+  z-index: 1;
 }
 
 .right-main {
@@ -327,15 +296,35 @@ h2.welcome {
   padding-top: 10px;
   /* padding-left: 10px; */
   height: auto;
-  width: 1020px;
+  width: 100vw;
   align-content: center;
   justify-content: space-between;
 }
 
-.expand-arrow {
+.dash-main {
+  display: flex;
+  flex-direction: row;
   transition: 0.5s;
-  position: fixed;
-  bottom: 50%;
+  padding-top: 10px;
+  height: auto;
+  width: fit-content;
+  align-content: center;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+}
+
+.user-icon {
+  flex: 1 0 100%;
+}
+
+.user-welcome {
+  flex: 1 0 100%;
+  padding: 20px;
+}
+
+.dashboard-buttons {
+  flex: 1 0 100%;
+  max-width: 550px;
 }
 
 .form-body {
@@ -365,184 +354,30 @@ h2.welcome {
   box-shadow: 0 0 0 0.25rem rgba(85, 141, 41, 0.2);
 }
 
-.user-icon {
-  height: 500px;
-  width: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+
+/* This is for phone viewing */
+@media screen and (max-width: 750px) {
+  .left-logo {
+    flex: 1 0 100%;
+    justify-content: center;
+    flex-flow: row;
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .left-logo {
+    display: flex;
+    justify-content:center;
+  }
+
+  .right-buttons {
+    display: flex;
+    flex: 1 0 100%;
+    height: fit-content;
+    flex-flow: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    padding-top: 40px;
+  }
 }
-
-.dashboard-buttons {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-#danHeader {
-  background-color: var(--green);
-}
-
-
-
-/* This is for desktop viewing */
-@media screen and (min-width: 1025px)
-   {
-    .view {
-      display: grid;
-      /* height: 100vh; */
-      width: 100vw;
-      grid-template-columns: 10px 1fr 1fr 300px 1fr 300px 300px 1fr 1fr;
-    }
-    
-    .square-home {
-      display: flex;
-      width: 300px;
-      height: auto;
-      position: absolute;
-    }
-    
-    .square {
-      grid-column: 4;
-      top: 50%;
-      left: 50%;
-      align-items: center;
-      margin-top: 100px;
-    }
-    
-    .square-1 {
-      grid-column: 6;
-      top: 50%;
-      left: 50%;
-      align-items: center;
-      margin-top: 440px;
-    }
-    
-    .square-2 {
-      grid-column: 7;
-      top: 50%;
-      left: 50%;
-      align-items: center;
-      margin-top: 140px;
-    }
-    
-    /* .homepage-logo {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    } */
-    
-    .logo {
-      height: 92px;
-        width: auto;
-        position: absolute;
-        margin-top: 105px;
-        margin-left: 30px;
-    }
-
-    #loginBtn {
-      position: absolute;
-      margin-top: 140px;
-      margin-left: 70px;
-      width: 155px;
-      font-size: 23px;
-      color: black;
-      background-color: rgba(255, 255, 255, .6);
-    }
-    
-    #signUpBtn {
-      position: absolute;
-      margin-top: 140px;
-      margin-left: 70px;
-      width: 155px;
-      font-size: 23px;
-      color: black;
-      background-color: rgba(255, 255, 255, .6);
-    }
-    
-
-    
-} 
-
-/* big monitor */
-@media screen and (min-width: 1330px)
-   {
-    .view {
-      display: grid;
-      /* height: 100vh; */
-      width: 100vw;
-      grid-template-columns: 10px 1fr 1fr 375px 1fr 375px 375px 1fr 1fr;
-    }
-    
-    .square-home {
-      display: flex;
-      width: 375px;
-      height: auto;
-      position: absolute;
-    }
-    
-    .square {
-      grid-column: 4;
-      top: 50%;
-      left: 50%;
-      align-items: center;
-      margin-top: 100px;
-    }
-    
-    .square-1 {
-      grid-column: 6;
-      top: 50%;
-      left: 50%;
-      align-items: center;
-      margin-top: 515px;
-    }
-    
-    .square-2 {
-      grid-column: 7;
-      top: 50%;
-      left: 50%;
-      align-items: center;
-      margin-top: 140px;
-    }
-    
-    /* .homepage-logo {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    } */
-    
-    .logo {
-      height: 110px;
-        width: auto;
-        position: absolute;
-        margin-top: 135px;
-        margin-left: 40px;
-    }
-
-    #loginBtn {
-      position: absolute;
-      margin-top: 160px;
-      margin-left: 70px;
-      width: 240px;
-      font-size: 28px;
-      color: black;
-      background-color: rgba(255, 255, 255, .6);
-    }
-    
-    #signUpBtn {
-      position: absolute;
-      margin-top: 140px;
-      margin-left: 70px;
-      width: 240px;
-      font-size: 28px;
-      color: black;
-      background-color: rgba(255, 255, 255, .6);
-    }
-    
-
-    
-} 
