@@ -13,7 +13,6 @@ const weeklyPDF = require('./weeklyPDF-routes');
 
 
 
-
 router.use('/users', userRoutes);
 router.use('/publications', pubRoutes);
 router.use('/media', mediaRoutes);
@@ -24,5 +23,4 @@ router.use('/ftr', ftrRoutes);
 router.use('/weekly-report', weeklyReport);
 router.use('/navbar-routes', navRoutes);
 router.use('/weekly-pdf', weeklyPDF);
-
 module.exports = router;
