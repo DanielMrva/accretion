@@ -74,7 +74,7 @@ router.get('/', async (req, res) => {
         const conInteractions = congressData.map((congress) => congress.get({plain: true}));
 
 
-        res.render('weeklyReport', {publications, meetings, mediaInteractions, records, conInteractions}); 
+        res.render('weeklyreport', {publications, meetings, mediaInteractions, records, conInteractions}); 
 
     } catch (err) {
 

@@ -1,4 +1,4 @@
-async function weeklyReport(){ 
+async function weeklyreport(){ 
     
     console.log("weekly report running");
 
@@ -14,6 +14,6 @@ async function weeklyReport(){
 
 }
 
-document.getElementById('weeklyReport').addEventListener('click', weeklyReport);
-document.getElementById('weekly-report').addEventListener('click', weeklyReport);
+document.getElementById('weeklyreport').addEventListener('click', weeklyreport);
+document.getElementById('weekly-report').addEventListener('click', weeklyreport);
 
