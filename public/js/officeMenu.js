@@ -66,7 +66,3 @@ async function menuGen() {
 
 menuGen()
 
-
-// var e = document.getElementById("selectElementID");
-// var value=e.options[e.selectedIndex].value;// get selected option value
-// var text=e.options[e.selectedIndex].text;
