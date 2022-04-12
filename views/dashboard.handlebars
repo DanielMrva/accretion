@@ -1,15 +1,20 @@
 {{>navigation}}
 
-<div id="rightMain" class="right-main">
+<div id="rightMain" class="dash-main">
     
+    <div class="user-icon">
     <img src="../assets/images/user-icon.png" class="user-icon"/>
+    </div>
 
+    <div class="user-welcome">
     <h2 class="welcome">WELCOME BACK {{user.first_name}} {{user.last_name}}</h2>
+    </div>
+
 
     <div class="dashboard-buttons">
-        <button class="button-3" id="weeklyReport" role="button">WEEKLY REPORT</button>
+        <button class="button-3" id="weeklyReport" role="button">NEW SUBMISSION</button>
 
-        <button class="button-3" id="submitAchievement" role="button">SUBMISSIONS</button>
+        <button class="button-3" id="submitAchievement" role="button">PAST SUBMISSIONS</button>
 
     </div>
 </div>

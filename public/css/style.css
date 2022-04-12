@@ -1,3 +1,8 @@
+/* Mobile- 360x640
+Tablet- 768x1024 (51.43%)
+Desktop/laptop- 1366x768 (22.98%)
+ */
+
 :root {
     --green: rgb(85, 141, 41);
     --main-font: 'Cantarell', sans-serif;
@@ -12,7 +17,7 @@ video {
   left: 0;
 }
 
-.homepage-nav {
+.video-home-nav {
   position: relative;
   display: flex;
   align-items: center;
@@ -136,6 +141,7 @@ button {
   color: var(--green);
   height: 80px;
   width: 200px;
+  margin: 0px;
 }
 
 .button-3:hover,
@@ -231,6 +237,7 @@ h2 {
 
 h2.welcome {
   padding: 10px;
+  text-transform: uppercase;
 }
 
 .logo-nav {
@@ -250,12 +257,12 @@ h2.welcome {
 
 .side-nav {
   height: 100%;
-  width: 300px;
+  width: 320px;
   position: fixed;
   top: 0;
   left: 0;
   background: rgb(85, 141, 41);
-  margin-left: -300px;
+  margin-left: -320px;
   transition: 0.5s;
   z-index: 1;
 }
@@ -280,6 +287,8 @@ h2.welcome {
 .side-arrow {
   height: 50px;
   width:auto;
+  transition: 0.5s;
+  z-index: 1;
 }
 
 .right-main {
@@ -292,6 +301,31 @@ h2.welcome {
   justify-content: space-between;
 }
 
+.dash-main {
+  display: flex;
+  flex-direction: row;
+  transition: 0.5s;
+  padding-top: 10px;
+  height: auto;
+  width: fit-content;
+  align-content: center;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+}
+
+.user-icon {
+  flex: 1 0 100%;
+}
+
+.user-welcome {
+  flex: 1 0 100%;
+  padding: 20px;
+}
+
+.dashboard-buttons {
+  flex: 1 0 100%;
+  max-width: 550px;
+}
 
 .form-body {
   width: 700px;
