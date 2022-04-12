@@ -4,7 +4,6 @@ const { Office, Publication, Media, Congress, Meeting, FTR } = require('../../mo
 
 const { Op } = require('sequelize');
 
-
 // api/weekly-report
 router.get('/', async (req, res) => {
 
