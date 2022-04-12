@@ -1,0 +1,18 @@
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom" id="danHeader">
+    <a href="https://www.usgs.gov/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+      <img src="../assets/images/usgs_logo.png" alt="usgs logo" class="header-image">
+    </a>
+</header>
+
+<section id="congress-report">
+    <div class="page-header container" id="Con-Head">
+        <h2 class="report-heading">Congressional Interactions</h2>
+        <div class="entries-container">
+            {{#each conInteractions}}
+                {{>congress-details}}
+            {{/each}}
+        </div>
+    </div>
+</section>
+
+
