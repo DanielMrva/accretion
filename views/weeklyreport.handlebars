@@ -1,0 +1,58 @@
+
+ 
+
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom" id="danHeader">
+    <a href="https://www.usgs.gov/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+      <img src="../assets/images/usgs_logo.png" alt="usgs logo" class="header-image">
+    </a>
+    
+    <ul class="nav nav-pills">
+        <li class="nav-item"><button class="btn btn-primary button-3" id="weeklyPDF", type="submit">PDF PRINTABLE VERSION</button></li>
+      <li class="nav-item"><a href="../dashboard" class="nav-link" id="dashboard-link">Dashboard</a></li>
+    </ul>
+</header>
+
+{{>navigation}}
+
+<section id="weekly-report">
+    <div class="page-header container" id="Pub-Head">
+        <h2 class="report-heading">Upcoming Significant Publications or Science Products (not yet published)</h2>
+        <div class="entries-container">
+            {{#each publications}}
+                {{>publication-details}}
+            {{/each}}
+        </div>
+    </div>
+    <div class="page-header container" id="Meeting-Head">
+        <h2 class="report-heading">Upcoming Meetings, Events, or Scientific Achievements</h2>
+        <div class="entries-container">
+            {{#each meetings}}
+                {{>meeting-achievement-details}}
+            {{/each}}
+        </div>
+    </div>
+    <div class="page-header container" id="Media-Head">
+        <h2 class="report-heading">Media Interactions</h2>
+        <div class="entries-container">
+            {{#each mediaInteractions}}
+                {{>media-details}}
+            {{/each}}
+        </div>
+    </div>
+    <div class="page-header container" id="FTR-Head">
+        <h2 class="report-heading">For the Record</h2>
+        <div class="entries-container">
+            {{#each records}}
+                {{>ftr-details}}
+            {{/each}}
+        </div>
+    </div>
+    <div class="page-header container" id="Con-Head">
+        <h2 class="report-heading">Congressional Interactions</h2>
+        <div class="entries-container">
+            {{#each conInteractions}}
+                {{>congress-details}}
+            {{/each}}
+        </div>
+    </div>
+</section>
