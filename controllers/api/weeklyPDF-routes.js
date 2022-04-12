@@ -79,7 +79,7 @@ router.get('/', async (req, res) => {
         });
         doc.pipe(res);
         doc.font("Helvetica-Bold", 20);
-        doc.text("Weely Report");
+        doc.text("Weekly Report");
         doc.moveDown();
         doc.font("Helvetica", 18);
         doc.text("Upcoming Significant Publications or Science Products (not yet published)");
