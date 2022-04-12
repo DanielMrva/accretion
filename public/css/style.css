@@ -327,7 +327,7 @@ ul {
   height: auto;
   width: fit-content;
   align-content: center;
-  /* justify-content: space-between; */
+  justify-content: center;
   flex-wrap: wrap;
   margin-left: 320px;
 }
@@ -354,6 +354,10 @@ ul {
 
 .user-icon {
   flex: 1 0 100%;
+}
+
+.user-icon-small {
+  width: 50px;
 }
 
 .user-welcome {

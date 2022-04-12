@@ -1,8 +1,6 @@
 const router = require('express').Router();
 const { Meeting, Office } = require('../../models');
 
-const { Op } = require('sequelize');
-
 //endpoint location: /api/meetings
 //gets a list of all meetings in the database
 router.get('/', async (req, res) => {
@@ -10,14 +8,10 @@ router.get('/', async (req, res) => {
       const meetingData = await Meeting.findAll({
         include: [{model: Office}]
       });
-      const meetings = meetingData.map((meeting) => meeting.get({plain: true}));
-
-      res.render('meeting', {meetings})
-  
+      res.status(200).json(meetingData);
     } catch (err) {
       res.status(500).json(err);
     }
-    
 });
 
 //endpoint location: /api/meetings/:id
