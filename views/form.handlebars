@@ -27,51 +27,6 @@
     <!-- ACHIEVEMENTS part of form -->
     <div id="form" class="form-body">
       <div class="accordion" id="accordionExample">
-        {{!-- <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button
-              class="accordion-button"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseOne"
-              aria-expanded="true"
-              aria-controls="collapseOne"
-            >
-              ACHIEVEMENTS
-            </button>
-          </h2>
-          <div
-            id="collapseOne"
-            class="accordion-collapse collapse show"
-            aria-labelledby="headingOne"
-            data-bs-parent="#accordionExample"
-          >
-            <div class="accordion-body">
-              <div class="form-floating">
-                <textarea
-                  class="form-control"
-                  placeholder="Leave a comment here"
-                  id="achDate"
-                ></textarea>
-                <label for="achDate"
-                  >Date of Achievement, Will be a datepicker</label
-                >
-              </div>
-
-              <div class="form-floating">
-                <textarea
-                  class="form-control"
-                  placeholder="Leave a comment here"
-                  id="achName"
-                ></textarea>
-                <label for="achName">Achievement</label>
-              </div>
-
-              <button class="button-2" id="submitAchievement" role="button">SUBMIT</button>
-
-            </div>
-          </div>
-        </div> --}}
 
         <!-- CONGRESS part of form -->
         <div class="accordion-item">
@@ -122,7 +77,7 @@
                   placeholder="Leave a comment here"
                   id="congress-name"
                 ></textarea>
-                <label for="floatingTextarea">Name(s):</label>
+                <label for="floatingTextarea">Name:</label>
               </div>
 
               <div class="form-floating">
@@ -132,17 +87,24 @@
                   id="congress-email"
                 ></textarea>
                 <label for="floatingTextarea"
-                  >Email(s):</label
+                  >Email:</label
                 >
               </div>
 
               <div class="form-floating">
-                <textarea
+                {{!-- <textarea
                   class="form-control"
                   placeholder="Leave a comment here"
                   id="congress-office"
-                ></textarea>
-                <label for="floatingTextarea">Office (use id# for now; will be a dropdown)</label>
+                ></textarea> --}}
+
+                <form>  
+                  <label> Office: </label>  
+                  <select id="congress-office">  
+                  </select>  
+                </form>
+
+                {{!-- <label for="floatingTextarea">Office (use id# for now; will be a dropdown)</label> --}}
               </div>
 
               <button class="button-2" id="submitCongress" role="button">SUBMIT</button>
@@ -206,7 +168,7 @@
                   placeholder="Leave a comment here"
                   id="media-emp-name"
                 ></textarea>
-                <label for="floatingTextarea">Name(s):</label>
+                <label for="floatingTextarea">Name:</label>
               </div>
 
               <div class="form-floating">
@@ -215,16 +177,23 @@
                   placeholder="Leave a comment here"
                   id="media-emp-email"
                 ></textarea>
-                <label for="floatingTextarea">Email(s):</label>
+                <label for="floatingTextarea">Email:</label>
               </div>
 
               <div class="form-floating">
-                <textarea
+                {{!-- <textarea
                   class="form-control"
                   placeholder="Leave a comment here"
                   id="media-office"
                 ></textarea>
-                <label for="floatingTextarea">Office (use id# for now; will be a dropdown):</label>
+                <label for="floatingTextarea">Office (use id# for now; will be a dropdown):</label> --}}
+
+                <form>  
+                  <label> Office: </label>  
+                  <select id="media-office">  
+                  </select>  
+                </form>
+                
               </div>                                                      
 
               <button class="button-2" id="submitMedia" role="button">SUBMIT</button>
@@ -281,7 +250,7 @@
                   placeholder="Leave a comment here"
                   id="mtg-name"
                 ></textarea>
-                <label for="floatingTextarea">Name(s):</label>
+                <label for="floatingTextarea">Name:</label>
               </div>
 
               <div class="form-floating">
@@ -290,16 +259,23 @@
                   placeholder="Leave a comment here"
                   id="mtg-email"
                 ></textarea>
-                <label for="mtg-email">Email(s):</label>
+                <label for="mtg-email">Email:</label>
               </div>   
 
               <div class="form-floating">
-                <textarea
+                {{!-- <textarea
                   class="form-control"
                   placeholder="Leave a comment here"
                   id="mtg-office"
                 ></textarea>
-                <label for="mtg-email">Office (use id# for now; will be a dropdown):</label>
+                <label for="mtg-email">Office (use id# for now; will be a dropdown):</label> --}}
+
+                <form>  
+                  <label> Office: </label>  
+                  <select id="mtg-office">  
+                  </select>  
+                </form>
+
               </div>                             
 
               <button class="button-2" id="submitMeetings" role="button">SUBMIT</button>
@@ -367,7 +343,7 @@
                     id="pub-emp-name"
                   ></textarea>
                   <label for="floatingTextarea"
-                    >Name(s):</label
+                    >Name:</label
                   >
                 </div>
 
@@ -377,7 +353,7 @@
                     placeholder="Leave a comment here"
                     id="pub-emp-email"
                   ></textarea>
-                  <label for="floatingTextarea">Email(s):</label>
+                  <label for="floatingTextarea">Email:</label>
                 </div>
 
                 <div class="form-floating">
@@ -392,12 +368,19 @@
                 </div>
 
                 <div class="form-floating">
-                  <textarea
+                  {{!-- <textarea
                     class="form-control"
                     placeholder="Leave a comment here"
                     id="pub-office"
                   ></textarea>
-                  <label for="floatingTextarea">Office (use id# for now; will be a dropdown):</label>
+                  <label for="floatingTextarea">Office (use id# for now; will be a dropdown):</label> --}}
+
+                <form>  
+                  <label> Office: </label>  
+                  <select id="pub-office">  
+                  </select>  
+                </form>
+
                 </div>                
 
                 <button class="button-2" id="submitPublications" role="button">SUBMIT</button>
@@ -453,7 +436,7 @@
                   placeholder="Leave a comment here"
                   id="ftr-emp-name"
                 ></textarea>
-                <label for="floatingTextarea">Name(s):</label>
+                <label for="floatingTextarea">Name:</label>
               </div>
 
               <div class="form-floating">
@@ -462,16 +445,23 @@
                   placeholder="Leave a comment here"
                   id="ftr-emp-email"
                 ></textarea>
-                <label for="floatingTextarea">Email(s):</label>
+                <label for="floatingTextarea">Email:</label>
               </div>
 
               <div class="form-floating">
-                <textarea
+                {{!-- <textarea
                   class="form-control"
                   placeholder="Leave a comment here"
                   id="ftr-office"
                 ></textarea>
-                <label for="floatingTextarea">Office (use id# for now; will be a dropdown):</label>
+                <label for="floatingTextarea">Office (use id# for now; will be a dropdown):</label> --}}
+
+                <form>  
+                  <label> Office: </label>  
+                  <select id="ftr-office">  
+                  </select>  
+                </form>
+
               </div>                            
 
               <button class="button-2" id="submitFTR" role="button">SUBMIT</button>
@@ -483,7 +473,8 @@
 
     </div>
 </div>
-</div>
+</div>  
 
 <script src="../js/fetch.js"></script>
 <script src="../js/form.js"></script>
+<script src="../js/officeMenu.js"></script>
