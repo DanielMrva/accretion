@@ -2,92 +2,92 @@
     {
         "mtg_ach": "North Dakota Water Quality Monitoring Conference",
         "desc": "Staff from the Dakota Water Science Center will give the following presentations at the North Dakota Water Quality Monitoring Conference in Bismarck, March 21–23: Climate extremes as drivers of surface water quality trends in the US and water quality in the National Climate Assessment, (Karen Ryberg); Salinity and nutrients in Heart River Basin, (Joel Galloway); Better or worse? Considerations in trend analysis, (Rochelle Nustad); Fargo-Moorhead Diversion water quality, (Spencer Wheeling); Recent declines in river chloride concentrations point to success of management actions, though more progress to be made, poster, (Lindsey Schafer, lschafer@usgs.gov; Jennifer Murphy) (Central Midwest Water Science Center) and presenter, (Karen Ryberg)",
-        "employee_name": "Karen Ryberg",
-        "employee_email": "kryberg@usgs.gov",
+        "employee_name": "Karen R",
+        "employee_email": "kr@usgs.gov",
         "office_id": 8
     },
     {
         "mtg_ach": "Machine Learning Model to Predict and Aid Conservation of Submersed Aquatic Vegetation on the Mississippi River",
         "desc": "Drs. John Delaney and Danelle Larson are invited speakers to the Upper Mississippi River Conservation Committee Meeting in Cape Girdeau, MO on March 23-25, 2022.  The talk is entitled 'Identifying areas for conservation and restoration of submersed aquatic vegetation in the Upper Mississippi River.'  In the Upper Mississippi River there is increasing urgency to understand driving forces and potential for ecological changes for submersed aquatic vegetation (SAV).  In the late 1980's, SAV was lost systemically but recovered in certain river reaches by 2010.  We used a random forest machine learning model to predict the presence of SAV in three navigation pools in the river.  Our model utilized ten years of long-term resource monitoring data from the post recovery period (2010-2019) from aquatic vegetation surveys, water quality surveys, gaging stations, and hydrogeomorphic datasets.  Predictor variables were selected by consulting with scientists and managers in a virtual workshop.  Our analysis identified important predictors of SAV and used model output to estimate potential for changes between vegetated and unvegetated states.  This work will help managers identify vulnerable and resilient areas, and areas with restoration potential.  Future plans are to develop an online interactive dashboard to allow managers to explore model outputs and integrate the information into their planning processes.  This work was funded by the Upper Mississippi River Restoration program.",
-        "employee_name": "Danelle Larson", 
-        "employee_email": "dmlarson@usgs.gov",
+        "employee_name": "Danelle L", 
+        "employee_email": "dl@usgs.gov",
         "office_id": 6
     },
     {
         "mtg_ach": "Women’s History Month: “Picture a Scientist” Panel Event March 29",
         "desc": "Please mark your calendars for Tuesday, March 29 from 12:00-1:30 ET for a panel discussion of the award-winning film “Picture a Scientist” (www.pictureascientist.com), a story of three women scientists, the issues they have faced, and the efforts that they have made to make science more equitable.  The film’s director, two scientists featured in the film, and three USGS scientists (Jill Baron, Ruth Harris and Camille Hopkins) will discuss issues raised in the film that are faced by women and people of color across scientific fields.  This event will be moderated by USGS scientist Virginia Burkett.  Join via Zoom (https://doitalent.zoomgov.com/j/1617367509) using passcode 757311.  This event is jointly sponsored by USGS Office of Diversity and Equal Opportunity, the WISDom Employee Resources Group, the Peer Support Worker Program, and Water Mission Area DEIA-Leadership Team.  Kathi Jo Jankowski (UMESC) initiated this event idea and has been co-lead in planning along with Katie Skalak (WMA), Ernestine Coleman (DEO), and Preston Ford (DEO).",
-        "employee_name": "Kathi Jo Jankowski", 
-        "employee_email": "kjankowski@usgs.gov",
+        "employee_name": "Kathi J", 
+        "employee_email": "kj@usgs.gov",
         "office_id": 6
     },
     {
         "mtg_ach": "North Central branch of the Entomological Society of America meeting",
         "desc": "Mike Simanonok will present “Historical and modern pollen diets of the rusty patched bumble bee (Bombus affinis)” at the North Central branch of the Entomological Society of America meeting in Minneapolis, MN on March 20.  Clint Otto will present “Estimating occupancy and detection of Bombus affinis to inform monitoring.”",
-        "employee_name": "Mike Simanonok", 
-        "employee_email": "msimanonok@usgs.gov",
+        "employee_name": "Mike S", 
+        "employee_email": "ms@usgs.gov",
         "office_id": 1
     },
     {
         "mtg_ach": "Presentations at Association of Montana Floodplain Managers",
         "desc": "On March 22, WY-MT WSC will be presenting virtually “The Role of the WY-MT Water Science in Western Water Resource Challenges,” at the Oregon WSC lunchtime series.  Presenters will include Joanna Thamke, Associate Center Director for Studies, Jason Alexander, Supervisory Hydrologist, and Melissa Schaar, Supervisory Hydrologist.  The presentation will showcase current and emerging research and data collection efforts at the WY-MT WSC.  Highlights include Koocanusa Reservoir transboundary monitoring, Clark Fork Long Term monitoring and surrogate technology used to estimate metal concentrations, robotic eDNA surveillance at USGS streamgages, machine learning prediction of flows in ungaged basins, flood frequency history and/or refinement of MOVE3, and regression equations using channel width to predict flood frequency magnitudes.",
-        "employee_name": "Melissa Schaar", 
-        "employee_email": "mschaar@usgs.gov",
+        "employee_name": "Melissa S", 
+        "employee_email": "ms@usgs.gov",
         "office_id": 3
     },
     {
         "mtg_ach": "2022 NABat winter abundance analyses update",
         "desc": "On March 31, Ashton Wiens will present 'Status and trends of North American Bats: understanding winter population abundance for the North American Bat Monitoring Program', work with coauthors Wayne Thogmartin, Brian Reichert, Bradley Udell, Bethany Straw, (USGS), Tina Cheng, and Winifred Frick (BCI).  He will update data contributors and key partners on the scope and status of modeling efforts, answer any questions or concerns, and welcome feedback.  The presentation will highlight the methods and results of the population modeling, including the Bayesian hierarchical model, the regional and range-wide abundance and growth rate predictions, and summarized impacts of white-nose syndrome for 11 North American bat species.",  
-        "employee_name": "Ashton Wiens", 
-        "employee_email": "awiens@usgs.gov",
+        "employee_name": "Ashton W", 
+        "employee_email": "aw@usgs.gov",
         "office_id": 6
     },
     {
         "mtg_ach": "North American Wildlife and Natural Resources Conference",
         "desc": "Bryan Richards and LeAnn White will be attending the North American Wildlife and Natural Resources Conference held virtually March 9-11 and 14-18.  Richards and White will provide updates on National Wildlife Health Center research and wildlife health technical assistance to partners.  This conference serves as an annual forum to set conservation policy in North America and includes the administrators from natural resource agencies, college and university program leaders, private conservation organizations, and other managers, scientists, and researchers of natural resources.",
-        "employee_name": "LeAnn White", 
-        "employee_email": "clwhite@usgs.gov",
+        "employee_name": "LeAnn W", 
+        "employee_email": "lw@usgs.gov",
         "office_id": 2
     },
     {
         "mtg_ach": "GLSC to present at State of Lake Erie Conference",
         "desc": "Several GLSC scientists will attend and present at the State of Lake Erie Conference in Cleveland, Ohio, March 16-17, 2022.  Mary Anne Evans (GLSC, Ann Arbor, Michigan) will be co-leading the 'Lake Erie Harmful and Nuisance Algal Blooms' session highlighting recent research on Great Lakes harmful and nuisance algal blooms (HABs and NABs).  The session will include a talk by Kasia Przybyla-Kelly (GLSC, Chesterton, Indiana) on 'Four lakes, four years: How does Cladophora biomass in Lake Erie weigh in against other Great Lakes?' as well as a panel of resource managers discussing their science information needs.  Beth Sparks-Jackson (GLSC, Ann Arbor, Michigan) will also deliver a presentation, “Science-based decisions guide the development of ecological restoration projects in the Maumee River,” describing the collaborative, science-based approach used to develop aquatic restoration projects within the Maumee Area of Concern.",
-        "employee_name": "Mary Anne Evans", 
-        "employee_email": "maevans@usgs.gov",
+        "employee_name": "Mary E", 
+        "employee_email": "me@usgs.gov",
         "office_id": 5
     },
     {
         "mtg_ach": "Panel discussion about wildlife biology career",
         "desc": "On March 15th, Will Janousek (NOROCK) will participate in a panel discussion organized for the Honors Introduction to Biostatistics course in the Wildlife Biology program at the University of Montana.  Janousek will speak with students about the types of statistics and analytical tools USGS uses to conduct cutting edge research and how to prepare for a successful career in the field of wildlife biology.",
-        "employee_name": "Will Janousek", 
-        "employee_email": "wjanousek@usgs.gov",
+        "employee_name": "Will J", 
+        "employee_email": "wj@usgs.gov",
         "office_id": 4
     },
     {
         "mtg_ach": "USGS symposium “Informing Species Conservation in a Changing World – Science Addressing Climate Change and Climate Drivers for Decision-Makers”",
         "desc": "NOROCK’s Tabitha Graves, Clint Muhlfeld, and Erik Beever will be presenting at the USGS symposium titled “Informing Species Conservation in a Changing World – Science Addressing Climate Change and Climate Drivers for Decision-Makers” hosted by the Species Management Research Program.  Graves will be presenting on March 29 and Muhlfeld and Beever will be presentation on March 30: [Graves, T.A., and Janousek, W.J., 2022, Understanding current cumulative influences on and projecting future occupancy for Western and McKay's bumble bees—presentation: USGS symposium “Informing Species Conservation in a Changing World – Science Addressing Climate Change and Climate Drivers for Decision-Makers”.  (Tabitha Graves)], [Muhlfeld, C., 2022, Vulnerability of native salmonids in the Northern Rockies: Linking science and management for climate adaptation—presentation: USGS symposium “Informing Species Conservation in a Changing World – Science Addressing Climate Change and Climate Drivers for Decision-Makers”.  (Clint Muhlfeld)],[Beever, E., 2022, Adaptive capacity: The linchpin for understanding and addressing species vulnerability to climate-change impacts—presentation: USGS symposium “Informing Species Conservation in a Changing World – Science Addressing Climate Change and Climate Drivers for Decision-Makers” (Erik Beever)].",
-        "employee_name": "Tabitha Graves", 
-        "employee_email": "tgraves@usgs.gov",
+        "employee_name": "Tabitha G", 
+        "employee_email": "tg@usgs.gov",
         "office_id": 4
     },
     {
         "mtg_ach": "Presentations about western bumblebee research",
         "desc": "NOROCK’s Tabitha Graves and Will Janousek will be updating the BLM Montana-Dakotas pollinator group on project results on March 28.  Additionally on March 30, Graves and Janousek will speak to the Montana Native Plant Society about the western bumblebee and sampling.  Graves, T.A., Janousek, W.J., and Colgan, A., 2022, Bumblebee research in Montana and the West: non-invasive approaches and habitat needs—presentation: BLM Montana-Dakotas Pollinator Working Group.",
-        "employee_name": "Tabitha Graves", 
-        "employee_email": "tgraves@usgs.gov",
+        "employee_name": "Tabitha G", 
+        "employee_email": "tg@usgs.gov",
         "office_id": 4
     },
     {
         "mtg_ach": "Spring North Central RISCC Science Integration Workshop",
         "desc": "Heather Baldwin will present “Annual Brome Adaptive Management: Development and Implementation of an adaptive resource management framework” at the Spring North Central RISCC Science Integration Workshop on April 6.  Other USGS NPWRC authors include Amy Symstad and Max Post van der Burg.",
-        "employee_name": "Heather Baldwin", 
-        "employee_email": "baldwinh@usgs.gov",
+        "employee_name": "Heather B", 
+        "employee_email": "hb@usgs.gov",
         "office_id": 1
     },
     {
         "mtg_ach": "Yellowstone River Compact Commission Meeting",
         "desc": "WY-MT WSC participates in annual Technical Advisory Committee meeting:  On April 14, Center Director and Federal Chair, John Kilpatrick, Deputy Director Brian Loving, and YRCC Secretary, Seth Davidson will attend via Zoom the annual Technical Advisory Committee (TAC) meeting for the Yellowstone River Compact Commission. The Compact apportions water of interstate tributaries in the Yellowstone River between the States of Wyoming and Montana.  The TAC addresses technical issues of water administration as tasked by the Commission.",
-        "employee_name": "Seth Davidson",
-        "employee_email": "sdavids@usgs.gov",
+        "employee_name": "Seth D",
+        "employee_email": "sd@usgs.gov",
         "office_id": 3
     }
 ]
