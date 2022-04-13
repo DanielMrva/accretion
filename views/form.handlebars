@@ -1,7 +1,15 @@
+<div id="rightMain" class="dash-main-report">
 {{!-- navigation will go here --}}
+
+<div class="right-buttons2 nav-pills">
+        <a href="../dashboard" class="nav-link" id="dashboard-link">
+        <img src="../assets/images/user-icon.png" alt="usgs logo" class="user-icon-small">
+        </a>
+</div>
+
 {{>navigation}}
 
-  <div id="rightMain" class="right-main">
+  
     <div class="form-container">
     <!-- ACHIEVEMENTS part of form -->
     <div id="form" class="form-body">
@@ -102,7 +110,7 @@
                   placeholder="Leave a comment here"
                   id="congress-name"
                 ></textarea>
-                <label for="floatingTextarea">Name(s):</label>
+                <label for="floatingTextarea">Name:</label>
               </div>
 
               <div class="form-floating">
@@ -112,17 +120,24 @@
                   id="congress-email"
                 ></textarea>
                 <label for="floatingTextarea"
-                  >Email(s):</label
+                  >Email:</label
                 >
               </div>
 
               <div class="form-floating">
-                <textarea
+                {{!-- <textarea
                   class="form-control"
                   placeholder="Leave a comment here"
                   id="congress-office"
-                ></textarea>
-                <label for="floatingTextarea">Office (use id# for now; will be a dropdown)</label>
+                ></textarea> --}}
+
+                <form>  
+                  <label> Office: </label>  
+                  <select id="congress-office">  
+                  </select>  
+                </form>
+
+                {{!-- <label for="floatingTextarea">Office (use id# for now; will be a dropdown)</label> --}}
               </div>
 
               <button class="button-2" id="submitCongress" role="button">SUBMIT</button>
@@ -187,7 +202,7 @@
                   placeholder="Leave a comment here"
                   id="media-emp-name"
                 ></textarea>
-                <label for="floatingTextarea">Name(s):</label>
+                <label for="floatingTextarea">Name:</label>
               </div>
 
               <div class="form-floating">
@@ -196,16 +211,23 @@
                   placeholder="Leave a comment here"
                   id="media-emp-email"
                 ></textarea>
-                <label for="floatingTextarea">Email(s):</label>
+                <label for="floatingTextarea">Email:</label>
               </div>
 
               <div class="form-floating">
-                <textarea
+                {{!-- <textarea
                   class="form-control"
                   placeholder="Leave a comment here"
                   id="media-office"
                 ></textarea>
-                <label for="floatingTextarea">Office (use id# for now; will be a dropdown):</label>
+                <label for="floatingTextarea">Office (use id# for now; will be a dropdown):</label> --}}
+
+                <form>  
+                  <label> Office: </label>  
+                  <select id="media-office">  
+                  </select>  
+                </form>
+                
               </div>                                                      
 
               <button class="button-2" id="submitMedia" role="button">SUBMIT</button>
@@ -262,7 +284,7 @@
                   placeholder="Leave a comment here"
                   id="mtg-name"
                 ></textarea>
-                <label for="floatingTextarea">Name(s):</label>
+                <label for="floatingTextarea">Name:</label>
               </div>
 
               <div class="form-floating">
@@ -271,16 +293,23 @@
                   placeholder="Leave a comment here"
                   id="mtg-email"
                 ></textarea>
-                <label for="mtg-email">Email(s):</label>
+                <label for="mtg-email">Email:</label>
               </div>   
 
               <div class="form-floating">
-                <textarea
+                {{!-- <textarea
                   class="form-control"
                   placeholder="Leave a comment here"
                   id="mtg-office"
                 ></textarea>
-                <label for="mtg-email">Office (use id# for now; will be a dropdown):</label>
+                <label for="mtg-email">Office (use id# for now; will be a dropdown):</label> --}}
+
+                <form>  
+                  <label> Office: </label>  
+                  <select id="mtg-office">  
+                  </select>  
+                </form>
+
               </div>                             
 
               <button class="button-2" id="submitMeetings" role="button">SUBMIT</button>
@@ -349,7 +378,7 @@
                     id="pub-emp-name"
                   ></textarea>
                   <label for="floatingTextarea"
-                    >Name(s):</label
+                    >Name:</label
                   >
                 </div>
 
@@ -359,7 +388,7 @@
                     placeholder="Leave a comment here"
                     id="pub-emp-email"
                   ></textarea>
-                  <label for="floatingTextarea">Email(s):</label>
+                  <label for="floatingTextarea">Email:</label>
                 </div>
 
                 <div class="form-floating">
@@ -374,12 +403,19 @@
                 </div>
 
                 <div class="form-floating">
-                  <textarea
+                  {{!-- <textarea
                     class="form-control"
                     placeholder="Leave a comment here"
                     id="pub-office"
                   ></textarea>
-                  <label for="floatingTextarea">Office (use id# for now; will be a dropdown):</label>
+                  <label for="floatingTextarea">Office (use id# for now; will be a dropdown):</label> --}}
+
+                <form>  
+                  <label> Office: </label>  
+                  <select id="pub-office">  
+                  </select>  
+                </form>
+
                 </div>                
 
                 <button class="button-2" id="submitPublications" role="button">SUBMIT</button>
@@ -436,7 +472,7 @@
                   placeholder="Leave a comment here"
                   id="ftr-emp-name"
                 ></textarea>
-                <label for="floatingTextarea">Name(s):</label>
+                <label for="floatingTextarea">Name:</label>
               </div>
 
               <div class="form-floating">
@@ -445,16 +481,23 @@
                   placeholder="Leave a comment here"
                   id="ftr-emp-email"
                 ></textarea>
-                <label for="floatingTextarea">Email(s):</label>
+                <label for="floatingTextarea">Email:</label>
               </div>
 
               <div class="form-floating">
-                <textarea
+                {{!-- <textarea
                   class="form-control"
                   placeholder="Leave a comment here"
                   id="ftr-office"
                 ></textarea>
-                <label for="floatingTextarea">Office (use id# for now; will be a dropdown):</label>
+                <label for="floatingTextarea">Office (use id# for now; will be a dropdown):</label> --}}
+
+                <form>  
+                  <label> Office: </label>  
+                  <select id="ftr-office">  
+                  </select>  
+                </form>
+
               </div>                            
 
               <button class="button-2" id="submitFTR" role="button">SUBMIT</button>
@@ -469,5 +512,7 @@
 </div>
 </div>
 
+
 <script src="../js/fetch.js"></script>
 <script src="../js/form.js"></script>
+<script src="../js/officeMenu.js"></script>

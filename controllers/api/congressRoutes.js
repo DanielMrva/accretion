@@ -8,11 +8,14 @@ router.get('/', async (req, res) => {
       const congressData = await Congress.findAll({
         include: [{model: Office}]
       });
+      
       res.status(200).json(congressData);
+
     } catch (err) {
       res.status(500).json(err);
     }
 });
+
 
 //endpoint: /api/congress/:id
 //gets one congressional hearing, needs id 
