@@ -2,22 +2,22 @@
     {
         "note": "Award won at the Montana Chapter of the American Fisheries Society meeting",
         "desc": "NOROCK’s Tim Cline won the best professional presentation award at the 2022 Montana Chapter of the American Fisheries Society meeting that was held last week.  Cline’s presentation was titled “Brown Trout population status and trends for rivers across Montana”.  Clint Muhlfeld and Robert Al-Chokhachy were co-authors on the presentation.  The award has not yet been publicly announced.",
-        "employee_name": "Tim Cline",
-        "employee_email": "tcline@usgs.gov",
+        "employee_name": "Tim C",
+        "employee_email": "tc@usgs.gov",
         "office_id": 4
     },
     {
         "note": "Information provided to Smithsonian Institution post-doctoral fellow",
         "desc": "Dave Mech provided reports and information about his participation in a USSR/US cooperative program in the 1970s to a post-doctoral fellow from the Smithsonian Institution for a book she is writing on interactions between American and Soviet scientists during the Cold War.",
-        "employee_name": "Dave Mech", 
-        "employee_email": "david_mech@usgs.gov",
+        "employee_name": "Dave M", 
+        "employee_email": "dmh@usgs.gov",
         "office_id": 1
     },
     {
         "note": "Esselman presents on fisheries applications of advanced technologies at Wayne State University",
         "desc": "Dr. Peter Esselman (GLSC, Ann Arbor, Michigan) delivered a one-hour presentation entitled 'Monitoring the Great Lakes ecosystem 'at scale' with marine autonomous vehicles' at Wayne University's Water@Wayne webinar series.  The presentation summarized the status of research using autonomous underwater vehicles and uncrewed surface vehicles to monitor Great Lakes prey fish communities.",
-        "employee_name": "Peter Esselman",
-        "employee_email": "pesselman@usgs.gov",
+        "employee_name": "Peter E",
+        "employee_email": "pe@usgs.gov",
         "office_id": 5
     }
 ]
