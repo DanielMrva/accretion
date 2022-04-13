@@ -7,7 +7,7 @@ const officeRoutes = require('./office-routes');
 const meetingRoutes = require('./meetingRoutes');
 const congressRoutes = require('./congressRoutes');
 const ftrRoutes = require('./ftr-routes');
-const weeklyreport = require('./weeklyreport-routes');
+const weeklyreport = require('./weeklyReport-routes');
 const weeklyPDF = require('./weeklyPDF-routes');
 
 
