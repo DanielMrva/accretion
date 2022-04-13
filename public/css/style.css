@@ -155,6 +155,17 @@ button {
   opacity: .5;
 }
 
+.button-4 {
+  background-color:white(85, 141, 41, 0.3);
+  border-radius: 15px;
+  color: white;
+  font-size: 16px;
+  margin: 80px 40px;
+  height: 65px;
+  width:200px;
+  
+}
+
 #login {
   display: flex;
   height: 300px;
@@ -211,6 +222,7 @@ input {
   margin-top: 8px;
   height: 28px;
   width: 260px;
+  font-family: 'Merriweather', serif;
 }
 
 .user-icon {
@@ -219,6 +231,7 @@ input {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  flex: 1 0 100%;
 }
 
 .dashboard-buttons {
@@ -227,6 +240,16 @@ input {
   width: 650px;
   display: flex;
   justify-content: space-evenly;
+}
+
+h1 {
+  font-family: var(--main-font);
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 28px;
+  padding: 30px;
+  color: var(--green);
+  text-align: center;
 }
 
 h2 {
@@ -240,10 +263,23 @@ h2.welcome {
   text-transform: uppercase;
 }
 
+ul {
+  list-style: none;
+  padding: none;
+}
+
+li:hover {
+  background-color: rgb(255, 255, 255, 0.4);
+}
+
+.nav-link {
+  padding: none;
+}
+
 .logo-nav {
   display: flex;
   justify-content: center;
-  margin: 20px;
+  margin: -10px 20px 20px 20px;
   width: 250px;
   height: auto;
 }
@@ -262,7 +298,7 @@ h2.welcome {
   top: 0;
   left: 0;
   background: rgb(85, 141, 41);
-  margin-left: -320px;
+  /* margin-left: -320px; */
   transition: 0.5s;
   z-index: 1;
 }
@@ -288,12 +324,51 @@ h2.welcome {
   height: 50px;
   width:auto;
   transition: 0.5s;
+  margin-left: 320px;
   z-index: 1;
+}
+
+.right-buttons2 {
+  display: flex;
+  flex: 1 0 70%;
+  height: auto;
+  flex-flow: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width:fit-content;
+  padding-right: 40px;
+  align-items: center;
+  margin-top: -15px;
+}
+
+.dash-main {
+  display: flex;
+  flex-direction: row;
+  transition: 0.5s;
+  padding-top: 40px;
+  height: 100vh;
+  /* width: fit-content; */
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: 320px;
+}
+
+.form-main {
+  display: flex;
+  flex-direction: row;
+  transition: 0.5s;
+  padding-top: 40px;
+  height: auto;
+  width: 100vw;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* margin-left: 320px; */
 }
 
 .right-main {
   transition: 0.5s;
-  padding-top: 10px;
   /* padding-left: 10px; */
   height: auto;
   width: 100vw;
@@ -301,20 +376,32 @@ h2.welcome {
   justify-content: space-between;
 }
 
-.dash-main {
+.dash-main-report {
   display: flex;
   flex-direction: row;
   transition: 0.5s;
-  padding-top: 10px;
+  padding-top: 40px;
+  height: auto;
+  /* width: fit-content; */
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: 320px;
+}
+
+.right-main-report {
+  transition: 0.5s;
+  padding: 10px 60px;
+  /* padding-left: 10px; */
   height: auto;
   width: fit-content;
   align-content: center;
-  /* justify-content: space-between; */
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.user-icon {
-  flex: 1 0 100%;
+.user-icon-small {
+  width: 80px;
+  padding: none;
 }
 
 .user-welcome {
@@ -328,6 +415,7 @@ h2.welcome {
 }
 
 .form-body {
+  flex: 1 0 700px;
   width: 700px;
   display: block;
   margin-top: 50px;
@@ -354,9 +442,25 @@ h2.welcome {
   box-shadow: 0 0 0 0.25rem rgba(85, 141, 41, 0.2);
 }
 
+h3.card-title {
+  text-transform: uppercase;
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0px;
+}
+
+p {
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+}
+
+
+
+
 
 /* This is for phone viewing */
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 800px) {
   .left-logo {
     flex: 1 0 100%;
     justify-content: center;
@@ -379,5 +483,104 @@ h2.welcome {
     flex-wrap: wrap;
     align-content: center;
     padding-top: 40px;
+  }
+
+  .form-body {
+    flex: 1 0 550px;
+    width: 550px;
+    display: block;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #login {
+    display: flex;
+    height: 300px;
+    width: 768px;
+    border-color: red;
+    display: none;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .home-login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 160px;
+    width: 300px;
+    border-radius: 40px;
+    margin-top: 30px;
+    background-color:rgba(255, 255, 255, .4);
+    padding: 30px;
+  }
+  
+  .home-signup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 280px;
+    width: 300px;
+    border-radius: 40px;
+    margin-top: 20px;
+    background-color:rgba(255, 255, 255, .4);
+    padding: 30px;
+  }
+
+  .user-icon {
+    height: 310px;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    flex: 1 0 100%;
+  }
+
+  .button-3 {
+    background-color: rgba(85, 141, 41, 0.1);
+    border-radius: 15px;
+    color: var(--green);
+    height: 80px;
+    width: 155px;
+    margin: 0px;
+  }
+
+  .side-nav {
+    height: 100%;
+    width: 320px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(85, 141, 41);
+    margin-left: -320px;
+    transition: 0.5s;
+    z-index: 1;
+  }
+
+  .dash-main {
+    display: flex;
+    flex-direction: row;
+    transition: 0.5s;
+    padding-top: 40px;
+    height: 100vh;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* margin-left: -320px; */
+  }
+
+  #rightMain {
+    margin-left: 0px;
+  }
+
+  .side-arrow {
+    height: 50px;
+    width:auto;
+    transition: 0.5s;
+    margin-left: 320px;
+    z-index: 1;
   }
 }
