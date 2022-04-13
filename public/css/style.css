@@ -155,6 +155,17 @@ button {
   opacity: .5;
 }
 
+.button-4 {
+  background-color:white(85, 141, 41, 0.3);
+  border-radius: 15px;
+  color: white;
+  font-size: 16px;
+  margin: 80px 40px;
+  height: 65px;
+  width:200px;
+  
+}
+
 #login {
   display: flex;
   height: 300px;
@@ -220,6 +231,7 @@ input {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  flex: 1 0 100%;
 }
 
 .dashboard-buttons {
@@ -253,6 +265,14 @@ h2.welcome {
 
 ul {
   list-style: none;
+  padding: none;
+}
+
+li:hover {
+  background-color: rgb(255, 255, 255, 0.4);
+}
+
+.nav-link {
   padding: none;
 }
 
@@ -317,6 +337,8 @@ ul {
   flex-wrap: wrap;
   width:fit-content;
   padding-right: 40px;
+  align-items: center;
+  margin-top: -15px;
 }
 
 .dash-main {
@@ -324,22 +346,47 @@ ul {
   flex-direction: row;
   transition: 0.5s;
   padding-top: 40px;
-  height: auto;
-  width: fit-content;
+  height: 100vh;
+  /* width: fit-content; */
   align-content: center;
   justify-content: center;
   flex-wrap: wrap;
   margin-left: 320px;
 }
 
+.form-main {
+  display: flex;
+  flex-direction: row;
+  transition: 0.5s;
+  padding-top: 40px;
+  height: auto;
+  width: 100vw;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* margin-left: 320px; */
+}
+
 .right-main {
   transition: 0.5s;
-  padding-top: 10px;
   /* padding-left: 10px; */
   height: auto;
   width: 100vw;
   align-content: center;
   justify-content: space-between;
+}
+
+.dash-main-report {
+  display: flex;
+  flex-direction: row;
+  transition: 0.5s;
+  padding-top: 40px;
+  height: auto;
+  /* width: fit-content; */
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: 320px;
 }
 
 .right-main-report {
@@ -352,12 +399,9 @@ ul {
   justify-content: space-between;
 }
 
-.user-icon {
-  flex: 1 0 100%;
-}
-
 .user-icon-small {
-  width: 50px;
+  width: 80px;
+  padding: none;
 }
 
 .user-welcome {
@@ -371,6 +415,7 @@ ul {
 }
 
 .form-body {
+  flex: 1 0 700px;
   width: 700px;
   display: block;
   margin-top: 50px;
@@ -415,7 +460,7 @@ p {
 
 
 /* This is for phone viewing */
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 800px) {
   .left-logo {
     flex: 1 0 100%;
     justify-content: center;
@@ -438,5 +483,104 @@ p {
     flex-wrap: wrap;
     align-content: center;
     padding-top: 40px;
+  }
+
+  .form-body {
+    flex: 1 0 550px;
+    width: 550px;
+    display: block;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #login {
+    display: flex;
+    height: 300px;
+    width: 768px;
+    border-color: red;
+    display: none;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .home-login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 160px;
+    width: 300px;
+    border-radius: 40px;
+    margin-top: 30px;
+    background-color:rgba(255, 255, 255, .4);
+    padding: 30px;
+  }
+  
+  .home-signup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 280px;
+    width: 300px;
+    border-radius: 40px;
+    margin-top: 20px;
+    background-color:rgba(255, 255, 255, .4);
+    padding: 30px;
+  }
+
+  .user-icon {
+    height: 310px;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    flex: 1 0 100%;
+  }
+
+  .button-3 {
+    background-color: rgba(85, 141, 41, 0.1);
+    border-radius: 15px;
+    color: var(--green);
+    height: 80px;
+    width: 155px;
+    margin: 0px;
+  }
+
+  .side-nav {
+    height: 100%;
+    width: 320px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(85, 141, 41);
+    margin-left: -320px;
+    transition: 0.5s;
+    z-index: 1;
+  }
+
+  .dash-main {
+    display: flex;
+    flex-direction: row;
+    transition: 0.5s;
+    padding-top: 40px;
+    height: 100vh;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* margin-left: -320px; */
+  }
+
+  #rightMain {
+    margin-left: 0px;
+  }
+
+  .side-arrow {
+    height: 50px;
+    width:auto;
+    transition: 0.5s;
+    margin-left: 320px;
+    z-index: 1;
   }
 }
