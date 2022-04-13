@@ -1,4 +1,5 @@
-<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom" id="danHeader">
+<div id="rightMain" class="dash-main-report">
+{{!-- <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom" id="danHeader">
     <a href="https://www.usgs.gov/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
       <img src="../assets/images/usgs_logo.png" alt="usgs logo" class="header-image">
     </a>
@@ -6,13 +7,20 @@
     <ul class="nav nav-pills">
       <li class="nav-item"><a href="../dashboard" class="nav-link" id="dashboard-link">Dashboard</a></li>
     </ul>
-</header>
+</header> --}}
+
+<div class="right-buttons2 nav-pills">
+        <a href="../dashboard" class="nav-link" id="dashboard-link">
+        <img src="../assets/images/user-icon.png" alt="usgs logo" class="user-icon-small">
+        </a>
+</div>
 
 {{>navigation}}
+
 <section id="report">
 
 <div class="page-header container" id="Media-Head">
-        <h2 class="report-heading">Media Interactions</h2>
+        <h1 class="report-heading">Media Interactions</h1>
         <div class="entries-container">
             {{#each mediaInteractions}}
                 {{>media-details}}
@@ -23,3 +31,5 @@
 </section>
 
 <script src="../js/navbar.js"></script>
+
+</div>

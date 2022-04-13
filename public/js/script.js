@@ -18,7 +18,7 @@ function displayLogin () {
 
 function openNav () {
     document.getElementById('sideNav').style.marginLeft = '0';
-    document.getElementById('rightMain').style.marginLeft = '310px';
+    document.getElementById('rightMain').style.marginLeft = '320px';
     document.getElementById('expandArrow').style.marginLeft = "320px";
 };
 

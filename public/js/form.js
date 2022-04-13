@@ -12,12 +12,12 @@ async function pubSubmit(event) {
 
     // defines the data
     let pubData = {
-        pub_name: document.getElementById("pub-name").value,
-        title: document.getElementById("pub-title").value,
-        desc: document.getElementById("pub-desc").value,
-        employee_name: document.getElementById("pub-emp-name").value,
-        employee_email: document.getElementById("pub-emp-email").value,
-        authors: document.getElementById("pub-authors").value,
+        pub_name: document.getElementById("pub-name").value.trim(),
+        title: document.getElementById("pub-title").value.trim(),
+        desc: document.getElementById("pub-desc").value.trim(),
+        employee_name: document.getElementById("pub-emp-name").value.trim(),
+        employee_email: document.getElementById("pub-emp-email").value.trim(),
+        authors: document.getElementById("pub-authors").value.trim(),
         // office_id: document.getElementById('pub-office').value
     }
 
@@ -56,10 +56,10 @@ async function congSubmit(event) {
     event.preventDefault();
 
     let congData =  {
-        rep_committee: document.getElementById('rep-committee').value,
-        desc: document.getElementById('congress-desc').value,
-        employee_name: document.getElementById('congress-name').value,
-        employee_email: document.getElementById('congress-email').value, 
+        rep_committee: document.getElementById('rep-committee').value.trim(),
+        desc: document.getElementById('congress-desc').value.trim(),
+        employee_name: document.getElementById('congress-name').value.trim(),
+        employee_email: document.getElementById('congress-email').value.trim(), 
         // office_id: document.getElementById('congress-office').value
     }
 
@@ -93,11 +93,11 @@ async function mediaSubmit(event) {
     event.preventDefault();
 
     let mediaData = {
-        name: document.getElementById('media-interaction').value,
-        outlet: document.getElementById('media-outlet').value,
-        desc: document.getElementById('media-desc').value, 
-        employee_name: document.getElementById('media-emp-name').value,
-        employee_email: document.getElementById('media-emp-email').value,
+        name: document.getElementById('media-interaction').value.trim(),
+        outlet: document.getElementById('media-outlet').value.trim(),
+        desc: document.getElementById('media-desc').value.trim(), 
+        employee_name: document.getElementById('media-emp-name').value.trim(),
+        employee_email: document.getElementById('media-emp-email').value.trim(),
         // office_id: document.getElementById('media-office').value
     }
 
@@ -131,10 +131,10 @@ async function meetingsSubmit(event) {
     event.preventDefault();
 
     let mtgData = {
-        mtg_ach: document.getElementById('mtg-ach').value,
-        desc: document.getElementById('mtg-desc').value,
-        employee_name: document.getElementById('mtg-name').value,
-        employee_email: document.getElementById('mtg-email').value,
+        mtg_ach: document.getElementById('mtg-ach').value.trim(),
+        desc: document.getElementById('mtg-desc').value.trim(),
+        employee_name: document.getElementById('mtg-name').value.trim(),
+        employee_email: document.getElementById('mtg-email').value.trim(),
         // office_id: document.getElementById('mtg-office').value
     }
 
@@ -167,10 +167,10 @@ async function ftrSubmit(event) {
     event.preventDefault();
 
     let ftrData = {
-        note: document.getElementById('ftr-note').value,
-        desc: document.getElementById('ftr-desc').value,
-        employee_name: document.getElementById('ftr-emp-name').value,
-        employee_email: document.getElementById('ftr-emp-email').value,
+        note: document.getElementById('ftr-note').value.trim(),
+        desc: document.getElementById('ftr-desc').value.trim(),
+        employee_name: document.getElementById('ftr-emp-name').value.trim(),
+        employee_email: document.getElementById('ftr-emp-email').value.trim(),
         // office_id: document.getElementById('ftr-office').value
     }
 
