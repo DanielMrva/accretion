@@ -57,7 +57,45 @@ We were asked by an employee of the the United States Geological Survey (USGS) t
 <br>
 ## Usage
 From the root url, you may either login or create a new account. If you are a returning user, login using your credentials. If new, create an account. You will then be taken to the dashboard where you can submit new data or compile the weekly report. When submit is selected you are taken to a form page where you may submit your data (note, all fields must be filled in for the data to post to the database). Once a form is filled out you may press the associated submit button to send that data to the database. If you wish to compile the weekly report (from the dashboard) press the weekly report button and all entries from all users from the past 7 days will be displayed. There is a button to print the report to a pdf as well (simply press it and the pdf will generate). In addition to the dashboard, there is a navigation side bar that allows you to submit data, generate the weekly report, and also search for specific data for each of the tables. 
-    
+
+<br>
+
+
+<img src="./public/assets/images/README/front-page.png" alt="front page" width="650"/>
+
+Front Page
+
+<br>
+
+<img src="./public/assets/images/README/login.png" alt="login page" width="650"/>
+
+Login Page
+
+<br>
+
+<img src="./public/assets/images/README/dashboard.png" alt="user dashboard" width="650"/>
+
+User Dashboard
+
+<br>
+
+<img src="./public/assets/images/README/input-form.png" alt="input form" width="650"/>
+
+Input Form
+
+<br>
+
+<img src="./public/assets/images/README/generated-report.png" alt="weekly repoort" width="650"/>
+
+Generated weekly report
+
+<br>
+
+<img src="./public/assets/images/README/pdf-report.png" alt="generated pdf" width="650"/>
+
+PDF generated report
+
+
 ---
 <br>
 
