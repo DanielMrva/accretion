@@ -9,8 +9,6 @@ router.get('/', async (req, res) => {
 
     try {
 
-        // const mediaData = await Media.findAll({include: [{model:User, through: UserMedia, as: 'users'}]});
-
         const mediaData = await Media.findAll({
             include: [{model: Office}]
         });

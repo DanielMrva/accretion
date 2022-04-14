@@ -18,7 +18,6 @@ async function pubSubmit(event) {
         employee_name: document.getElementById("pub-emp-name").value.trim(),
         employee_email: document.getElementById("pub-emp-email").value.trim(),
         authors: document.getElementById("pub-authors").value.trim(),
-        // office_id: document.getElementById('pub-office').value
     }
 
 
@@ -60,7 +59,6 @@ async function congSubmit(event) {
         desc: document.getElementById('congress-desc').value.trim(),
         employee_name: document.getElementById('congress-name').value.trim(),
         employee_email: document.getElementById('congress-email').value.trim(), 
-        // office_id: document.getElementById('congress-office').value
     }
 
     const office = document.getElementById("congress-office").value;
@@ -98,7 +96,6 @@ async function mediaSubmit(event) {
         desc: document.getElementById('media-desc').value.trim(), 
         employee_name: document.getElementById('media-emp-name').value.trim(),
         employee_email: document.getElementById('media-emp-email').value.trim(),
-        // office_id: document.getElementById('media-office').value
     }
 
     const office = document.getElementById("media-office").value;
@@ -135,7 +132,6 @@ async function meetingsSubmit(event) {
         desc: document.getElementById('mtg-desc').value.trim(),
         employee_name: document.getElementById('mtg-name').value.trim(),
         employee_email: document.getElementById('mtg-email').value.trim(),
-        // office_id: document.getElementById('mtg-office').value
     }
 
     const office = document.getElementById("mtg-office").value;
@@ -171,7 +167,6 @@ async function ftrSubmit(event) {
         desc: document.getElementById('ftr-desc').value.trim(),
         employee_name: document.getElementById('ftr-emp-name').value.trim(),
         employee_email: document.getElementById('ftr-emp-email').value.trim(),
-        // office_id: document.getElementById('ftr-office').value
     }
 
     const office = document.getElementById("ftr-office").value;
